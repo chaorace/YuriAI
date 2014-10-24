@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_MoveUp_LastJumpTick</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Remembers the last time a jump action was performed</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkits_Movement_Trigger_MoveUp_JumpTicks</string>
+                            <string id="value">0</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Checks how long the character has been jumping for</string>
+                        </action>
+                    </normal>
+                </condition>
+                <orblock>
+                    <string id="Comment">Is there a reason to ignore a jump command?</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkits_Movement_Trigger_MoveUp_JumpTicks</string>
+                            <string id="value">0</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">resets the jumptick counter</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_Movement_Trigger_MoveUp_LastJumpTick</string>
+                            <string id="value">Toolkit_Ticker_Event_1TickAgo</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Was I trying to jump last tick too?</string>
+                            <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkits_Movement_Trigger_MoveUp_JumpTicks</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">add</string>
+                                    <string id="Comment">increments the jumptick counter</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkits_Movement_Trigger_MoveUp_JumpTicks</string>
+                                    <string id="value">0</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">resets the jumptick counter</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <action id="pressButton">
+                            <string id="button" values="buttons">FACE_BOTTOM</string>
+                            <float id="duration in seconds">0.10</float>
+                            <string id="Comment">Press jump button for a tick</string>
+                        </action>
+                    </else>
+                    <or>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkits_Movement_Trigger_MoveUp_JumpTicks</string>
+                            <string id="value">3</string>
+                            <string id="compare method" values="valuecompare">greater or equal</string>
+                            <string id="Comment">This is probably where you should start adjusting jump behavior for individual characters, The code from this block forward is designed for characters with tall, multiple jumps</string>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">Toolkit_Detection_Event_WallAtDirectTop</string>
+                            <string id="value" values="yesno">yes</string>
+                            <string id="Comment">Is a wall directly above me?</string>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">Toolkit_Detection_Event_WallAtMidTop</string>
+                            <string id="value" values="yesno">yes</string>
+                            <string id="Comment">Is a wall above me?</string>
+                        </condition>
+                    </or>
+                </orblock>
+                <action id="adjustCounter">
+                    <string id="id">Toolkit_Movement_Trigger_MoveUp_LastJumpTick</string>
+                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                    <string id="adjust method" values="valueadjust">set</string>
+                    <string id="Comment">This tick is now the last jump tick</string>
+                </action>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

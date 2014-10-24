@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <string id="Comment">Document events here</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_WaypointPlus_Event_JumpType</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Tells what kind of jump the character has: 0:Flier 1:Multi-Jump 2:Hover+Tall-Jump 3:Tall-Jump 4:Hover+Short-Jump 5:Short-Jump</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_WaypointPlus_Event_AtFinalDestination</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Checks if the charater is at the final destination</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_WaypointPlus_Event_CustomPathId</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Returns -1 if no custom path is loaded. Otherwise, returns the ID of the currently loaded custom path</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Event_LastCheckpoint</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Tells the last checkpoint arrived at by the character</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Event_NextCheckpoint</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Tells the next checkpoint</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_WaypointPlus_Event_AtLastCheckpoint</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Tells if the character is still at the last checkpoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Event_LastCheckpointTick</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Tells the last tick the character was at a checkpoint</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="isAtDestWaypoint">
+                    <normal>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_WaypointPlus_Event_NextCheckpoint</string>
+                            <string id="value">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Did I just arrive at my final destination?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_WaypointPlus_Event_AtFinalDestination</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Checks if the charater is at the final destination</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_WaypointPlus_Event_AtFinalDestination</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Checks if the charater is at the final destination</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Event_LastCheckpointTick</string>
+                            <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">This is now the last checkpoint tick</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Event_LastCheckpoint</string>
+                            <string id="value">Toolkit_WaypointPlus_Event_NextCheckpoint</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">The old NextCheckpoint is now the new LastCheckpoint</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_WaypointPlus_Event_AtLastCheckpoint</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Tells if the character is still at the last checkpoint</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <action id="setBool">
+                            <string id="id">Toolkit_WaypointPlus_Event_AtLastCheckpoint</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Tells if the character is still at the last checkpoint</string>
+                        </action>
+                    </else>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+    <behaviour>
+        <condition id="checkCounter" x="3066" y="220">
+            <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+            <string id="value">30</string>
+            <string id="compare method" values="valuecompare">equal</string>
+            <string id="Comment">Next stop: CENTERHP</string>
+            <normal>
+                <action id="adjustCounter">
+                    <string id="id">Toolkit_WaypointPlus_Event_NextCheckpoint</string>
+                    <string id="value">30</string>
+                    <string id="adjust method" values="valueadjust">set</string>
+                </action>
+            </normal>
+        </condition>
+    </behaviour>
+</enemy>

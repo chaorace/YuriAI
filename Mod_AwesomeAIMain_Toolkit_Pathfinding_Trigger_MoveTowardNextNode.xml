@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="isNextWaypointPosition">
+                    <string id="position" values="offsetposition">ABOVE</string>
+                    <string id="Comment">Is next waypoint node above me?</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going up. Takes precedence over down in conflicts</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <condition id="isNextWaypointPosition">
+                            <string id="position" values="offsetposition">BELOW</string>
+                            <string id="Comment">Is next waypoint node below me?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveDown</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">non-sticky. Keep enabled to keep going down</string>
+                                </action>
+                            </normal>
+                        </condition>
+                    </else>
+                </condition>
+                <condition id="isNextWaypointPosition">
+                    <string id="position" values="offsetposition">FRONT</string>
+                    <string id="Comment">Is next waypoint node in front of me?</string>
+                    <normal>
+                        <condition id="directionToEnemyBase">
+                            <string id="direction" values="forwardbackward">FORWARD</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                </action>
+                            </else>
+                        </condition>
+                    </normal>
+                    <else>
+                        <condition id="isNextWaypointPosition">
+                            <string id="position" values="offsetposition">BACK</string>
+                            <string id="Comment">Is next waypoint node behind me?</string>
+                            <normal>
+                                <condition id="directionToEnemyBase">
+                                    <string id="direction" values="forwardbackward">FORWARD</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                        </action>
+                                    </else>
+                                </condition>
+                            </normal>
+                        </condition>
+                    </else>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

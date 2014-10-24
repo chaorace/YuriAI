@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <action id="pressButton">
+                    <string id="button" values="buttons">SHOULDER_LEFT</string>
+                    <float id="duration in seconds">0.10</float>
+                    <string id="Comment">Drop down</string>
+                </action>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

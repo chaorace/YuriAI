@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <string id="Comment">Pathfinding Triggers. Listed in order of precedence</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Node Based- Movement Trigger</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                    <string id="value" values="yesno">yes</string>
+                    <string id="Comment">Node-based movement trigger</string>
+                    <normal>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Pathfinding_Trigger_MoveTowardNextNode</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

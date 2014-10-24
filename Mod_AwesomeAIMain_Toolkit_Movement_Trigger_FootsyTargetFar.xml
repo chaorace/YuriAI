@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="hasTarget">
+                    <string id="condition" values="yesno">yes</string>
+                    <normal>
+                        <condition id="isTargetInArea">
+                            <string id="condition" values="yesno">no</string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">1.50</float>
+                            <float id="height">1.50</float>
+                            <string id="check line of sight" values="yesno">yes</string>
+                            <string id="ignore invisibility" values="yesno">no</string>
+                            <string id="Comment">Are my enemies out of sight?</string>
+                            <normal>
+                                <action id="selectTargetWaypoint">
+                                    <string id="Comment">Set Destination Waypoint to near target</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Node Based- Movement Trigger</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <condition id="isTargetInArea">
+                                    <string id="condition" values="yesno">yes</string>
+                                    <float id="xOffset">0.00</float>
+                                    <float id="yOffset">0.00</float>
+                                    <float id="width">1.00</float>
+                                    <float id="height">1.00</float>
+                                    <string id="check line of sight" values="yesno">no</string>
+                                    <string id="ignore invisibility" values="yesno">no</string>
+                                    <string id="Comment">Is my target too close?</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveAwayFromTarget</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                        </action>
+                                    </normal>
+                                </condition>
+                            </else>
+                        </condition>
+                    </normal>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

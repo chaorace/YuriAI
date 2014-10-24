@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Movement_Event_RunningFromTarget</string>
+                    <string id="value" values="yesno">yes</string>
+                    <string id="Comment">Am I moving away from my target?</string>
+                    <normal>
+                        <andblock>
+                            <normal>
+                                <action id="aimStickAtTarget">
+                                    <float id="duration seconds">0.01</float>
+                                    <string id="only aim when needed" values="yesno">no</string>
+                                    <string id="Comment">Take Aim - Innacurate, but fast</string>
+                                </action>
+                                <action id="pressButton">
+                                    <string id="button" values="buttons">FACE_LEFT</string>
+                                    <float id="duration in seconds">0.10</float>
+                                    <string id="Comment">Fire</string>
+                                </action>
+                            </normal>
+                            <or>
+                                <condition id="isSkillOnButtonAvailable">
+                                    <string id="button" values="buttons">FACE_LEFT</string>
+                                    <string id="Comment">Is my AA off cooldown?</string>
+                                </condition>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Ticker_Event_10thTick</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Has it been 1 seconds yet?</string>
+                                </condition>
+                            </or>
+                        </andblock>
+                    </normal>
+                    <else>
+                        <condition id="isSkillOnButtonAvailable">
+                            <string id="button" values="buttons">FACE_LEFT</string>
+                            <string id="Comment">Is my AA off cooldown?</string>
+                            <normal>
+                                <action id="aimStickAtTarget">
+                                    <float id="duration seconds">0.01</float>
+                                    <string id="only aim when needed" values="yesno">no</string>
+                                    <string id="Comment">Take Aim</string>
+                                </action>
+                                <action id="pressButton">
+                                    <string id="button" values="buttons">FACE_LEFT</string>
+                                    <float id="duration in seconds">0.10</float>
+                                    <string id="Comment">Fire</string>
+                                </action>
+                            </normal>
+                        </condition>
+                    </else>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

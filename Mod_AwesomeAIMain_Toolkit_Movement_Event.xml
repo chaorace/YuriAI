@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <string id="Comment">Document events here</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Event_RunningFromTarget</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">I&apos;m running from a target</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Event_LastRunningTick</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">When was I last running? NOTE: Only refers to running from target, not running in general</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="hasTarget">
+                    <string id="condition" values="yesno">yes</string>
+                    <string id="Comment">Am I running from my target?</string>
+                    <normal>
+                        <condition id="getBoolEquals">
+                            <string id="id">Toolkit_Detection_Event_TargetAtRight</string>
+                            <string id="value" values="yesno">yes</string>
+                            <string id="Comment">Is target at right?</string>
+                            <normal>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveLeft</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Am I moving left?</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Event_RunningFromTarget</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">I&apos;m running from a target</string>
+                                        </action>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_Movement_Event_LastRunningTick</string>
+                                            <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                                            <string id="adjust method" values="valueadjust">set</string>
+                                            <string id="Comment">I was last running this tick</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Event_RunningFromTarget</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">I&apos;m not running from a target</string>
+                                        </action>
+                                    </else>
+                                </condition>
+                            </normal>
+                            <else>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Detection_Event_TargetAtLeft</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Is target at left?</string>
+                                    <normal>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveRight</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Am I moving right?</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Movement_Event_RunningFromTarget</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">I&apos;m running from a target</string>
+                                                </action>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_Movement_Event_LastRunningTick</string>
+                                                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">I was last running this tick</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Movement_Event_RunningFromTarget</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">I&apos;m not running from a target</string>
+                                                </action>
+                                            </else>
+                                        </condition>
+                                    </normal>
+                                </condition>
+                            </else>
+                        </condition>
+                    </normal>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

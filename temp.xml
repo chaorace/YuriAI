@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Detection_Event_DirectionFacing</string>
+                    <string id="value" values="yesno">no</string>
+                    <string id="Comment">Am I facing right?</string>
+                    <normal>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">-2.80</float>
+                            <float id="yOffset">0.85</float>
+                            <float id="width">0.50</float>
+                            <float id="height">0.75</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is the top back red turret up?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret20</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">The red top back turret is up</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret20</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">The red top back turret is down</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">-2.40</float>
+                            <float id="yOffset">-0.55</float>
+                            <float id="width">0.50</float>
+                            <float id="height">0.75</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is the bottom back red turret up?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret21</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">The red top back turret is up</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret21</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">The red top back turret is down</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">-3.85</float>
+                            <float id="yOffset">0.85</float>
+                            <float id="width">0.50</float>
+                            <float id="height">0.75</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is the top front red turret up?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret22</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">The red top front turret is up</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret22</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">The red top front turret is down</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">-3.55</float>
+                            <float id="yOffset">-0.70</float>
+                            <float id="width">0.50</float>
+                            <float id="height">0.75</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is the bottom back red turret up?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret23</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">The red bottom front turret is up</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret23</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">The red bottom front turret is down</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">-6.50</float>
+                            <float id="yOffset">0.85</float>
+                            <float id="width">0.50</float>
+                            <float id="height">0.75</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is the top back blue turret up?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret10</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">The blue top back turret is up</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret10</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">The blue top back turret is down</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">-6.90</float>
+                            <float id="yOffset">-0.55</float>
+                            <float id="width">0.50</float>
+                            <float id="height">0.75</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is the bottom back red turret up?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret11</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">The blue top back turret is up</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret11</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">The blue top back turret is down</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">-5.45</float>
+                            <float id="yOffset">0.85</float>
+                            <float id="width">0.50</float>
+                            <float id="height">0.75</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is the top front blue turret up?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret12</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">The blue top front turret is up</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_MapInfo_Event_Turret12</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">The blue top front turret is down</string>
+                                </action>
+                            </else>
+                        </condition>
+                    </normal>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

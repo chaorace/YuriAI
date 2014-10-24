@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <action id="executeBehaviourTree">
+                    <string id="fileName">Mod_AwesomeAIMain</string>
+                    <string id="Comment">Load AwesomeAI</string>
+                    <string id="Minimized">yes</string>
+                </action>
+                <action id="setBool">
+                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                    <string id="value" values="flagtoggle">yes</string>
+                    <string id="Comment">Node Based- Movement Trigger</string>
+                </action>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_WaypointPlus_Event_LastCheckpoint</string>
+                    <string id="value">-1</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Do I have a lastcheckpoint yet?</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                            <string id="value">10</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Go to red shop</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                            <string id="value">31</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                        </action>
+                    </else>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

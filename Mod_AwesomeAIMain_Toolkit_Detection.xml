@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <normal>
+                        <action id="log">
+                            <string id="text">Loaded Detection Toolkit!</string>
+                            <string id="counter"></string>
+                            <string id="bool"></string>
+                        </action>
+                    </normal>
+                </condition>
+                <action id="executeBehaviourTree">
+                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection_Event</string>
+                    <string id="Comment">Events File</string>
+                    <string id="Minimized">yes</string>
+                </action>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

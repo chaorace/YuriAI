@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="hasTarget">
+                    <string id="condition" values="yesno">yes</string>
+                    <string id="Comment">Do I have a target?</string>
+                    <normal>
+                        <condition id="isTargetPosition">
+                            <string id="condition" values="yesno">yes</string>
+                            <string id="target position" values="offsetposition">ABOVE</string>
+                            <string id="Comment">Target above me?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveDown</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">non-sticky. Keep enabled to keep going down</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <condition id="isTargetPosition">
+                                    <string id="condition" values="yesno">yes</string>
+                                    <string id="target position" values="offsetposition">BELOW</string>
+                                    <string id="Comment">Target below me?</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">non-sticky. Keep enabled to keep going up. Takes precedence over down in conflicts</string>
+                                        </action>
+                                    </normal>
+                                </condition>
+                            </else>
+                        </condition>
+                        <condition id="isTargetPosition">
+                            <string id="condition" values="yesno">yes</string>
+                            <string id="target position" values="offsetposition">VERTICAL EQUAL</string>
+                            <string id="Comment">Target directly above/below?</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Move toward base</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Detection_Event_TargetAtRight</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Target at cardinal right?</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Detection_Event_TargetAtLeft</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Target at cardinal left?</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                                </action>
+                                            </normal>
+                                        </condition>
+                                    </else>
+                                </condition>
+                            </else>
+                        </condition>
+                    </normal>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_MoveForward_LastActiveTick</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">When was the last time this trigger was active?</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_MoveForward_ActiveTicks</string>
+                            <string id="value">0</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">How long has this trigger been active?</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="isFromTeam">
+                    <string id="team" values="teamswithnumbers">ZERO_TEAM</string>
+                    <string id="check on" values="targetself">self</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveRight</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going right</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveLeft</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going right</string>
+                        </action>
+                    </else>
+                </condition>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_Movement_Trigger_MoveForward_LastActiveTick</string>
+                    <string id="value">Toolkit_Ticker_Event_1TickAgo</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Was this trigger active last tick?</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_MoveForward_ActiveTicks</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">add</string>
+                            <string id="Comment">Increment the active tick counter</string>
+                        </action>
+                        <andblock>
+                            <normal>
+                                <orblock>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Jump!</string>
+                                        </action>
+                                    </normal>
+                                    <or>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Detection_Event_WallAtDirectFront</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Is there a wall in front of me?</string>
+                                        </condition>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Detection_Event_Blocked</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Am I being blocked by a collidable entity?</string>
+                                        </condition>
+                                    </or>
+                                </orblock>
+                            </normal>
+                            <or>
+                                <condition id="checkCounter">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveForward_ActiveTicks</string>
+                                    <string id="value">3</string>
+                                    <string id="compare method" values="valuecompare">greater or equal</string>
+                                    <string id="Comment">Has this trigger been active for 3 ticks or more?</string>
+                                </condition>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Movement_Trigger_MoveDown</string>
+                                    <string id="value" values="yesno">no</string>
+                                    <string id="Comment">I wasn&apos;t on my way down already, right?</string>
+                                </condition>
+                            </or>
+                        </andblock>
+                    </normal>
+                    <else>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_MoveForward_ActiveTicks</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Reset the active time</string>
+                        </action>
+                    </else>
+                </condition>
+                <action id="adjustCounter">
+                    <string id="id">Toolkit_Movement_Trigger_MoveForward_LastActiveTick</string>
+                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                    <string id="adjust method" values="valueadjust">set</string>
+                    <string id="Comment">This is now the last active tick</string>
+                </action>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

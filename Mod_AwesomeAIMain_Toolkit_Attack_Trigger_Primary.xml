@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <action id="aimStickAtTarget">
+                    <float id="duration seconds">0.10</float>
+                    <string id="only aim when needed" values="yesno">no</string>
+                    <string id="Comment">Take aim at target</string>
+                </action>
+                <action id="pressButton">
+                    <string id="button" values="buttons">DPAD_RIGHT</string>
+                    <float id="duration in seconds">0.10</float>
+                    <string id="Comment">Press Primary button</string>
+                    <string id="Minimized">yes</string>
+                </action>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>
