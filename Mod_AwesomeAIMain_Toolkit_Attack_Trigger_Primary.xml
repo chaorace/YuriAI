@@ -9,7 +9,7 @@
                     <string id="Comment">Take aim at target</string>
                 </action>
                 <action id="pressButton">
-                    <string id="button" values="buttons">DPAD_RIGHT</string>
+                    <string id="button" values="buttons">FACE_RIGHT</string>
                     <float id="duration in seconds">0.10</float>
                     <string id="Comment">Press Primary button</string>
                     <string id="Minimized">yes</string>
