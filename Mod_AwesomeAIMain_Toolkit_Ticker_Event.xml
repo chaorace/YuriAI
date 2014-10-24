@@ -5,18 +5,7 @@
             <normal>
                 <condition id="once">
                     <string id="Comment">Document variables</string>
-                    <string id="Minimized">yes</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">Toolkit_Ticker_Event_OddModWorking</string>
-                            <string id="value" values="flagtoggle">no</string>
-                            <string id="Comment">True when odd modulus works</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">Toolkit_Ticker_Event_EvenModWorking</string>
-                            <string id="value" values="flagtoggle">no</string>
-                            <string id="Comment">True when even modulus works</string>
-                        </action>
                         <action id="adjustCounter">
                             <string id="id">Toolkit_Ticker_Event_Ticks</string>
                             <string id="value">0</string>
