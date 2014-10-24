@@ -25,7 +25,6 @@
                 <sequence>
                     <string id="Is blocking">yes</string>
                     <string id="Comment">Resets all non-sticky triggers</string>
-                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
@@ -48,7 +47,7 @@
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveTowardTarget</string>
                             <string id="value" values="flagtoggle">no</string>
-                            <string id="Comment">non-sticky. Keep enabled to keep going backward. Takes precedence over Move Away in conflicts</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over Move Away in conflicts</string>
                             <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
