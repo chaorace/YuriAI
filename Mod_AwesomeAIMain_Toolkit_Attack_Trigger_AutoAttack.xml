@@ -3,21 +3,33 @@
     <behaviour>
         <root x="110" y="40">
             <normal>
+                <condition id="once">
+                    <string id="Comment">Document variables</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                            <string id="value">2</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">How fast backwards AA fires. 0 = Do not fire. 1 = fire every 1s. 2 = fire every 0.5s, 3 = fire as often as possible</string>
+                        </action>
+                    </normal>
+                </condition>
                 <condition id="getBoolEquals">
                     <string id="id">Toolkit_Movement_Event_RunningFromTarget</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Am I moving away from my target?</string>
                     <normal>
-                        <condition id="getBoolEquals">
-                            <string id="id">Toolkit_Movement_Event_RetaliateAgainstAttacker</string>
-                            <string id="value" values="yesno">yes</string>
-                            <string id="Comment">Do I want to retalliate with AA against attackers?</string>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                            <string id="value">1</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Attack speed 1:  attack whenever AA is off cooldown</string>
                             <normal>
                                 <condition id="checkCounter">
-                                    <string id="id">Toolkit_Event_RetaliateAASpeed</string>
-                                    <string id="value">1</string>
+                                    <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                                    <string id="value">3</string>
                                     <string id="compare method" values="valuecompare">equal</string>
-                                    <string id="Comment">Attack speed 1:  attack whenever AA is off cooldown</string>
+                                    <string id="Comment">Attack speed 3: attack as often as possible</string>
                                     <normal>
                                         <andblock>
                                             <normal>
@@ -42,7 +54,7 @@
                                     </normal>
                                     <else>
                                         <condition id="checkCounter">
-                                            <string id="id">Toolkit_Event_RetaliateAASpeed</string>
+                                            <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
                                             <string id="value">2</string>
                                             <string id="compare method" values="valuecompare">equal</string>
                                             <string id="Comment">Attack speed 2: attack every 0.5s</string>
@@ -75,10 +87,10 @@
                                             </normal>
                                             <else>
                                                 <condition id="checkCounter">
-                                                    <string id="id">Toolkit_Event_RetaliateAASpeed</string>
-                                                    <string id="value">3</string>
+                                                    <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                                                    <string id="value">1</string>
                                                     <string id="compare method" values="valuecompare">equal</string>
-                                                    <string id="Comment">Attack speed 3: attack every 1s</string>
+                                                    <string id="Comment">Attack speed 1: attack every 1s</string>
                                                     <normal>
                                                         <andblock>
                                                             <normal>
@@ -106,6 +118,21 @@
                                                             </or>
                                                         </andblock>
                                                     </normal>
+                                                    <else>
+                                                        <condition id="checkCounter">
+                                                            <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                                                            <string id="value">0</string>
+                                                            <string id="compare method" values="valuecompare">equal</string>
+                                                            <string id="Comment">Attack speed 0: do not attack</string>
+                                                            <else>
+                                                                <action id="log">
+                                                                    <string id="text">Toolkit_Attack_Trigger_BackwardsAASpeed expects 0, 1, 2 or 3. </string>
+                                                                    <string id="counter">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                                                                    <string id="bool"></string>
+                                                                </action>
+                                                            </else>
+                                                        </condition>
+                                                    </else>
                                                 </condition>
                                             </else>
                                         </condition>
