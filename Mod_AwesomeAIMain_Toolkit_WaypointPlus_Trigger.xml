@@ -13,32 +13,6 @@
                         </action>
                     </normal>
                 </condition>
-                <condition id="checkCounter">
-                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
-                    <string id="value">-1</string>
-                    <string id="compare method" values="valuecompare">equal</string>
-                    <string id="Comment">Determines which static map to use for finding the next path</string>
-                    <normal>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_GenericFindNextPath</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                    </normal>
-                    <else>
-                        <condition id="checkCounter">
-                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
-                            <string id="value">0</string>
-                            <string id="compare method" values="valuecompare">equal</string>
-                            <string id="Comment">Determines which static map to use for finding the next path</string>
-                            <normal>
-                                <action id="executeBehaviourTree">
-                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_RibbitFindNextPath</string>
-                                    <string id="Minimized">yes</string>
-                                </action>
-                            </normal>
-                        </condition>
-                    </else>
-                </condition>
             </normal>
         </root>
     </behaviour>

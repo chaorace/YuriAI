@@ -1,0 +1,12 @@
+1	MyApp constructor starts
+2	C:\Program Files (x86)\Steam\SteamApps\common\Awesomenauts\Data\BehaviourCreator
+3	Command Line:  0
+4	MyApp constructor ends
+5	NetworkManager constructor starts
+6	NetworkManager constructor ends
+7	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_GenericFindNextPath.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml"
+8	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_RibbitFindNextPath.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml"
+9	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml"
+10	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml"
+11	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus.xml"
+12	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus.xml"

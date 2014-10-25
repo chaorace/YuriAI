@@ -7,19 +7,9 @@
                     <string id="Comment">Document events here</string>
                     <normal>
                         <action id="setBool">
-                            <string id="id">Toolkit_WaypointPlus_Event_JumpType</string>
-                            <string id="value" values="flagtoggle">no</string>
-                            <string id="Comment">Tells what kind of jump the character has: 0:Flier 1:Multi-Jump 2:Hover+Tall-Jump 3:Tall-Jump 4:Hover+Short-Jump 5:Short-Jump</string>
-                        </action>
-                        <action id="setBool">
                             <string id="id">Toolkit_WaypointPlus_Event_AtFinalDestination</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">Checks if the charater is at the final destination</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">Toolkit_WaypointPlus_Event_CustomPathId</string>
-                            <string id="value" values="flagtoggle">no</string>
-                            <string id="Comment">Returns -1 if no custom path is loaded. Otherwise, returns the ID of the currently loaded custom path</string>
                         </action>
                         <action id="adjustCounter">
                             <string id="id">Toolkit_WaypointPlus_Event_LastCheckpoint</string>
@@ -98,7 +88,7 @@
         </root>
     </behaviour>
     <behaviour>
-        <condition id="checkCounter" x="3066" y="220">
+        <condition id="checkCounter" x="3241" y="220">
             <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
             <string id="value">30</string>
             <string id="compare method" values="valuecompare">equal</string>
