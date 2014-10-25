@@ -4,12 +4,241 @@
         <root x="110" y="40">
             <normal>
                 <condition id="once">
+                    <string id="Comment">Declares Constants</string>
                     <normal>
                         <action id="adjustCounter">
                             <string id="id">Toolkit_Constants_Event_ConstantZero</string>
                             <string id="value">0</string>
                             <string id="adjust method" values="valueadjust">set</string>
                             <string id="Comment">Necessary for modulus comparisons</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">REGENHOME_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BEHINDDRILL_0</string>
+                            <string id="value">2</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BELOWLAUNCH_0</string>
+                            <string id="value">3</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">LAUNCH_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">FINALSTAND_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">ABOVEBASE_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">FIRSTHP_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">UPPERSECONDTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">ABOVEUPPERSECONDTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">UPPERLANE_LEFT</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">UPPERLANESECOND_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">UPPERHP_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">UPPERFIRSTTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">ABOVEUPPERFIRSTTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">ABOVEBOTTOMSECONDTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BOTTOMSECONDTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BOTTOMLANESECOND_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BOTTOMHP_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BOTTOMFIRSTTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">ABOVEBOTTOMFIRSTTOWER_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">HEALTHBEHINDSOLARBOSS_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">SOLARBOSS_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">NEUTRALSIDESPOT_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">NEUTRAL_HALFWAY_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">NEUTRALCENTERSPOT_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CENTERHP</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">UPPERLANE</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">HIDEAREATOP</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">HIDEAREACENTRE</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">HIDEAREABOTTOM</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BOTTOMLANE</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BEHINDDRILL_1</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BELOWLAUNCH_1</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">LAUNCH_1</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">FINALSTAND_1</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">ABOVEBASE_1</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">FIRSTHP_1</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">REGENHOME_0</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint</string>
                         </action>
                     </normal>
                 </condition>
