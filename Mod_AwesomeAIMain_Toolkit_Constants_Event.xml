@@ -31,25 +31,25 @@
                                     <string id="id">BEHINDDRILL_0</string>
                                     <string id="value">2</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;behindDrill_0&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">BEHINDDRILL_1</string>
                                     <string id="value">102</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;behindDrill_1&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">BELOWLAUNCH_0</string>
                                     <string id="value">3</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;BelowLaunch_0&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">BELOWLAUNCH_1</string>
                                     <string id="value">103</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;BelowLaunch_1&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">LAUNCH_0</string>
@@ -61,7 +61,7 @@
                                     <string id="id">LAUNCH_1</string>
                                     <string id="value">104</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;launch_1&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">FINALSTAND_0</string>
@@ -79,53 +79,95 @@
                                     <string id="id">ABOVEBASE_0</string>
                                     <string id="value">6</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;aboveBase_0&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">ABOVEBASE_1</string>
                                     <string id="value">106</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;aboveBase_1&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">NEUTRALSIDESPOT_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">7</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">NEUTRALSIDESPOT_1</string>
-                                    <string id="value">1</string>
+                                    <string id="value">107</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">NEUTRALCENTERSPOT_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">8</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">NEUTRALCENTERSPOT_1</string>
-                                    <string id="value">1</string>
+                                    <string id="value">108</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">BOTTOMFIRSTTOWER_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">9</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint: &quot;bottomFirstTower_0&quot; on Sorona, Ribbit.</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">BOTTOMFIRSTTOWER_1</string>
-                                    <string id="value">1</string>
+                                    <string id="value">109</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint: &quot;bottomFirstTower_1&quot; on Sorona, Ribbit.</string>
                                 </action>
                                 <action id="adjustCounter">
-                                    <string id="id">ABOVEUPPERSECONDTOWER_0</string>
-                                    <string id="value">1</string>
+                                    <string id="id">FIRSTHP_0</string>
+                                    <string id="value">10</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">FIRSTHP_1</string>
+                                    <string id="value">110</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMSECONDTOWER_0</string>
+                                    <string id="value">11</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;bottomSecondTower_0&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMSECONDTOWER_1</string>
+                                    <string id="value">111</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint:&quot; bottomSecondTower_1&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">ABOVEBOTTOMSECONDTOWER_0</string>
+                                    <string id="value">12</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;aboveBottomSecondTower_0&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">ABOVEBOTTOMSECONDTOWER_1</string>
+                                    <string id="value">112</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;aboveBottomSecondTower_1&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMLANE</string>
+                                    <string id="value">1000</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">UPPERLANE</string>
+                                    <string id="value">1001</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
@@ -136,15 +178,27 @@
                             <normal>
                                 <action id="adjustCounter">
                                     <string id="id">UPPERFIRSTTOWER_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">13</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint: &quot;upperFirstTower_0&quot; on Sorona</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">UPPERFIRSTTOWER_1</string>
-                                    <string id="value">1</string>
+                                    <string id="value">113</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint:  &quot;upperFirstTower_1&quot; on Sorona</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">ABOVEUPPERFIRSTTOWER_0</string>
+                                    <string id="value">14</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: AboveUpperFirstTower_0&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">ABOVEUPPERFIRSTTOWER_1</string>
+                                    <string id="value">114</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: AboveUpperFirstTower_1&quot; on Ribbit</string>
                                 </action>
                             </normal>
                         </condition>
@@ -153,13 +207,37 @@
                             <normal>
                                 <action id="adjustCounter">
                                     <string id="id">UPPERSECONDTOWER_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">15</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;upperSecondTower_0: on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">UPPERSECONDTOWER_1</string>
+                                    <string id="value">115</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;upperSecondTower_1&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">ABOVEUPPERSECONDTOWER_0</string>
+                                    <string id="value">16</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;AboveUpperSecondTower_0&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">ABOVEUPPERSECONDTOWER_1</string>
+                                    <string id="value">116</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;AboveUpperSecondTower_1&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">UPPERLANESECOND_0</string>
+                                    <string id="value">17</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
-                                    <string id="id">UPPERSECONDTOWER_1</string>
-                                    <string id="value">1</string>
+                                    <string id="id">UPPERLANESECOND_1</string>
+                                    <string id="value">117</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
@@ -169,136 +247,118 @@
                             <string id="Comment">Ribbit Waypoints</string>
                             <normal>
                                 <action id="adjustCounter">
-                                    <string id="id">FIRSTHP_0</string>
-                                    <string id="value">1</string>
+                                    <string id="id">BOTTOMHP_0</string>
+                                    <string id="value">18</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMHP_1</string>
+                                    <string id="value">118</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">UPPERHP_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">19</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
-                                    <string id="id">UPPERLANESECOND_0</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">ABOVEUPPERFIRSTTOWER_0</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">ABOVEBOTTOMSECONDTOWER_0</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">BOTTOMSECONDTOWER_0</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">BOTTOMLANESECOND_0</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">BOTTOMHP_0</string>
-                                    <string id="value">1</string>
+                                    <string id="id">UPPERHP_1</string>
+                                    <string id="value">119</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">ABOVEBOTTOMFIRSTTOWER_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">20</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;aboveSecondTower_0&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">ABOVEBOTTOMFIRSTTOWER_1</string>
+                                    <string id="value">120</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;aboveSecondTower_1&quot; on Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMLANESECOND_0</string>
+                                    <string id="value">21</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMLANESECOND_1</string>
+                                    <string id="value">121</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">HEALTHBEHINDSOLARBOSS_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">22</string>
                                     <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
+                                    <string id="Comment">Waypoint: &quot;healthBeindSolarBoss_0&quot; On Ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">HEALTHBEHINDSOLARBOSS_1</string>
+                                    <string id="value">122</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;healthBehindSolarBoss_1&quot; on Ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">SOLARBOSS_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">23</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint: &quot;solarboss_0&quot;</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">SOLARBOSS_1</string>
-                                    <string id="value">1</string>
+                                    <string id="value">123</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint: &quot;solarboss_1&quot;</string>
                                 </action>
                                 <action id="adjustCounter">
-                                    <string id="id">CENTERHP</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">UPPERLANE</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">HIDEAREATOP</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint: &quot;hideAreaTop&quot;</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">HIDEAREACENTRE</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint: &quot;hideAreaCentre&quot;</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">HIDEAREABOTTOM</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint: &quot;hideAreaBottom&quot;</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">BOTTOMLANE</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">UPPERLANE_LEFT</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint: WARNING ONLY EXISTS ON RED SIDE</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">FIRSTHP_1</string>
-                                    <string id="value">1</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
                                     <string id="id">NEUTRAL_HALFWAY_0</string>
-                                    <string id="value">1</string>
+                                    <string id="value">24</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint: &quot;NEUTRAL_halfway_0&quot; on ribbit</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">NEUTRAL_HALFWAY_1</string>
-                                    <string id="value">1</string>
+                                    <string id="value">124</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint: &quot;NEUTRAL_halfway_1&quot; on ribbit</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">HIDEAREATOP</string>
+                                    <string id="value">1002</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;hideAreaTop&quot;</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">HIDEAREACENTRE</string>
+                                    <string id="value">1003</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;hideAreaCentre&quot;</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">HIDEAREABOTTOM</string>
+                                    <string id="value">1004</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: &quot;hideAreaBottom&quot;</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">CENTERHP</string>
+                                    <string id="value">1005</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">UPPERLANE_LEFT</string>
+                                    <string id="value">900</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint: WARNING ONLY EXISTS ON RED SIDE</string>
                                 </action>
                             </normal>
                         </condition>
@@ -313,25 +373,25 @@
                             <normal>
                                 <action id="adjustCounter">
                                     <string id="id">WORMBUTTON</string>
-                                    <string id="value">1001</string>
+                                    <string id="value">1</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint. Spelling &quot;wormButton&quot;</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">CENTERBOTTOMHP</string>
-                                    <string id="value">1002</string>
+                                    <string id="value">1</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">JUMPPADCENTER_0</string>
-                                    <string id="value">1001</string>
+                                    <string id="value">1</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint. Spelling &quot;jumppadCenter_0&quot;</string>
                                 </action>
                                 <action id="adjustCounter">
                                     <string id="id">JUMPPADCENTER_1</string>
-                                    <string id="value">1001</string>
+                                    <string id="value">1</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint. Spelling &quot;jumppadCenter_1&quot;</string>
                                 </action>
