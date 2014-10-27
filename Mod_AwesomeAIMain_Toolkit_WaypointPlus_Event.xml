@@ -5,6 +5,14 @@
             <normal>
                 <condition id="once">
                     <string id="Comment">Document events here</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Event_LastCheckpoint</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">The last checkpoint to be successfully arrived at</string>
+                        </action>
+                    </normal>
                 </condition>
             </normal>
         </root>
