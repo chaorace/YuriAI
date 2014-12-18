@@ -4,8 +4,21 @@
 4	MyApp constructor ends
 5	NetworkManager constructor starts
 6	NetworkManager constructor ends
-7	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger.xml" CurrentFile is: ""
-8	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"
-9	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger_AutoAttack.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"
-10	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger_Primary.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"
-11	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger_Secondary.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"
+7	Received PID_CONNECTION_SUCCESSFUL
+8	Sending AI info
+9	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetFar.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+10	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+11	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetClose.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+12	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveTowardTarget.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+13	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveAwayFromTarget.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+14	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveForward.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+15	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveBackward.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+16	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_Teleport.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+17	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveDown.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+18	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveUp.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+19	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveLeft.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+20	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveRight.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
+21	NetworkManager destructor starts
+22	NetworkManager destructor ends
+23	MyApp destructor starts
+24	MyApp destructor ends
