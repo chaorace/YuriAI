@@ -6,25 +6,137 @@
                 <condition id="once">
                     <string id="Comment">Document variables</string>
                 </condition>
-                <condition id="hasTarget">
-                    <string id="condition" values="yesno">yes</string>
-                    <string id="Comment">Am I targetting someone?</string>
-                    <else>
+                <condition id="isCharacterInArea">
+                    <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
+                    <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                    <string id="class"></string>
+                    <string id="condition" values="charactervaluesCheckable">health</string>
+                    <string id="comparison" values="valuecompare">greater or equal</string>
+                    <float id="value">0.00</float>
+                    <string id="character minimum"></string>
+                    <float id="xOffset">0.00</float>
+                    <float id="yOffset">2.00</float>
+                    <float id="width">7.00</float>
+                    <float id="height">4.00</float>
+                    <string id="check line of sight" values="yesno">no</string>
+                    <string id="Comment">[TARGETSELECTION] Is an enemy player in the area?</string>
+                    <string id="Minimized">yes</string>
+                    <normal>
                         <action id="selectTarget">
                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
-                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                             <string id="class"></string>
-                            <string id="remove if not found" values="yesno">no</string>
+                            <string id="remove if not found" values="yesno">yes</string>
                             <float id="xOffset">0.00</float>
-                            <float id="yOffset">0.00</float>
-                            <float id="width">50.00</float>
-                            <float id="height">50.00</float>
+                            <float id="yOffset">2.00</float>
+                            <float id="width">9.00</float>
+                            <float id="height">6.00</float>
                             <string id="compare method" values="valuecompare2">greater or equal</string>
                             <float id="health value">0.00</float>
                             <string id="distance check" values="distance check">CLOSEST</string>
                             <string id="check line of sight" values="yesno">no</string>
                             <string id="ignore invisibility" values="yesno">no</string>
-                            <string id="Comment">Cling to the nearest possible guy</string>
+                            <string id="Comment">Target the nearest enemy player</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <condition id="isCharacterInArea">
+                            <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
+                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                            <string id="class"></string>
+                            <string id="condition" values="charactervaluesCheckable">health</string>
+                            <string id="comparison" values="valuecompare">greater or equal</string>
+                            <float id="value">0.00</float>
+                            <string id="character minimum"></string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">2.00</float>
+                            <float id="width">5.00</float>
+                            <float id="height">4.00</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="Comment">Is an enemy player in the area?</string>
+                            <normal>
+                                <action id="selectTarget">
+                                    <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
+                                    <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                                    <string id="class"></string>
+                                    <string id="remove if not found" values="yesno">yes</string>
+                                    <float id="xOffset">0.00</float>
+                                    <float id="yOffset">2.00</float>
+                                    <float id="width">7.00</float>
+                                    <float id="height">6.00</float>
+                                    <string id="compare method" values="valuecompare2">greater or equal</string>
+                                    <float id="health value">0.00</float>
+                                    <string id="distance check" values="distance check">CLOSEST</string>
+                                    <string id="check line of sight" values="yesno">no</string>
+                                    <string id="ignore invisibility" values="yesno">no</string>
+                                    <string id="Comment">Target the nearest enemy player</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <condition id="hasTarget">
+                                    <string id="condition" values="yesno">yes</string>
+                                    <string id="Comment">Am I targetting someone?</string>
+                                    <normal>
+                                        <orblock>
+                                            <string id="Comment">Am I targetting something that&apos;s not an ally?</string>
+                                            <normal>
+                                                <action id="removeTarget">
+                                                    <string id="Comment">Stop targetting</string>
+                                                </action>
+                                            </normal>
+                                            <or>
+                                                <condition id="isTargetType">
+                                                    <string id="condition" values="yesno">yes</string>
+                                                    <string id="target groups" values="target groups" multiselect="true">CREEPS;;DESTROYABLE_OBSTACLES;;</string>
+                                                    <string id="Comment">Am I not targetting a player?</string>
+                                                </condition>
+                                                <condition id="isFromTeam">
+                                                    <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
+                                                    <string id="check on" values="targetself">target</string>
+                                                    <string id="Comment">Is my target hostile?</string>
+                                                </condition>
+                                            </or>
+                                        </orblock>
+                                    </normal>
+                                    <else>
+                                        <action id="selectTarget">
+                                            <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
+                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                            <string id="class"></string>
+                                            <string id="remove if not found" values="yesno">no</string>
+                                            <float id="xOffset">0.00</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">50.00</float>
+                                            <float id="height">50.00</float>
+                                            <string id="compare method" values="valuecompare2">greater or equal</string>
+                                            <float id="health value">0.00</float>
+                                            <string id="distance check" values="distance check">CLOSEST</string>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="ignore invisibility" values="yesno">yes</string>
+                                            <string id="Comment">Target the nearest possible ally</string>
+                                        </action>
+                                    </else>
+                                </condition>
+                            </else>
+                        </condition>
+                    </else>
+                </condition>
+                <condition id="isFromTeam">
+                    <string id="team" values="teamswithnumbers">OWN_TEAM</string>
+                    <string id="check on" values="targetself">target</string>
+                    <string id="Comment">Is my target friendly?</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Stay near my ally</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Keep a distance from my enemy</string>
                         </action>
                     </else>
                 </condition>

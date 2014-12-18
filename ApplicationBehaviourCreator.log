@@ -9,16 +9,268 @@
 9	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetFar.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
 10	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
 11	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetClose.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-12	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveTowardTarget.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-13	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveAwayFromTarget.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-14	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveForward.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-15	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveBackward.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-16	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_Teleport.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-17	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveDown.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-18	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveUp.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-19	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveLeft.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-20	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveRight.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium.xml"
-21	NetworkManager destructor starts
-22	NetworkManager destructor ends
-23	MyApp destructor starts
-24	MyApp destructor ends
+12	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveTowardTarget.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTar14	Connection lost
+15	Received PID_CONNECTION_SUCCESSFUL
+16	Sending AI info
+17	Connection lost
+18	Received PID_CONNECTION_SUCCESSFUL
+19	Sending AI info
+20	Connection lost
+21	Received PID_CONNECTION_SUCCESSFUL
+22	Sending AI info
+23	Connection lost
+24	Received PID_CONNECTION_SUCCESSFUL
+25	Sending AI info
+26	Connection lost
+27	Received PID_CONNECTION_SUCCESSFUL
+28	Sending AI info
+29	Connection lost
+30	Received PID_CONNECTION_SUCCESSFUL
+31	Sending AI info
+32	Connection lost
+33	Received PID_CONNECTION_SUCCESSFUL
+34	Sending AI info
+35	Connection lost
+36	Received PID_CONNECTION_SUCCESSFUL
+37	Sending AI info
+38	Connection lost
+39	Received PID_CONNECTION_SUCCESSFUL
+40	Sending AI info
+41	Connection lost
+42	Received PID_CONNECTION_SUCCESSFUL
+43	Sending AI info
+44	Connection lost
+45	Received PID_CONNECTION_SUCCESSFUL
+46	Sending AI info
+47	Connection lost
+48	Received PID_CONNECTION_SUCCESSFUL
+49	Sending AI info
+50	Connection lost
+51	Received PID_CONNECTION_SUCCESSFUL
+52	Sending AI info
+53	Connection lost
+54	Received PID_CONNECTION_SUCCESSFUL
+55	Sending AI info
+56	Connection lost
+57	Received PID_CONNECTION_SUCCESSFUL
+58	Sending AI info
+59	Connection lost
+60	Received PID_CONNECTION_SUCCESSFUL
+61	Sending AI info
+62	Connection lost
+63	Received PID_CONNECTION_SUCCESSFUL
+64	Sending AI info
+65	Connection lost
+66	Received PID_CONNECTION_SUCCESSFUL
+67	Sending AI info
+68	Connection lost
+69	Received PID_CONNECTION_SUCCESSFUL
+70	Sending AI info
+71	Connection lost
+72	Received PID_CONNECTION_SUCCESSFUL
+73	Sending AI info
+74	Connection lost
+75	Received PID_CONNECTION_SUCCESSFUL
+76	Sending AI info
+77	Connection lost
+78	Received PID_CONNECTION_SUCCESSFUL
+79	Sending AI info
+80	Connection lost
+81	Received PID_CONNECTION_SUCCESSFUL
+82	Sending AI info
+83	Connection lost
+84	Received PID_CONNECTION_SUCCESSFUL
+85	Sending AI info
+86	Connection lost
+87	Received PID_CONNECTION_SUCCESSFUL
+88	Sending AI info
+89	Connection lost
+90	Received PID_CONNECTION_SUCCESSFUL
+91	Sending AI info
+92	Connection lost
+93	Received PID_CONNECTION_SUCCESSFUL
+94	Sending AI info
+95	Connection lost
+96	Received PID_CONNECTION_SUCCESSFUL
+97	Sending AI info
+98	Connection lost
+99	Received PID_CONNECTION_SUCCESSFUL
+100	Sending AI info
+101	Connection lost
+102	Received PID_CONNECTION_SUCCESSFUL
+103	Sending AI info
+104	Connection lost
+105	Received PID_CONNECTION_SUCCESSFUL
+106	Sending AI info
+107	Connection lost
+108	Received PID_CONNECTION_SUCCESSFUL
+109	Sending AI info
+110	Connection lost
+111	Received PID_CONNECTION_SUCCESSFUL
+112	Sending AI info
+113	Connection lost
+114	Received PID_CONNECTION_SUCCESSFUL
+115	Sending AI info
+116	Connection lost
+117	Received PID_CONNECTION_SUCCESSFUL
+118	Sending AI info
+119	Connection lost
+120	Received PID_CONNECTION_SUCCESSFUL
+121	Sending AI info
+122	Connection lost
+123	Received PID_CONNECTION_SUCCESSFUL
+124	Sending AI info
+125	Connection lost
+126	Received PID_CONNECTION_SUCCESSFUL
+127	Sending AI info
+128	Connection lost
+129	Received PID_CONNECTION_SUCCESSFUL
+130	Sending AI info
+131	Connection lost
+132	Received PID_CONNECTION_SUCCESSFUL
+133	Sending AI info
+134	Connection lost
+135	Received PID_CONNECTION_SUCCESSFUL
+136	Sending AI info
+137	Connection lost
+138	Received PID_CONNECTION_SUCCESSFUL
+139	Sending AI info
+140	Connection lost
+141	Received PID_CONNECTION_SUCCESSFUL
+142	Sending AI info
+143	Connection lost
+144	Received PID_CONNECTION_SUCCESSFUL
+145	Sending AI info
+146	Connection lost
+147	Received PID_CONNECTION_SUCCESSFUL
+148	Sending AI info
+149	Connection lost
+150	Received PID_CONNECTION_SUCCESSFUL
+151	Sending AI info
+152	Connection lost
+153	Received PID_CONNECTION_SUCCESSFUL
+154	Sending AI info
+155	Connection lost
+156	Received PID_CONNECTION_SUCCESSFUL
+157	Sending AI info
+158	Connection lost
+159	Received PID_CONNECTION_SUCCESSFUL
+160	Sending AI info
+161	Connection lost
+162	Received PID_CONNECTION_SUCCESSFUL
+163	Sending AI info
+164	Connection lost
+165	Received PID_CONNECTION_SUCCESSFUL
+166	Sending AI info
+167	Connection lost
+168	Received PID_CONNECTION_SUCCESSFUL
+169	Sending AI info
+170	Connection lost
+171	Received PID_CONNECTION_SUCCESSFUL
+172	Sending AI info
+173	Connection lost
+174	Received PID_CONNECTION_SUCCESSFUL
+175	Sending AI info
+176	Connection lost
+177	Received PID_CONNECTION_SUCCESSFUL
+178	Sending AI info
+179	Connection lost
+180	Received PID_CONNECTION_SUCCESSFUL
+181	Sending AI info
+182	Connection lost
+183	Received PID_CONNECTION_SUCCESSFUL
+184	Sending AI info
+185	Connection lost
+186	Received PID_CONNECTION_SUCCESSFUL
+187	Sending AI info
+188	Connection lost
+189	Received PID_CONNECTION_SUCCESSFUL
+190	Sending AI info
+191	Connection lost
+192	Received PID_CONNECTION_SUCCESSFUL
+193	Sending AI info
+194	Connection lost
+195	Received PID_CONNECTION_SUCCESSFUL
+196	Sending AI info
+197	Connection lost
+198	Received PID_CONNECTION_SUCCESSFUL
+199	Sending AI info
+200	Connection lost
+201	Received PID_CONNECTION_SUCCESSFUL
+202	Sending AI info
+203	Connection lost
+204	Received PID_CONNECTION_SUCCESSFUL
+205	Sending AI info
+206	Connection lost
+207	Received PID_CONNECTION_SUCCESSFUL
+208	Sending AI info
+209	Connection lost
+210	Received PID_CONNECTION_SUCCESSFUL
+211	Sending AI info
+212	Connection lost
+213	Received PID_CONNECTION_SUCCESSFUL
+214	Sending AI info
+215	Connection lost
+216	Received PID_CONNECTION_SUCCESSFUL
+217	Sending AI info
+218	Connection lost
+219	Received PID_CONNECTION_SUCCESSFUL
+220	Sending AI info
+221	Connection lost
+222	Received PID_CONNECTION_SUCCESSFUL
+223	Sending AI info
+224	Connection lost
+225	Received PID_CONNECTION_SUCCESSFUL
+226	Sending AI info
+227	Connection lost
+228	Received PID_CONNECTION_SUCCESSFUL
+229	Sending AI info
+230	Connection lost
+231	Received PID_CONNECTION_SUCCESSFUL
+232	Sending AI info
+233	Connection lost
+234	Received PID_CONNECTION_SUCCESSFUL
+235	Sending AI info
+236	Connection lost
+237	Received PID_CONNECTION_SUCCESSFUL
+238	Sending AI info
+239	Connection lost
+240	Received PID_CONNECTION_SUCCESSFUL
+241	Sending AI info
+242	Connection lost
+243	Received PID_CONNECTION_SUCCESSFUL
+244	Sending AI info
+245	Connection lost
+246	Received PID_CONNECTION_SUCCESSFUL
+247	Sending AI info
+248	Connection lost
+249	Received PID_CONNECTION_SUCCESSFUL
+250	Sending AI info
+251	Connection lost
+252	Received PID_CONNECTION_SUCCESSFUL
+253	Sending AI info
+254	Connection lost
+255	Received PID_CONNECTION_SUCCESSFUL
+256	Sending AI info
+257	Connection lost
+258	Received PID_CONNECTION_SUCCESSFUL
+259	Sending AI info
+260	Connection lost
+261	Received PID_CONNECTION_SUCCESSFUL
+262	Sending AI info
+263	Connection lost
+264	Received PID_CONNECTION_SUCCESSFUL
+265	Sending AI info
+266	Connection lost
+267	Received PID_CONNECTION_SUCCESSFUL
+268	Sending AI info
+269	Connection lost
+270	Received PID_CONNECTION_SUCCESSFUL
+271	Sending AI info
+272	Connection lost
+273	Received PID_CONNECTION_SUCCESSFUL
+274	Sending AI info
+275	Connection lost
+276	Received PID_CONNECTION_SUCCESSFUL
+277	Sending AI info
+278	Connection lost

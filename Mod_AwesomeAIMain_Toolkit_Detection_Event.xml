@@ -7,6 +7,66 @@
                     <string id="Comment">Document events here</string>
                     <string id="Minimized">yes</string>
                     <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_SelfHurt</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I below 90%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_SelfUnhealthy</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I below 70%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I below 50%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I below 35%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_SelfDeadly</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I below 20%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetHurt</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target below 90%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetUnhealthy</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target below 70%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetDamaged</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target below 50%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetCritical</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target below 35%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetDeadly</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target below 20%?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
                         <condition id="checkGameTime">
                             <float id="time in seconds">-1.00</float>
                             <string id="compare method" values="valuecompare">greater or equal</string>
@@ -352,9 +412,360 @@
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Only do once every other tick to save performance/Simulate human reaction time</string>
                     <normal>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                            <float id="value">90.00</float>
+                            <string id="compare method" values="valuecompare">less or equal</string>
+                            <string id="check on" values="targetself">self</string>
+                            <string id="Comment">Self Health Checks</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Am I below 90%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <condition id="checkCharacterValue">
+                                    <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                    <float id="value">70.00</float>
+                                    <string id="compare method" values="valuecompare">less or equal</string>
+                                    <string id="check on" values="targetself">self</string>
+                                    <string id="Comment">Self Health Checks</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_SelfUnhealthy</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Am I below 70%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <condition id="checkCharacterValue">
+                                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                            <float id="value">50.00</float>
+                                            <string id="compare method" values="valuecompare">less or equal</string>
+                                            <string id="check on" values="targetself">self</string>
+                                            <string id="Comment">Self Health Checks</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">Am I below 50%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <condition id="checkCharacterValue">
+                                                    <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                                    <float id="value">35.00</float>
+                                                    <string id="compare method" values="valuecompare">less or equal</string>
+                                                    <string id="check on" values="targetself">self</string>
+                                                    <string id="Comment">Self Health Checks</string>
+                                                    <normal>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                                                            <string id="value" values="flagtoggle">yes</string>
+                                                            <string id="Comment">Am I below 35%?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <condition id="checkCharacterValue">
+                                                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                                            <float id="value">20.00</float>
+                                                            <string id="compare method" values="valuecompare">less or equal</string>
+                                                            <string id="check on" values="targetself">self</string>
+                                                            <string id="Comment">Self Health Checks</string>
+                                                            <normal>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_SelfDeadly</string>
+                                                                    <string id="value" values="flagtoggle">no</string>
+                                                                    <string id="Comment">Am I below 20%?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                            </normal>
+                                                            <else>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_SelfDeadly</string>
+                                                                    <string id="value" values="flagtoggle">no</string>
+                                                                    <string id="Comment">Am I below 20%?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                            </else>
+                                                        </condition>
+                                                    </normal>
+                                                    <else>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Am I below 35%?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_SelfDeadly</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Am I below 20%?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                    </else>
+                                                </condition>
+                                            </normal>
+                                            <else>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Am I below 50%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Am I below 35%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_SelfDeadly</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Am I below 20%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                            </else>
+                                        </condition>
+                                    </normal>
+                                    <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_SelfUnhealthy</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I below 70%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I below 50%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I below 35%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_SelfDeadly</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I below 20%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </else>
+                                </condition>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I below 90%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_SelfUnhealthy</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I below 70%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I below 50%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I below 35%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_SelfDeadly</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I below 20%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                            <float id="value">90.00</float>
+                            <string id="compare method" values="valuecompare">less or equal</string>
+                            <string id="check on" values="targetself">target</string>
+                            <string id="Comment">Target Health Checks</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetHurt</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Is my target below 90%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <condition id="checkCharacterValue">
+                                    <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                    <float id="value">70.00</float>
+                                    <string id="compare method" values="valuecompare">less or equal</string>
+                                    <string id="check on" values="targetself">target</string>
+                                    <string id="Comment">Target Health Checks</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_TargetUnhealthy</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Is my target below 70%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <condition id="checkCharacterValue">
+                                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                            <float id="value">50.00</float>
+                                            <string id="compare method" values="valuecompare">less or equal</string>
+                                            <string id="check on" values="targetself">target</string>
+                                            <string id="Comment">Target Health Checks</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_TargetDamaged</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">Is my target below 50%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <condition id="checkCharacterValue">
+                                                    <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                                    <float id="value">35.00</float>
+                                                    <string id="compare method" values="valuecompare">less or equal</string>
+                                                    <string id="check on" values="targetself">target</string>
+                                                    <string id="Comment">Target Health Checks</string>
+                                                    <normal>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_TargetCritical</string>
+                                                            <string id="value" values="flagtoggle">yes</string>
+                                                            <string id="Comment">Is my target below 35%?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <condition id="checkCharacterValue">
+                                                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                                            <float id="value">20.00</float>
+                                                            <string id="compare method" values="valuecompare">less or equal</string>
+                                                            <string id="check on" values="targetself">target</string>
+                                                            <string id="Comment">Target Health Checks</string>
+                                                            <normal>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_TargetDeadly</string>
+                                                                    <string id="value" values="flagtoggle">yes</string>
+                                                                    <string id="Comment">Is my target below 20%?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                            </normal>
+                                                            <else>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_TargetDeadly</string>
+                                                                    <string id="value" values="flagtoggle">no</string>
+                                                                    <string id="Comment">Is my target below 20%?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                            </else>
+                                                        </condition>
+                                                    </normal>
+                                                    <else>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_TargetCritical</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Is my target below 35%?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_TargetDeadly</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Is my target below 20%?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                    </else>
+                                                </condition>
+                                            </normal>
+                                            <else>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_TargetDamaged</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Is my target below 50%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_TargetCritical</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Is my target below 35%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_TargetDeadly</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Is my target below 20%?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                            </else>
+                                        </condition>
+                                    </normal>
+                                    <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_TargetUnhealthy</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Is my target below 70%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_TargetDamaged</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Is my target below 50%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_TargetCritical</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Is my target below 35%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_TargetDeadly</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Is my target below 20%?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </else>
+                                </condition>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetHurt</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Is my target below 90%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetUnhealthy</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Is my target below 70%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetDamaged</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Is my target below 50%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetCritical</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Is my target below 35%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetDeadly</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Is my target below 20%?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
                         <condition id="directionToEnemyBase">
                             <string id="direction" values="forwardbackward">FORWARD</string>
                             <string id="Comment">Which way am I facing?</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <condition id="isFromTeam">
                                     <string id="team" values="teamswithnumbers">ZERO_TEAM</string>
@@ -404,6 +815,7 @@
                             <float id="time in seconds">-1.00</float>
                             <string id="compare method" values="valuecompare">greater or equal</string>
                             <string id="Comment">Wall detection</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <andblock>
                                     <normal>
@@ -2838,9 +3250,11 @@
                             <float id="time in seconds">-1.00</float>
                             <string id="compare method" values="valuecompare">greater or equal</string>
                             <string id="Comment">Corner Detection</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <andblock>
                                     <string id="Comment">Row check top</string>
+                                    <string id="Minimized">yes</string>
                                     <normal>
                                         <andblock>
                                             <string id="Comment">column check right</string>
@@ -3268,6 +3682,7 @@
                             <string id="id">Toolkit_Detection_Event_Blocked</string>
                             <string id="value" values="yesno">yes</string>
                             <string id="Comment">Identifies the blocking entity</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <condition id="isInArea">
                                     <string id="condition" values="yesno">yes</string>
@@ -3354,6 +3769,7 @@
                         </condition>
                         <andblock>
                             <string id="Comment">Am I on a glass platform?</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_OnPlatform</string>
