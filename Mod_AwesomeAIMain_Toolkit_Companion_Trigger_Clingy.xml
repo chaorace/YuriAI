@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <string id="Comment">Document variables</string>
+                </condition>
+                <condition id="hasTarget">
+                    <string id="condition" values="yesno">yes</string>
+                    <string id="Comment">Am I targetting someone?</string>
+                    <else>
+                        <action id="selectTarget">
+                            <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="class"></string>
+                            <string id="remove if not found" values="yesno">no</string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">50.00</float>
+                            <float id="height">50.00</float>
+                            <string id="compare method" values="valuecompare2">greater or equal</string>
+                            <float id="health value">0.00</float>
+                            <string id="distance check" values="distance check">CLOSEST</string>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="ignore invisibility" values="yesno">no</string>
+                            <string id="Comment">Cling to the nearest possible guy</string>
+                        </action>
+                    </else>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

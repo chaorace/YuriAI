@@ -4,9 +4,8 @@
 4	MyApp constructor ends
 5	NetworkManager constructor starts
 6	NetworkManager constructor ends
-7	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_GenericFindNextPath.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml"
-8	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_RibbitFindNextPath.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml"
-9	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml"
-10	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml"
-11	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus.xml"
-12	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_WaypointPlus.xml"
+7	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger.xml" CurrentFile is: ""
+8	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"
+9	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger_AutoAttack.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"
+10	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger_Primary.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"
+11	BehaviourBlockExecute::open uses fullFileName: "../BehavioursCustom/Mod_AwesomeAIMain_Toolkit_Attack_Trigger_Secondary.xml" CurrentFile is: "C:\Users\Chris\Documents\GitHub\YuriAI\Mod_AwesomeAIMain_Toolkit_Companion.xml"

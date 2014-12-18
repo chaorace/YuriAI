@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <normal>
+                        <action id="log">
+                            <string id="text">Loaded Attack Toolkit!</string>
+                            <string id="counter"></string>
+                            <string id="bool"></string>
+                        </action>
+                    </normal>
+                </condition>
+                <action id="executeBehaviourTree">
+                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Companion_Trigger</string>
+                    <string id="Comment">Triggers binding file</string>
+                    <string id="Minimized">yes</string>
+                </action>
+                <sequence>
+                    <string id="Is blocking">no</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Companion_Trigger_Clingy</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Clingy Trigger</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </sequence>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>
