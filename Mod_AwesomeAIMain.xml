@@ -12,12 +12,6 @@
                         </action>
                     </normal>
                 </condition>
-                <action id="setBool">
-                    <string id="id">Toolkit_Companion_Trigger_Clingy</string>
-                    <string id="value" values="flagtoggle">yes</string>
-                    <string id="Comment">Clingy Trigger</string>
-                    <string id="Minimized">yes</string>
-                </action>
                 <action id="executeBehaviourTree">
                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Constants</string>
                     <string id="Comment">Constants Toolkit, handles constants</string>

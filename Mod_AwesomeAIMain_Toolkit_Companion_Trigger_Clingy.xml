@@ -126,7 +126,7 @@
                     <string id="Comment">Is my target friendly?</string>
                     <normal>
                         <action id="setBool">
-                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
+                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
                             <string id="value" values="flagtoggle">yes</string>
                             <string id="Comment">Stay near my ally</string>
                         </action>
