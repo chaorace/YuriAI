@@ -52,10 +52,10 @@
                             <float id="width">0.50</float>
                             <float id="height">0.40</float>
                             <string id="check line of sight" values="yesno">no</string>
-                            <string id="Comment">Is an enemy player in the area?</string>
+                            <string id="Comment">Is an enemy creep in the area?</string>
                             <normal>
                                 <action id="selectTarget">
-                                    <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
+                                    <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                     <string id="class"></string>
                                     <string id="remove if not found" values="yesno">yes</string>
