@@ -155,66 +155,64 @@
 155	Received PID_CONNECTION_SUCCESSFUL
 156	Sending AI info
 157	Connection lost
-0	Sending AI info
-31	Connection lost
-32	Received PID_CONNECTION_SUCCESSFUL
-33	Sending AI info
-34	Connection lost
-35	Received PID_CONNECTION_SUCCESSFUL
-36	Sending AI info
-37	Connection lost
-38	Received PID_CONNECTION_SUCCESSFUL
-39	Sending AI info
-40	Connection lost
-41	Received PID_CONNECTION_SUCCESSFUL
-42	Sending AI info
-43	Connection lost
-44	Received PID_CONNECTION_SUCCESSFUL
-45	Sending AI info
-46	Connection lost
-47	Received PID_CONNECTION_SUCCESSFUL
-48	Sending AI info
-49	Connection lost
-50	Received PID_CONNECTION_SUCCESSFUL
-51	Sending AI info
-52	Connection lost
-53	Received PID_CONNECTION_SUCCESSFUL
-54	Sending AI info
-55	Connection lost
-56	Received PID_CONNECTION_SUCCESSFUL
-57	Sending AI info
-58	Connection lost
-59	Received PID_CONNECTION_SUCCESSFUL
-60	Sending AI info
-61	Connection lost
-62	Received PID_CONNECTION_SUCCESSFUL
-63	Sending AI info
-64	Connection lost
-65	Received PID_CONNECTION_SUCCESSFUL
-66	Sending AI info
-67	Connection lost
-68	Received PID_CONNECTION_SUCCESSFUL
-69	Sending AI info
-70	Connection lost
-71	Received PID_CONNECTION_SUCCESSFUL
-72	Sending AI info
-73	Connection lost
-74	Received PID_CONNECTION_SUCCESSFUL
-75	Sending AI info
-76	Connection lost
-77	Received PID_CONNECTION_SUCCESSFUL
-78	Sending AI info
-79	Connection lost
-80	Received PID_CONNECTION_SUCCESSFUL
-81	Sending AI info
-82	Connection lost
-83	Received PID_CONNECTION_SUCCESSFUL
-84	Sending AI info
-85	Connection lost
-86	Received PID_CONNECTION_SUCCESSFUL
-87	Sending AI info
-88	Connection lost
-89	Received PID_CONNECTION_SUCCESSFUL
+158	Received PID_CONNECTION_SUCCESSFUL
+159	Sending AI info
+160	Connection lost
+161	Received PID_CONNECTION_SUCCESSFUL
+162	Sending AI info
+163	Connection lost
+164	Received PID_CONNECTION_SUCCESSFUL
+165	Sending AI info
+166	Connection lost
+167	Received PID_CONNECTION_SUCCESSFUL
+168	Sending AI info
+169	Connection lost
+170	Received PID_CONNECTION_SUCCESSFUL
+171	Sending AI info
+172	Connection lost
+173	Received PID_CONNECTION_SUCCESSFUL
+174	Sending AI info
+175	Connection lost
+176	Received PID_CONNECTION_SUCCESSFUL
+177	Sending AI info
+178	Connection lost
+179	Received PID_CONNECTION_SUCCESSFUL
+180	Sending AI info
+181	Connection lost
+182	Received PID_CONNECTION_SUCCESSFUL
+183	Sending AI info
+184	Connection lost
+185	Received PID_CONNECTION_SUCCESSFUL
+186	Sending AI info
+187	Connection lost
+188	Received PID_CONNECTION_SUCCESSFUL
+189	Sending AI info
+190	Connection lost
+191	Received PID_CONNECTION_SUCCESSFUL
+192	Sending AI info
+193	Connection lost
+194	Received PID_CONNECTION_SUCCESSFUL
+195	Sending AI info
+196	Connection lost
+197	Received PID_CONNECTION_SUCCESSFUL
+198	Sending AI info
+199	Connection lost
+200	Received PID_CONNECTION_SUCCESSFUL
+201	Sending AI info
+202	Connection lost
+203	Received PID_CONNECTION_SUCCESSFUL
+204	Sending AI info
+205	Connection lost
+206	Received PID_CONNECTION_SUCCESSFUL
+207	Sending AI info
+208	Connection lost
+209	Received PID_CONNECTION_SUCCESSFUL
+210	Sending AI info
+211	Connection lost
+212	Received PID_CONNECTION_SUCCESSFUL
+213	Sending AI info
+214	Connection lost
+NNECTION_SUCCESSFUL
 90	Sending AI info
 91	Connection lost
 92	Received PID_CONNECTION_SUCCESSFUL
@@ -301,3 +299,57 @@
 173	Received PID_CONNECTION_SUCCESSFUL
 174	Sending AI info
 175	Connection lost
+176	Received PID_CONNECTION_SUCCESSFUL
+177	Sending AI info
+178	Connection lost
+179	Received PID_CONNECTION_SUCCESSFUL
+180	Sending AI info
+181	Connection lost
+182	Received PID_CONNECTION_SUCCESSFUL
+183	Sending AI info
+184	Connection lost
+185	Received PID_CONNECTION_SUCCESSFUL
+186	Sending AI info
+187	Connection lost
+188	Received PID_CONNECTION_SUCCESSFUL
+189	Sending AI info
+190	Connection lost
+191	Received PID_CONNECTION_SUCCESSFUL
+192	Sending AI info
+193	Connection lost
+194	Received PID_CONNECTION_SUCCESSFUL
+195	Sending AI info
+196	Connection lost
+197	Received PID_CONNECTION_SUCCESSFUL
+198	Sending AI info
+199	Connection lost
+200	Received PID_CONNECTION_SUCCESSFUL
+201	Sending AI info
+202	Connection lost
+203	Received PID_CONNECTION_SUCCESSFUL
+204	Sending AI info
+205	Connection lost
+206	Received PID_CONNECTION_SUCCESSFUL
+207	Sending AI info
+208	Connection lost
+209	Received PID_CONNECTION_SUCCESSFUL
+210	Sending AI info
+211	Connection lost
+212	Received PID_CONNECTION_SUCCESSFUL
+213	Sending AI info
+214	Connection lost
+215	Received PID_CONNECTION_SUCCESSFUL
+216	Sending AI info
+217	Connection lost
+218	Received PID_CONNECTION_SUCCESSFUL
+219	Sending AI info
+220	Connection lost
+221	Received PID_CONNECTION_SUCCESSFUL
+222	Sending AI info
+223	Connection lost
+224	Received PID_CONNECTION_SUCCESSFUL
+225	Sending AI info
+226	Connection lost
+227	Received PID_CONNECTION_SUCCESSFUL
+228	Sending AI info
+229	Connection lost

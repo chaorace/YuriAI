@@ -418,6 +418,7 @@
                             <string id="compare method" values="valuecompare">less or equal</string>
                             <string id="check on" values="targetself">self</string>
                             <string id="Comment">Self Health Checks</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
@@ -593,6 +594,7 @@
                             <string id="compare method" values="valuecompare">less or equal</string>
                             <string id="check on" values="targetself">target</string>
                             <string id="Comment">Target Health Checks</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_TargetHurt</string>
@@ -3651,7 +3653,7 @@
                         </condition>
                         <condition id="isInArea">
                             <string id="condition" values="yesno">yes</string>
-                            <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;CREEPS;;</string>
+                            <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;CREEPS;;INVINCIBLE_OBSTACLES;;DESTROYABLE_OBSTACLES;;</string>
                             <string id="check green obstacles only" values="yesno">no</string>
                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                             <string id="areaName"></string>
@@ -3662,7 +3664,6 @@
                             <string id="check line of sight" values="yesno">no</string>
                             <string id="ignore invisibility" values="yesno">yes</string>
                             <string id="Comment">Am I being blocked by a collidable entity?</string>
-                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_Blocked</string>
@@ -3682,7 +3683,6 @@
                             <string id="id">Toolkit_Detection_Event_Blocked</string>
                             <string id="value" values="yesno">yes</string>
                             <string id="Comment">Identifies the blocking entity</string>
-                            <string id="Minimized">yes</string>
                             <normal>
                                 <condition id="isInArea">
                                     <string id="condition" values="yesno">yes</string>
@@ -3747,11 +3747,57 @@
                                                         </action>
                                                     </normal>
                                                     <else>
-                                                        <action id="adjustCounter">
-                                                            <string id="id">Toolkit_Detection_Event_BlockerType</string>
-                                                            <string id="value">-1</string>
-                                                            <string id="adjust method" values="valueadjust">set</string>
-                                                        </action>
+                                                        <condition id="isInArea">
+                                                            <string id="condition" values="yesno">yes</string>
+                                                            <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;</string>
+                                                            <string id="check green obstacles only" values="yesno">no</string>
+                                                            <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
+                                                            <string id="areaName"></string>
+                                                            <float id="xOffset">0.06</float>
+                                                            <float id="yOffset">0.00</float>
+                                                            <float id="width">0.03</float>
+                                                            <float id="height">0.08</float>
+                                                            <string id="check line of sight" values="yesno">no</string>
+                                                            <string id="ignore invisibility" values="yesno">yes</string>
+                                                            <string id="Comment">Am I being blocked by a wall?</string>
+                                                            <normal>
+                                                                <action id="adjustCounter">
+                                                                    <string id="id">Toolkit_Detection_Event_BlockerType</string>
+                                                                    <string id="value">4</string>
+                                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                                </action>
+                                                            </normal>
+                                                            <else>
+                                                                <condition id="isInArea">
+                                                                    <string id="condition" values="yesno">yes</string>
+                                                                    <string id="collision groups" values="collison groups" multiselect="true">DESTROYABLE_OBSTACLES;;</string>
+                                                                    <string id="check green obstacles only" values="yesno">no</string>
+                                                                    <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
+                                                                    <string id="areaName"></string>
+                                                                    <float id="xOffset">0.06</float>
+                                                                    <float id="yOffset">0.00</float>
+                                                                    <float id="width">0.03</float>
+                                                                    <float id="height">0.08</float>
+                                                                    <string id="check line of sight" values="yesno">no</string>
+                                                                    <string id="ignore invisibility" values="yesno">yes</string>
+                                                                    <string id="Comment">Am I being blocked by a construct?</string>
+                                                                    <normal>
+                                                                        <action id="adjustCounter">
+                                                                            <string id="id">Toolkit_Detection_Event_BlockerType</string>
+                                                                            <string id="value">4</string>
+                                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                                        </action>
+                                                                    </normal>
+                                                                    <else>
+                                                                        <action id="adjustCounter">
+                                                                            <string id="id">Toolkit_Detection_Event_BlockerType</string>
+                                                                            <string id="value">-1</string>
+                                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                                        </action>
+                                                                    </else>
+                                                                </condition>
+                                                            </else>
+                                                        </condition>
                                                     </else>
                                                 </condition>
                                             </else>
