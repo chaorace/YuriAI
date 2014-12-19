@@ -17,7 +17,7 @@
                 <condition id="getBoolEquals">
                     <string id="id">Toolkit_Companion_Trigger_Clingy</string>
                     <string id="value" values="yesno">yes</string>
-                    <string id="Comment">AutoAttack</string>
+                    <string id="Comment">Clingy Trigger</string>
                     <normal>
                         <action id="executeBehaviourTree">
                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Companion_Trigger_Clingy</string>
