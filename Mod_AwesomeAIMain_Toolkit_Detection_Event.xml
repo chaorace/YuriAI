@@ -3686,7 +3686,7 @@
                             <normal>
                                 <condition id="isInArea">
                                     <string id="condition" values="yesno">yes</string>
-                                    <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;</string>
+                                    <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;CREEPS;;</string>
                                     <string id="check green obstacles only" values="yesno">no</string>
                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                     <string id="areaName"></string>
