@@ -28,8 +28,8 @@
                             <else>
                                 <condition id="getBoolEquals">
                                     <string id="id">Toolkit_Detection_Event_TargetNear</string>
-                                    <string id="value" values="yesno">no</string>
-                                    <string id="Comment">Is my opponent outside &quot;far&quot; range?</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Is my opponent getting too close?</string>
                                     <normal>
                                         <action id="setBool">
                                             <string id="id">Toolkit_Movement_Trigger_MoveAwayFromTarget</string>

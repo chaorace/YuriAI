@@ -15,9 +15,9 @@
                     <float id="value">0.00</float>
                     <string id="character minimum"></string>
                     <float id="xOffset">0.00</float>
-                    <float id="yOffset">0.20</float>
-                    <float id="width">0.70</float>
-                    <float id="height">0.40</float>
+                    <float id="yOffset">0.00</float>
+                    <float id="width">1.00</float>
+                    <float id="height">1.00</float>
                     <string id="check line of sight" values="yesno">no</string>
                     <string id="Comment">[TARGETSELECTION] Is an enemy player in the area?</string>
                     <normal>
@@ -27,9 +27,9 @@
                             <string id="class"></string>
                             <string id="remove if not found" values="yesno">yes</string>
                             <float id="xOffset">0.00</float>
-                            <float id="yOffset">0.20</float>
-                            <float id="width">0.90</float>
-                            <float id="height">0.60</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">1.00</float>
+                            <float id="height">1.00</float>
                             <string id="compare method" values="valuecompare2">greater or equal</string>
                             <float id="health value">0.00</float>
                             <string id="distance check" values="distance check">CLOSEST</string>
@@ -49,8 +49,8 @@
                             <string id="character minimum"></string>
                             <float id="xOffset">0.00</float>
                             <float id="yOffset">0.20</float>
-                            <float id="width">0.50</float>
-                            <float id="height">0.40</float>
+                            <float id="width">0.20</float>
+                            <float id="height">0.20</float>
                             <string id="check line of sight" values="yesno">no</string>
                             <string id="Comment">Is an enemy creep in the area?</string>
                             <normal>
@@ -61,8 +61,8 @@
                                     <string id="remove if not found" values="yesno">yes</string>
                                     <float id="xOffset">0.00</float>
                                     <float id="yOffset">0.20</float>
-                                    <float id="width">0.70</float>
-                                    <float id="height">0.60</float>
+                                    <float id="width">0.20</float>
+                                    <float id="height">0.20</float>
                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                     <float id="health value">0.00</float>
                                     <string id="distance check" values="distance check">CLOSEST</string>
