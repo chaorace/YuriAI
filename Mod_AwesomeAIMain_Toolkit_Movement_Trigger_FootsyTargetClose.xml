@@ -6,15 +6,10 @@
                 <condition id="hasTarget">
                     <string id="condition" values="yesno">yes</string>
                     <normal>
-                        <condition id="isTargetInArea">
-                            <string id="condition" values="yesno">yes</string>
-                            <float id="xOffset">0.00</float>
-                            <float id="yOffset">0.00</float>
-                            <float id="width">0.20</float>
-                            <float id="height">0.20</float>
-                            <string id="check line of sight" values="yesno">no</string>
-                            <string id="ignore invisibility" values="yesno">no</string>
-                            <string id="Comment">Stay out of this radius</string>
+                        <condition id="getBoolEquals">
+                            <string id="id">Toolkit_Detection_Event_TargetClose</string>
+                            <string id="value" values="yesno">yes</string>
+                            <string id="Comment">Is my target close?</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Movement_Trigger_MoveAwayFromTarget</string>
@@ -22,16 +17,11 @@
                                 </action>
                             </normal>
                             <else>
-                                <condition id="isTargetInArea">
-                                    <string id="condition" values="yesno">yes</string>
-                                    <float id="xOffset">0.00</float>
-                                    <float id="yOffset">0.00</float>
-                                    <float id="width">0.50</float>
-                                    <float id="height">0.50</float>
-                                    <string id="check line of sight" values="yesno">no</string>
-                                    <string id="ignore invisibility" values="yesno">no</string>
-                                    <string id="Comment">Stay in this radius</string>
-                                    <else>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Detection_Event_TargetNear</string>
+                                    <string id="value" values="yesno">no</string>
+                                    <string id="Comment">Is my target not near?</string>
+                                    <normal>
                                         <condition id="isTargetInArea">
                                             <string id="condition" values="yesno">yes</string>
                                             <float id="xOffset">0.00</float>
@@ -58,7 +48,7 @@
                                                 </action>
                                             </else>
                                         </condition>
-                                    </else>
+                                    </normal>
                                 </condition>
                             </else>
                         </condition>

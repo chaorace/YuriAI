@@ -26,15 +26,10 @@
                                 </action>
                             </normal>
                             <else>
-                                <condition id="isTargetInArea">
-                                    <string id="condition" values="yesno">yes</string>
-                                    <float id="xOffset">0.00</float>
-                                    <float id="yOffset">0.00</float>
-                                    <float id="width">1.00</float>
-                                    <float id="height">1.00</float>
-                                    <string id="check line of sight" values="yesno">no</string>
-                                    <string id="ignore invisibility" values="yesno">no</string>
-                                    <string id="Comment">Is my target too close?</string>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Detection_Event_TargetNear</string>
+                                    <string id="value" values="yesno">no</string>
+                                    <string id="Comment">Is my opponent outside &quot;far&quot; range?</string>
                                     <normal>
                                         <action id="setBool">
                                             <string id="id">Toolkit_Movement_Trigger_MoveAwayFromTarget</string>
