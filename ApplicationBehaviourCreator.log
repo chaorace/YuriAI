@@ -212,12 +212,11 @@
 212	Received PID_CONNECTION_SUCCESSFUL
 213	Sending AI info
 214	Connection lost
-NNECTION_SUCCESSFUL
-90	Sending AI info
-91	Connection lost
-92	Received PID_CONNECTION_SUCCESSFUL
-93	Sending AI info
-94	Connection lost
+215	NetworkManager destructor starts
+216	NetworkManager destructor ends
+217	MyApp destructor starts
+218	MyApp destructor ends
+ion lost
 95	Received PID_CONNECTION_SUCCESSFUL
 96	Sending AI info
 97	Connection lost
@@ -353,3 +352,7 @@ NNECTION_SUCCESSFUL
 227	Received PID_CONNECTION_SUCCESSFUL
 228	Sending AI info
 229	Connection lost
+230	NetworkManager destructor starts
+231	NetworkManager destructor ends
+232	MyApp destructor starts
+233	MyApp destructor ends
