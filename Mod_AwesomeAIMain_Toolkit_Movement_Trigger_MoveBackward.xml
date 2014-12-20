@@ -75,7 +75,7 @@
                             </normal>
                             <or>
                                 <condition id="checkCounter">
-                                    <string id="id">Toolkit_Movement_Trigger_MoveForward_ActiveTicks</string>
+                                    <string id="id">Toolkit_Movement_Trigger_MoveBackward_ActiveTicks</string>
                                     <string id="value">3</string>
                                     <string id="compare method" values="valuecompare">greater or equal</string>
                                     <string id="Comment">Has this trigger been active for 3 ticks or more?</string>
