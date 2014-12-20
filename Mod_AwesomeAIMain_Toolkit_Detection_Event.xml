@@ -8,6 +8,24 @@
                     <string id="Minimized">yes</string>
                     <normal>
                         <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetClose</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target close?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetNear</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target near?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_TargetFar</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Is my target far?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
                             <string id="id">Toolkit_Detection_Event_SelfHurt</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">Am I below 90%?</string>
@@ -412,6 +430,78 @@
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Only do once every other tick to save performance/Simulate human reaction time</string>
                     <normal>
+                        <condition id="isTargetInArea">
+                            <string id="condition" values="yesno">yes</string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">0.20</float>
+                            <float id="height">0.20</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="ignore invisibility" values="yesno">no</string>
+                            <string id="Comment">Nearness checks</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetClose</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_TargetClose</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <condition id="isTargetInArea">
+                                    <string id="condition" values="yesno">yes</string>
+                                    <float id="xOffset">0.00</float>
+                                    <float id="yOffset">0.00</float>
+                                    <float id="width">0.50</float>
+                                    <float id="height">0.50</float>
+                                    <string id="check line of sight" values="yesno">no</string>
+                                    <string id="ignore invisibility" values="yesno">no</string>
+                                    <string id="Comment">Is my target Near?</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_TargetNear</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_TargetNear</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <condition id="isTargetInArea">
+                                            <string id="condition" values="yesno">yes</string>
+                                            <float id="xOffset">0.00</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">1.00</float>
+                                            <float id="height">1.00</float>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="ignore invisibility" values="yesno">no</string>
+                                            <string id="Comment">Is my target far?</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_TargetFar</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_TargetFar</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                            </else>
+                                        </condition>
+                                    </else>
+                                </condition>
+                            </else>
+                        </condition>
                         <condition id="checkCharacterValue">
                             <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
                             <float id="value">90.00</float>
