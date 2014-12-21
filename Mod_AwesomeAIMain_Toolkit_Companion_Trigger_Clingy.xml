@@ -20,6 +20,7 @@
                     <float id="height">1.00</float>
                     <string id="check line of sight" values="yesno">no</string>
                     <string id="Comment">[TARGETSELECTION] Is an enemy player in the area?</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="selectTarget">
                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
@@ -120,25 +121,69 @@
                         </condition>
                     </else>
                 </condition>
-                <condition id="isFromTeam">
-                    <string id="team" values="teamswithnumbers">OWN_TEAM</string>
-                    <string id="check on" values="targetself">target</string>
-                    <string id="Comment">Is my target friendly?</string>
+                <andblock>
+                    <string id="Comment">Do I need to head back home?</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                            <string id="Comment">Stay near my ally</string>
+                        <action id="selectDestWaypoint">
+                            <string id="name">REGENHOME</string>
+                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                            <string id="Comment">I want to go home!</string>
                         </action>
+                        <condition id="isAtDestWaypoint">
+                            <string id="Comment">Am I home yet?</string>
+                            <normal>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Am I still hurt?</string>
+                                </condition>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_Teleport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Teleport!</string>
+                                </action>
+                            </else>
+                        </condition>
                     </normal>
                     <else>
-                        <action id="setBool">
-                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                            <string id="Comment">Keep a distance from my enemy</string>
-                        </action>
+                        <condition id="isFromTeam">
+                            <string id="team" values="teamswithnumbers">OWN_TEAM</string>
+                            <string id="check on" values="targetself">target</string>
+                            <string id="Comment">Is my target friendly?</string>
+                            <string id="Minimized">yes</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Stay near my ally</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Keep a distance from my enemy</string>
+                                </action>
+                            </else>
+                        </condition>
                     </else>
-                </condition>
+                    <or>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">gold</string>
+                            <float id="value">500.00</float>
+                            <string id="compare method" values="valuecompare">greater</string>
+                            <string id="check on" values="targetself">self</string>
+                            <string id="Comment">Am I rich?</string>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                            <string id="value" values="yesno">yes</string>
+                            <string id="Comment">Should I get health?</string>
+                        </condition>
+                    </or>
+                </andblock>
             </normal>
         </root>
     </behaviour>
