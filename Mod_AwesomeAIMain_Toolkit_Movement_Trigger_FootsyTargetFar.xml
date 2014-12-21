@@ -27,7 +27,7 @@
                             </normal>
                             <else>
                                 <condition id="getBoolEquals">
-                                    <string id="id">Toolkit_Detection_Event_TargetNear</string>
+                                    <string id="id">Toolkit_Detection_Event_TargetFar</string>
                                     <string id="value" values="yesno">yes</string>
                                     <string id="Comment">Is my opponent getting too close?</string>
                                     <normal>
