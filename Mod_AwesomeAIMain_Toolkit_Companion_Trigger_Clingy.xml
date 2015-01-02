@@ -20,7 +20,6 @@
                     <float id="height">1.00</float>
                     <string id="check line of sight" values="yesno">no</string>
                     <string id="Comment">[TARGETSELECTION] Is an enemy player in the area?</string>
-                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="selectTarget">
                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
@@ -69,7 +68,7 @@
                                     <string id="distance check" values="distance check">CLOSEST</string>
                                     <string id="check line of sight" values="yesno">no</string>
                                     <string id="ignore invisibility" values="yesno">no</string>
-                                    <string id="Comment">Target the nearest enemy player</string>
+                                    <string id="Comment">Target the nearest enemy creep</string>
                                 </action>
                             </normal>
                             <else>
