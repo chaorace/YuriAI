@@ -36,7 +36,7 @@
                             <string id="compare method" values="valuecompare2">greater or equal</string>
                             <float id="health value">0.00</float>
                             <string id="distance check" values="distance check">CLOSEST</string>
-                            <string id="check line of sight" values="yesno">yes</string>
+                            <string id="check line of sight" values="yesno">no</string>
                             <string id="ignore invisibility" values="yesno">no</string>
                             <string id="Comment">Target the nearest enemy turret</string>
                         </action>
@@ -77,40 +77,40 @@
                             <else>
                                 <condition id="isCharacterInArea">
                                     <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
-                                    <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
-                                    <string id="class"></string>
+                                    <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
+                                    <string id="class">CreepSolarboss</string>
                                     <string id="condition" values="charactervaluesCheckable">health</string>
                                     <string id="comparison" values="valuecompare">greater or equal</string>
                                     <float id="value">0.00</float>
                                     <string id="character minimum"></string>
                                     <float id="xOffset">0.00</float>
-                                    <float id="yOffset">0.20</float>
-                                    <float id="width">0.20</float>
-                                    <float id="height">0.20</float>
-                                    <string id="check line of sight" values="yesno">no</string>
-                                    <string id="Comment">Is an enemy creep in the area?</string>
+                                    <float id="yOffset">0.00</float>
+                                    <float id="width">0.80</float>
+                                    <float id="height">0.80</float>
+                                    <string id="check line of sight" values="yesno">yes</string>
+                                    <string id="Comment">Is a solarboss in the area?</string>
                                     <normal>
                                         <action id="selectTarget">
                                             <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
-                                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
-                                            <string id="class"></string>
+                                            <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
+                                            <string id="class">CreepSolarboss</string>
                                             <string id="remove if not found" values="yesno">yes</string>
                                             <float id="xOffset">0.00</float>
-                                            <float id="yOffset">0.20</float>
-                                            <float id="width">0.20</float>
-                                            <float id="height">0.20</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">0.80</float>
+                                            <float id="height">0.80</float>
                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                             <float id="health value">0.00</float>
                                             <string id="distance check" values="distance check">CLOSEST</string>
-                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="check line of sight" values="yesno">yes</string>
                                             <string id="ignore invisibility" values="yesno">no</string>
-                                            <string id="Comment">Target the nearest enemy creep</string>
+                                            <string id="Comment">Target the nearest solarboss</string>
                                         </action>
                                     </normal>
                                     <else>
                                         <condition id="isCharacterInArea">
                                             <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
-                                            <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
+                                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                             <string id="class"></string>
                                             <string id="condition" values="charactervaluesCheckable">health</string>
                                             <string id="comparison" values="valuecompare">greater or equal</string>
@@ -118,71 +118,106 @@
                                             <string id="character minimum"></string>
                                             <float id="xOffset">0.00</float>
                                             <float id="yOffset">0.20</float>
-                                            <float id="width">0.20</float>
-                                            <float id="height">0.20</float>
+                                            <float id="width">0.35</float>
+                                            <float id="height">0.40</float>
                                             <string id="check line of sight" values="yesno">no</string>
-                                            <string id="Comment">Is a neutral creep in the area?</string>
+                                            <string id="Comment">Is an enemy creep in the area?</string>
                                             <normal>
                                                 <action id="selectTarget">
                                                     <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
-                                                    <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
+                                                    <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                     <string id="class"></string>
                                                     <string id="remove if not found" values="yesno">yes</string>
                                                     <float id="xOffset">0.00</float>
                                                     <float id="yOffset">0.20</float>
-                                                    <float id="width">0.20</float>
-                                                    <float id="height">0.20</float>
+                                                    <float id="width">0.35</float>
+                                                    <float id="height">0.40</float>
                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                     <float id="health value">0.00</float>
                                                     <string id="distance check" values="distance check">CLOSEST</string>
                                                     <string id="check line of sight" values="yesno">no</string>
                                                     <string id="ignore invisibility" values="yesno">no</string>
-                                                    <string id="Comment">Target the nearest neutral creep</string>
+                                                    <string id="Comment">Target the nearest enemy creep</string>
                                                 </action>
                                             </normal>
                                             <else>
-                                                <condition id="hasTarget">
-                                                    <string id="condition" values="yesno">yes</string>
-                                                    <string id="Comment">Am I targetting someone?</string>
+                                                <condition id="isCharacterInArea">
+                                                    <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
+                                                    <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
+                                                    <string id="class"></string>
+                                                    <string id="condition" values="charactervaluesCheckable">health</string>
+                                                    <string id="comparison" values="valuecompare">greater or equal</string>
+                                                    <float id="value">0.00</float>
+                                                    <string id="character minimum"></string>
+                                                    <float id="xOffset">0.00</float>
+                                                    <float id="yOffset">0.20</float>
+                                                    <float id="width">0.35</float>
+                                                    <float id="height">0.40</float>
+                                                    <string id="check line of sight" values="yesno">no</string>
+                                                    <string id="Comment">Is a neutral creep in the area?</string>
                                                     <normal>
-                                                        <orblock>
-                                                            <string id="Comment">Am I targetting something that&apos;s not an ally?</string>
-                                                            <normal>
-                                                                <action id="removeTarget">
-                                                                    <string id="Comment">Stop targetting</string>
-                                                                </action>
-                                                            </normal>
-                                                            <or>
-                                                                <condition id="isTargetType">
-                                                                    <string id="condition" values="yesno">yes</string>
-                                                                    <string id="target groups" values="target groups" multiselect="true">CREEPS;;DESTROYABLE_OBSTACLES;;</string>
-                                                                    <string id="Comment">Am I not targetting a player?</string>
-                                                                </condition>
-                                                                <condition id="isFromTeam">
-                                                                    <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
-                                                                    <string id="check on" values="targetself">target</string>
-                                                                    <string id="Comment">Is my target hostile?</string>
-                                                                </condition>
-                                                            </or>
-                                                        </orblock>
-                                                    </normal>
-                                                    <else>
                                                         <action id="selectTarget">
-                                                            <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
-                                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                                            <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
+                                                            <string id="teams" values="teams" multiselect="true">NEUTRAL_TEAM;;</string>
                                                             <string id="class"></string>
-                                                            <string id="remove if not found" values="yesno">no</string>
+                                                            <string id="remove if not found" values="yesno">yes</string>
                                                             <float id="xOffset">0.00</float>
-                                                            <float id="yOffset">0.00</float>
-                                                            <float id="width">50.00</float>
-                                                            <float id="height">50.00</float>
+                                                            <float id="yOffset">0.20</float>
+                                                            <float id="width">0.35</float>
+                                                            <float id="height">0.40</float>
                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                             <float id="health value">0.00</float>
                                                             <string id="distance check" values="distance check">CLOSEST</string>
                                                             <string id="check line of sight" values="yesno">no</string>
-                                                            <string id="ignore invisibility" values="yesno">yes</string>
-                                                            <string id="Comment">Target the nearest possible ally</string>
+                                                            <string id="ignore invisibility" values="yesno">no</string>
+                                                            <string id="Comment">Target the nearest neutral creep</string>
                                                         </action>
+                                                    </normal>
+                                                    <else>
+                                                        <condition id="hasTarget">
+                                                            <string id="condition" values="yesno">yes</string>
+                                                            <string id="Comment">Am I targetting someone?</string>
+                                                            <normal>
+                                                                <orblock>
+                                                                    <string id="Comment">Am I targetting something that&apos;s not an ally?</string>
+                                                                    <normal>
+                                                                        <action id="removeTarget">
+                                                                            <string id="Comment">Stop targetting</string>
+                                                                        </action>
+                                                                    </normal>
+                                                                    <or>
+                                                                        <condition id="isTargetType">
+                                                                            <string id="condition" values="yesno">yes</string>
+                                                                            <string id="target groups" values="target groups" multiselect="true">CREEPS;;DESTROYABLE_OBSTACLES;;</string>
+                                                                            <string id="Comment">Am I not targetting a player?</string>
+                                                                        </condition>
+                                                                        <condition id="isFromTeam">
+                                                                            <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
+                                                                            <string id="check on" values="targetself">target</string>
+                                                                            <string id="Comment">Is my target hostile?</string>
+                                                                        </condition>
+                                                                    </or>
+                                                                </orblock>
+                                                            </normal>
+                                                            <else>
+                                                                <action id="selectTarget">
+                                                                    <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
+                                                                    <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                                                    <string id="class"></string>
+                                                                    <string id="remove if not found" values="yesno">no</string>
+                                                                    <float id="xOffset">0.00</float>
+                                                                    <float id="yOffset">0.00</float>
+                                                                    <float id="width">50.00</float>
+                                                                    <float id="height">50.00</float>
+                                                                    <string id="compare method" values="valuecompare2">greater or equal</string>
+                                                                    <float id="health value">0.00</float>
+                                                                    <string id="distance check" values="distance check">CLOSEST</string>
+                                                                    <string id="check line of sight" values="yesno">no</string>
+                                                                    <string id="ignore invisibility" values="yesno">yes</string>
+                                                                    <string id="Comment">Target the nearest possible ally</string>
+                                                                </action>
+                                                            </else>
+                                                        </condition>
                                                     </else>
                                                 </condition>
                                             </else>
@@ -196,7 +231,8 @@
                 <condition id="isFromTeam">
                     <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
                     <string id="check on" values="targetself">target</string>
-                    <string id="Comment">Am I being persued by a hostile target?</string>
+                    <string id="Comment">[TARGETHANDLING] Am I being persued by a hostile target?</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
@@ -205,79 +241,113 @@
                         </action>
                     </normal>
                     <else>
-                        <orblock>
-                            <string id="Comment">Do I need to head back home?</string>
+                        <condition id="isFromTeam">
+                            <string id="team" values="teamswithnumbers">NEUTRAL_TEAM</string>
+                            <string id="check on" values="targetself">target</string>
+                            <string id="Comment">Is my target a neutral creep?</string>
                             <normal>
-                                <action id="selectDestWaypoint">
-                                    <string id="name">HEALAREA</string>
-                                    <string id="team" values="ownenemy">OWN_TEAM</string>
-                                    <string id="Comment">I want to go home!</string>
-                                </action>
-                                <condition id="isAtDestWaypoint">
-                                    <string id="Comment">Am I home yet?</string>
+                                <condition id="checkClass">
+                                    <string id="check on" values="targetself">target</string>
+                                    <string id="class">CreepSolarboss</string>
+                                    <string id="Comment">Is it a solar boss?</string>
                                     <normal>
-                                        <action id="adjustCharacterValue">
-                                            <string id="property" values="charactervaluesAdjustable">gold</string>
-                                            <float id="value">450.00</float>
-                                            <string id="adjust method" values="valueadjust">set</string>
-                                            <string id="Comment">Shop logic placeholder</string>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Keep a distance from it</string>
                                         </action>
-                                        <condition id="getBoolEquals">
-                                            <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
-                                            <string id="value" values="yesno">yes</string>
-                                            <string id="Comment">Am I still hurt?</string>
+                                    </normal>
+                                    <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_MoveTowardTarget</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">non-sticky. Keep enabled to keep going backward. Takes precedence over Move Away in conflicts</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Attack_Trigger_AutoAttack</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Auto Attack Trigger</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </else>
+                                </condition>
+                            </normal>
+                            <else>
+                                <orblock>
+                                    <string id="Comment">Do I need to head back home?</string>
+                                    <normal>
+                                        <action id="selectDestWaypoint">
+                                            <string id="name">HEALAREA</string>
+                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                            <string id="Comment">I want to go home!</string>
+                                        </action>
+                                        <condition id="isAtDestWaypoint">
+                                            <string id="Comment">Am I home yet?</string>
                                             <normal>
-                                                <action id="setBool">
-                                                    <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
-                                                    <string id="value" values="flagtoggle">yes</string>
-                                                    <string id="Comment">Currently getting health at healing area</string>
+                                                <action id="adjustCharacterValue">
+                                                    <string id="property" values="charactervaluesAdjustable">gold</string>
+                                                    <float id="value">450.00</float>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Shop logic placeholder</string>
                                                 </action>
+                                                <condition id="getBoolEquals">
+                                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                                    <string id="value" values="yesno">yes</string>
+                                                    <string id="Comment">Am I still hurt?</string>
+                                                    <normal>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
+                                                            <string id="value" values="flagtoggle">yes</string>
+                                                            <string id="Comment">Currently getting health at healing area</string>
+                                                        </action>
+                                                    </normal>
+                                                    <else>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Currently getting health at healing area</string>
+                                                        </action>
+                                                    </else>
+                                                </condition>
                                             </normal>
                                             <else>
                                                 <action id="setBool">
-                                                    <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
-                                                    <string id="value" values="flagtoggle">no</string>
-                                                    <string id="Comment">Currently getting health at healing area</string>
+                                                    <string id="id">Toolkit_Movement_Trigger_Teleport</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">Teleport!</string>
                                                 </action>
                                             </else>
                                         </condition>
                                     </normal>
                                     <else>
                                         <action id="setBool">
-                                            <string id="id">Toolkit_Movement_Trigger_Teleport</string>
+                                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
                                             <string id="value" values="flagtoggle">yes</string>
-                                            <string id="Comment">Teleport!</string>
+                                            <string id="Comment">Stay near my ally</string>
                                         </action>
                                     </else>
-                                </condition>
-                            </normal>
-                            <else>
-                                <action id="setBool">
-                                    <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
-                                    <string id="value" values="flagtoggle">yes</string>
-                                    <string id="Comment">Stay near my ally</string>
-                                </action>
+                                    <or>
+                                        <condition id="checkCharacterValue">
+                                            <string id="property" values="charactervaluesCheckable">gold</string>
+                                            <float id="value">500.00</float>
+                                            <string id="compare method" values="valuecompare">greater</string>
+                                            <string id="check on" values="targetself">self</string>
+                                            <string id="Comment">Am I rich?</string>
+                                        </condition>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Should I get health?</string>
+                                        </condition>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Am I currently getting health at healing area?</string>
+                                        </condition>
+                                    </or>
+                                </orblock>
                             </else>
-                            <or>
-                                <condition id="checkCharacterValue">
-                                    <string id="property" values="charactervaluesCheckable">gold</string>
-                                    <float id="value">500.00</float>
-                                    <string id="compare method" values="valuecompare">greater</string>
-                                    <string id="check on" values="targetself">self</string>
-                                    <string id="Comment">Am I rich?</string>
-                                </condition>
-                                <condition id="getBoolEquals">
-                                    <string id="id">Toolkit_Detection_Event_SelfCritical</string>
-                                    <string id="value" values="yesno">yes</string>
-                                    <string id="Comment">Should I get health?</string>
-                                </condition>
-                                <condition id="getBoolEquals">
-                                    <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
-                                    <string id="value" values="yesno">yes</string>
-                                    <string id="Comment">Am I currently getting health at healing area?</string>
-                                </condition>
-                            </or>
-                        </orblock>
+                        </condition>
                     </else>
                 </condition>
             </normal>
