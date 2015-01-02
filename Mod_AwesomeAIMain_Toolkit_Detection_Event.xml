@@ -465,6 +465,7 @@
                             <string id="team" values="ownenemy">OWN_TEAM</string>
                             <string id="who" values="targetself">self</string>
                             <string id="Comment">Area Checks</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
@@ -3621,11 +3622,9 @@
                             <float id="time in seconds">-1.00</float>
                             <string id="compare method" values="valuecompare">greater or equal</string>
                             <string id="Comment">Corner Detection</string>
-                            <string id="Minimized">yes</string>
                             <normal>
                                 <andblock>
                                     <string id="Comment">Row check top</string>
-                                    <string id="Minimized">yes</string>
                                     <normal>
                                         <andblock>
                                             <string id="Comment">column check right</string>
@@ -3641,6 +3640,7 @@
                                             <else>
                                                 <andblock>
                                                     <string id="Comment">column check mid</string>
+                                                    <string id="Minimized">yes</string>
                                                     <normal>
                                                         <action id="adjustCounter">
                                                             <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
@@ -3725,6 +3725,7 @@
                                             <normal>
                                                 <andblock>
                                                     <string id="Comment">column check right</string>
+                                                    <string id="Minimized">yes</string>
                                                     <normal>
                                                         <action id="adjustCounter">
                                                             <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
@@ -3750,7 +3751,6 @@
                                                             <else>
                                                                 <andblock>
                                                                     <string id="Comment">column check left</string>
-                                                                    <string id="Minimized">yes</string>
                                                                     <normal>
                                                                         <action id="adjustCounter">
                                                                             <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
@@ -3820,11 +3820,9 @@
                                             <else>
                                                 <andblock>
                                                     <string id="Comment">Row check bottom</string>
-                                                    <string id="Minimized">yes</string>
                                                     <normal>
                                                         <andblock>
                                                             <string id="Comment">column check right</string>
-                                                            <string id="Minimized">yes</string>
                                                             <normal>
                                                                 <action id="adjustCounter">
                                                                     <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
@@ -3837,7 +3835,6 @@
                                                             <else>
                                                                 <andblock>
                                                                     <string id="Comment">column check mid</string>
-                                                                    <string id="Minimized">yes</string>
                                                                     <normal>
                                                                         <action id="adjustCounter">
                                                                             <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
@@ -3850,7 +3847,6 @@
                                                                     <else>
                                                                         <andblock>
                                                                             <string id="Comment">column check left</string>
-                                                                            <string id="Minimized">yes</string>
                                                                             <normal>
                                                                                 <action id="adjustCounter">
                                                                                     <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
@@ -3899,6 +3895,15 @@
                                                             </or>
                                                         </andblock>
                                                     </normal>
+                                                    <else>
+                                                        <action id="adjustCounter">
+                                                            <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
+                                                            <string id="value">0</string>
+                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                            <string id="Comment">Number of continuous ticks that the character may have been stuck in a corner</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                    </else>
                                                     <or>
                                                         <condition id="getBoolEquals">
                                                             <string id="id">Toolkit_Detection_Event_WallAt11</string>
