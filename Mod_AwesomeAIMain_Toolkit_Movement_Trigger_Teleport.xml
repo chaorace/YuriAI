@@ -28,7 +28,7 @@
                         <condition id="checkCounter">
                             <string id="id">Toolkit_Movement_Trigger_Teleport_FirstTeleportTick</string>
                             <string id="value">Toolkit_Ticker_Event_Ticks - 30</string>
-                            <string id="compare method" values="valuecompare">greater</string>
+                            <string id="compare method" values="valuecompare">less</string>
                             <string id="Comment">Has it been over 3 seconds since I started attempting to teleport?</string>
                             <normal>
                                 <action id="adjustCounter">
