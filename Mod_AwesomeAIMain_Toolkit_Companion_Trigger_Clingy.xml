@@ -23,6 +23,7 @@
                     <float id="height">1.00</float>
                     <string id="check line of sight" values="yesno">yes</string>
                     <string id="Comment">[TARGETSELECTION] Is an enemy turret in the area?</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="selectTarget">
                             <string id="groups to select" values="target groups" multiselect="true">DESTROYABLE_OBSTACLES;;</string>
@@ -232,7 +233,6 @@
                     <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
                     <string id="check on" values="targetself">target</string>
                     <string id="Comment">[TARGETHANDLING] Am I being persued by a hostile target?</string>
-                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
@@ -250,6 +250,7 @@
                                     <string id="check on" values="targetself">target</string>
                                     <string id="class">CreepSolarboss</string>
                                     <string id="Comment">Is it a solar boss?</string>
+                                    <string id="Minimized">yes</string>
                                     <normal>
                                         <action id="setBool">
                                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
@@ -276,17 +277,14 @@
                                 <orblock>
                                     <string id="Comment">Do I need to head back home?</string>
                                     <normal>
-                                        <action id="selectDestWaypoint">
-                                            <string id="name">HEALAREA</string>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">HEALAREA</string>
                                             <string id="team" values="ownenemy">OWN_TEAM</string>
-                                            <string id="Comment">I want to go home!</string>
-                                        </action>
-                                        <condition id="isAtDestWaypoint">
-                                            <string id="Comment">Am I home yet?</string>
+                                            <string id="who" values="targetself">self</string>
                                             <normal>
                                                 <action id="adjustCharacterValue">
                                                     <string id="property" values="charactervaluesAdjustable">gold</string>
-                                                    <float id="value">450.00</float>
+                                                    <float id="value">490.00</float>
                                                     <string id="adjust method" values="valueadjust">set</string>
                                                     <string id="Comment">Shop logic placeholder</string>
                                                 </action>
