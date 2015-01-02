@@ -129,7 +129,7 @@
                     </else>
                 </condition>
                 <condition id="isFromTeam">
-                    <string id="team" values="teamswithnumbers">OWN_TEAM</string>
+                    <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
                     <string id="check on" values="targetself">target</string>
                     <string id="Comment">Am I being persued by a hostile target?</string>
                     <normal>
