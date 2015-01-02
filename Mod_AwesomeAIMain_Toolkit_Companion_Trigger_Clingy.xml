@@ -139,10 +139,23 @@
                         <condition id="isAtDestWaypoint">
                             <string id="Comment">Am I home yet?</string>
                             <normal>
+                                <action id="adjustCharacterValue">
+                                    <string id="property" values="charactervaluesAdjustable">gold</string>
+                                    <float id="value">450.00</float>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Shop logic placeholder</string>
+                                </action>
                                 <condition id="getBoolEquals">
                                     <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
                                     <string id="value" values="yesno">yes</string>
                                     <string id="Comment">Am I still hurt?</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Currently getting health at healing area</string>
+                                        </action>
+                                    </normal>
                                     <else>
                                         <action id="setBool">
                                             <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
