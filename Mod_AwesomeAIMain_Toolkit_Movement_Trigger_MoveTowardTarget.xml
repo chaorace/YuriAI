@@ -30,32 +30,34 @@
                                             <string id="Comment">non-sticky. Keep enabled to keep going down</string>
                                         </action>
                                     </normal>
-                                </condition>
-                            </else>
-                        </condition>
-                        <condition id="getBoolEquals">
-                            <string id="id">Toolkit_Detection_Event_TargetAtRight</string>
-                            <string id="value" values="yesno">yes</string>
-                            <string id="Comment">Target at cardinal right?</string>
-                            <normal>
-                                <action id="setBool">
-                                    <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
-                                    <string id="value" values="flagtoggle">yes</string>
-                                    <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
-                                </action>
-                            </normal>
-                            <else>
-                                <condition id="getBoolEquals">
-                                    <string id="id">Toolkit_Detection_Event_TargetAtLeft</string>
-                                    <string id="value" values="yesno">yes</string>
-                                    <string id="Comment">Target at cardinal left?</string>
-                                    <normal>
-                                        <action id="setBool">
-                                            <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
-                                            <string id="value" values="flagtoggle">yes</string>
-                                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
-                                        </action>
-                                    </normal>
+                                    <else>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Detection_Event_TargetAtRight</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Target at cardinal right?</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <condition id="getBoolEquals">
+                                                    <string id="id">Toolkit_Detection_Event_TargetAtLeft</string>
+                                                    <string id="value" values="yesno">yes</string>
+                                                    <string id="Comment">Target at cardinal left?</string>
+                                                    <normal>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
+                                                            <string id="value" values="flagtoggle">yes</string>
+                                                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                                                        </action>
+                                                    </normal>
+                                                </condition>
+                                            </else>
+                                        </condition>
+                                    </else>
                                 </condition>
                             </else>
                         </condition>

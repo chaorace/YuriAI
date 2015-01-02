@@ -45,9 +45,45 @@
                                                 </action>
                                             </normal>
                                             <else>
-                                                <action id="selectTargetWaypoint">
-                                                    <string id="Comment">Set Destination Waypoint to near target</string>
-                                                </action>
+                                                <andblock>
+                                                    <normal>
+                                                        <condition id="getBoolEquals">
+                                                            <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                                                            <string id="value" values="yesno">yes</string>
+                                                            <string id="Comment">Am I in the spawn area?</string>
+                                                            <else>
+                                                                <action id="selectDestWaypoint">
+                                                                    <string id="name">REGENHOME</string>
+                                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                    <string id="Comment">Set destination node to closest node to spawn</string>
+                                                                </action>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                                                                    <string id="value" values="flagtoggle">yes</string>
+                                                                    <string id="Comment">Activate node movement</string>
+                                                                </action>
+                                                            </else>
+                                                        </condition>
+                                                    </normal>
+                                                    <else>
+                                                        <action id="selectTargetWaypoint">
+                                                            <string id="Comment">Set Destination Waypoint to near target</string>
+                                                        </action>
+                                                    </else>
+                                                    <or>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">STARTAREA</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">target</string>
+                                                            <string id="Comment">Is my target in spawn area?</string>
+                                                        </condition>
+                                                        <condition id="isFromTeam">
+                                                            <string id="team" values="teamswithnumbers">OWN_TEAM</string>
+                                                            <string id="check on" values="targetself">target</string>
+                                                            <string id="Comment">Is my target an ally?</string>
+                                                        </condition>
+                                                    </or>
+                                                </andblock>
                                                 <action id="setBool">
                                                     <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
                                                     <string id="value" values="flagtoggle">yes</string>

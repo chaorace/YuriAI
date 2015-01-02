@@ -6,3 +6,7 @@
 6	NetworkManager constructor ends
 7	Received PID_CONNECTION_SUCCESSFUL
 8	Sending AI info
+9	NetworkManager destructor starts
+10	NetworkManager destructor ends
+11	MyApp destructor starts
+12	MyApp destructor ends
