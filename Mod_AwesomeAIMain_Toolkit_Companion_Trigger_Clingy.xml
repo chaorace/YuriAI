@@ -5,6 +5,13 @@
             <normal>
                 <condition id="once">
                     <string id="Comment">Document variables</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Currently getting health at healing area</string>
+                        </action>
+                    </normal>
                 </condition>
                 <condition id="isCharacterInArea">
                     <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
@@ -20,6 +27,7 @@
                     <float id="height">1.00</float>
                     <string id="check line of sight" values="yesno">no</string>
                     <string id="Comment">[TARGETSELECTION] Is an enemy player in the area?</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="selectTarget">
                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
@@ -120,7 +128,7 @@
                         </condition>
                     </else>
                 </condition>
-                <andblock>
+                <orblock>
                     <string id="Comment">Do I need to head back home?</string>
                     <normal>
                         <action id="selectDestWaypoint">
@@ -135,6 +143,13 @@
                                     <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
                                     <string id="value" values="yesno">yes</string>
                                     <string id="Comment">Am I still hurt?</string>
+                                    <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Currently getting health at healing area</string>
+                                        </action>
+                                    </else>
                                 </condition>
                             </normal>
                             <else>
@@ -151,7 +166,6 @@
                             <string id="team" values="teamswithnumbers">OWN_TEAM</string>
                             <string id="check on" values="targetself">target</string>
                             <string id="Comment">Is my target friendly?</string>
-                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
@@ -181,8 +195,13 @@
                             <string id="value" values="yesno">yes</string>
                             <string id="Comment">Should I get health?</string>
                         </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">Toolkit_Companion_Trigger_Clingy_Healing</string>
+                            <string id="value" values="yesno">yes</string>
+                            <string id="Comment">Am I currently getting health at healing area?</string>
+                        </condition>
                     </or>
-                </andblock>
+                </orblock>
             </normal>
         </root>
     </behaviour>
