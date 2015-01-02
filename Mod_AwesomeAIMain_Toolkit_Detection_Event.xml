@@ -8,6 +8,36 @@
                     <string id="Minimized">yes</string>
                     <normal>
                         <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I at the spawn?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_AreaShop</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I at the shop?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_AreaJungle</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I at the Jungle?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_AreaSolarboss</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I at the solarboss?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Detection_Event_AreaCorner</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Am I stuck in a corner?</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
                             <string id="id">Toolkit_Detection_Event_TargetClose</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">Is my target close?</string>
@@ -430,6 +460,239 @@
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Only do once every other tick to save performance/Simulate human reaction time</string>
                     <normal>
+                        <condition id="isInNamedArea">
+                            <string id="area name">STARTAREA</string>
+                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                            <string id="who" values="targetself">self</string>
+                            <string id="Comment">Area Checks</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Comment">Am I at the spawn?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_AreaShop</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I at the shop?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_AreaJungle</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I at the Jungle?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_AreaSolarboss</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I at the solarboss?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_AreaCorner</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I stuck in a corner?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <condition id="isInNamedArea">
+                                    <string id="area name">HEALAREA</string>
+                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                    <string id="who" values="targetself">self</string>
+                                    <string id="Comment">Am I at shop?</string>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_AreaShop</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Am I at the shop?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_AreaSolarboss</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I at the solarboss?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I at the spawn?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_AreaJungle</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I at the Jungle?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_AreaCorner</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I stuck in a corner?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">JUNGLE</string>
+                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                            <string id="who" values="targetself">self</string>
+                                            <string id="Comment">Am I in the Jungle?</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_AreaJungle</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">Am I at the Jungle?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_AreaCorner</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Am I stuck in a corner?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Am I at the spawn?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_AreaShop</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Am I at the shop?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Detection_Event_AreaSolarboss</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Am I at the solarboss?</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <orblock>
+                                                    <string id="Comment">Am I near the solarboss?</string>
+                                                    <normal>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_AreaSolarboss</string>
+                                                            <string id="value" values="flagtoggle">yes</string>
+                                                            <string id="Comment">Am I at the solarboss?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Am I at the spawn?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_AreaCorner</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Am I stuck in a corner?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_AreaJungle</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Am I at the Jungle?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Detection_Event_AreaShop</string>
+                                                            <string id="value" values="flagtoggle">no</string>
+                                                            <string id="Comment">Am I at the shop?</string>
+                                                            <string id="Minimized">yes</string>
+                                                        </action>
+                                                    </normal>
+                                                    <else>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">CORNER_STUCK</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                            <string id="Comment">Am I stuck in a corner?</string>
+                                                            <normal>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_AreaCorner</string>
+                                                                    <string id="value" values="flagtoggle">yes</string>
+                                                                    <string id="Comment">Am I stuck in a corner?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_AreaSolarboss</string>
+                                                                    <string id="value" values="flagtoggle">no</string>
+                                                                    <string id="Comment">Am I at the solarboss?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_AreaJungle</string>
+                                                                    <string id="value" values="flagtoggle">no</string>
+                                                                    <string id="Comment">Am I at the Jungle?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                                                                    <string id="value" values="flagtoggle">no</string>
+                                                                    <string id="Comment">Am I at the spawn?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                                <action id="setBool">
+                                                                    <string id="id">Toolkit_Detection_Event_AreaShop</string>
+                                                                    <string id="value" values="flagtoggle">no</string>
+                                                                    <string id="Comment">Am I at the shop?</string>
+                                                                    <string id="Minimized">yes</string>
+                                                                </action>
+                                                            </normal>
+                                                        </condition>
+                                                    </else>
+                                                    <or>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">SOLAR_BOSS_WARNING_0</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                            <string id="Comment">Am I near the solarboss?</string>
+                                                        </condition>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">SOLAR_BOSS_WARNING_1</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                            <string id="Comment">Am I near the solarboss?</string>
+                                                        </condition>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">SOLAR_BOSS_WARNING_0</string>
+                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                            <string id="Comment">Am I near the solarboss?</string>
+                                                        </condition>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">SOLAR_BOSS_WARNING_1</string>
+                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                            <string id="Comment">Am I near the solarboss?</string>
+                                                        </condition>
+                                                    </or>
+                                                </orblock>
+                                            </else>
+                                        </condition>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Detection_Event_AreaShop</string>
+                                            <string id="value" values="flagtoggle">no</string>
+                                            <string id="Comment">Am I at the shop?</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </else>
+                                </condition>
+                                <action id="setBool">
+                                    <string id="id">Toolkit_Detection_Event_AreaSpawn</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                    <string id="Comment">Am I at the spawn?</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
                         <condition id="isTargetInArea">
                             <string id="condition" values="yesno">yes</string>
                             <float id="xOffset">0.00</float>
@@ -439,6 +702,7 @@
                             <string id="check line of sight" values="yesno">no</string>
                             <string id="ignore invisibility" values="yesno">no</string>
                             <string id="Comment">Nearness checks</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_TargetClose</string>
