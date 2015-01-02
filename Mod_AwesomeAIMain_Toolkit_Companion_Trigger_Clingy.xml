@@ -144,7 +144,7 @@
                             <string id="Comment">Do I need to head back home?</string>
                             <normal>
                                 <action id="selectDestWaypoint">
-                                    <string id="name">REGENHOME</string>
+                                    <string id="name">HEALAREA</string>
                                     <string id="team" values="ownenemy">OWN_TEAM</string>
                                     <string id="Comment">I want to go home!</string>
                                 </action>

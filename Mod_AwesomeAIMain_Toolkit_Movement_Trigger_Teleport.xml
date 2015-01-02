@@ -5,7 +5,7 @@
             <normal>
                 <action id="pressButton">
                     <string id="button" values="buttons">SHOULDER_RIGHT</string>
-                    <float id="duration in seconds">0.10</float>
+                    <float id="duration in seconds">0.08</float>
                     <string id="Comment">Teleporting...</string>
                 </action>
             </normal>
