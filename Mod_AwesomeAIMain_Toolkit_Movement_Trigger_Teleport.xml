@@ -3,10 +3,64 @@
     <behaviour>
         <root x="110" y="40">
             <normal>
-                <action id="pressButton">
-                    <string id="button" values="buttons">SHOULDER_RIGHT</string>
-                    <float id="duration in seconds">0.08</float>
-                    <string id="Comment">Teleporting...</string>
+                <condition id="once">
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_Teleport_LastTeleportTick</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Mark the last tick a teleport was attempted</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_Teleport_FirstTeleportTick</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Mark the first tick teleport was attempted</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_Ticker_Event_Ticks</string>
+                    <string id="value">Toolkit_Movement_Trigger_Teleport_LastTeleportTick - 1</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Was I trying to teleport last tick?</string>
+                    <normal>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_Movement_Trigger_Teleport_FirstTeleportTick</string>
+                            <string id="value">Toolkit_Ticker_Event_Ticks - 31</string>
+                            <string id="compare method" values="valuecompare">greater or equal</string>
+                            <string id="Comment">Has it been over 3 seconds since I started attempting to teleport?</string>
+                            <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkit_Movement_Trigger_Teleport_FirstTeleportTick</string>
+                                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Mark the first tick teleport was attempted</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="pressButton">
+                                    <string id="button" values="buttons">SHOULDER_RIGHT</string>
+                                    <float id="duration in seconds">0.10</float>
+                                    <string id="Comment">Teleporting...</string>
+                                </action>
+                            </else>
+                        </condition>
+                    </normal>
+                    <else>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_Teleport_FirstTeleportTick</string>
+                            <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Mark the first tick teleport was attempted</string>
+                        </action>
+                    </else>
+                </condition>
+                <action id="adjustCounter">
+                    <string id="id">Toolkit_Movement_Trigger_Teleport_LastTeleportTick</string>
+                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                    <string id="adjust method" values="valueadjust">set</string>
+                    <string id="Comment">Mark the last tick a teleport was attempted</string>
                 </action>
             </normal>
         </root>
