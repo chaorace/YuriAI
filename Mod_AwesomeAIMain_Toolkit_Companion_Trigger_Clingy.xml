@@ -238,9 +238,33 @@
                             <string id="target groups" values="target groups" multiselect="true">PLAYERS;;</string>
                             <string id="Comment">Is it a player?</string>
                             <normal>
-                                <orblock>
-                                    <string id="Comment">Reasons to run away</string>
+                                <andblock>
+                                    <normal>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Dance near the enemy player</string>
+                                        </action>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Attack_Trigger_AutoAttack</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Auto Attack Trigger</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </normal>
                                     <else>
+                                        <action id="setBool">
+                                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
+                                            <string id="value" values="flagtoggle">yes</string>
+                                            <string id="Comment">Keep a distance from my enemy</string>
+                                        </action>
+                                    </else>
+                                    <or>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
+                                            <string id="value" values="yesno">no</string>
+                                            <string id="Comment">Am I not severely injured?</string>
+                                        </condition>
                                         <condition id="isCharacterInArea">
                                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
@@ -255,35 +279,9 @@
                                             <float id="height">0.80</float>
                                             <string id="check line of sight" values="yesno">yes</string>
                                             <string id="Comment">Is a healthy ally nearby?</string>
-                                            <normal>
-                                                <action id="setBool">
-                                                    <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
-                                                    <string id="value" values="flagtoggle">yes</string>
-                                                    <string id="Comment">Dance near the enemy player</string>
-                                                </action>
-                                                <action id="setBool">
-                                                    <string id="id">Toolkit_Attack_Trigger_AutoAttack</string>
-                                                    <string id="value" values="flagtoggle">yes</string>
-                                                    <string id="Comment">Auto Attack Trigger</string>
-                                                </action>
-                                            </normal>
-                                            <else>
-                                                <action id="setBool">
-                                                    <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
-                                                    <string id="value" values="flagtoggle">yes</string>
-                                                    <string id="Comment">Keep a distance from my enemy</string>
-                                                </action>
-                                            </else>
-                                        </condition>
-                                    </else>
-                                    <or>
-                                        <condition id="getBoolEquals">
-                                            <string id="id">Toolkit_Detection_Event_SelfCritical</string>
-                                            <string id="value" values="yesno">yes</string>
-                                            <string id="Comment">Am I severely injured?</string>
                                         </condition>
                                     </or>
-                                </orblock>
+                                </andblock>
                             </normal>
                         </condition>
                     </normal>
