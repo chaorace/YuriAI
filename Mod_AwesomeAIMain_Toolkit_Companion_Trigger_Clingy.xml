@@ -241,9 +241,9 @@
                                 <andblock>
                                     <normal>
                                         <action id="setBool">
-                                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
+                                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
                                             <string id="value" values="flagtoggle">yes</string>
-                                            <string id="Comment">Dance near the enemy player</string>
+                                            <string id="Comment">Dance close to the enemy player</string>
                                         </action>
                                         <action id="setBool">
                                             <string id="id">Toolkit_Attack_Trigger_AutoAttack</string>
