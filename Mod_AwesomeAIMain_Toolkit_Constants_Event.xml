@@ -207,6 +207,18 @@
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Waypoint</string>
                                 </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMHP_0</string>
+                                    <string id="value">18</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMHP_1</string>
+                                    <string id="value">118</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
                             </normal>
                         </condition>
                         <condition id="once">
@@ -270,18 +282,6 @@
                         <condition id="once">
                             <string id="Comment">Ribbit Waypoints</string>
                             <normal>
-                                <action id="adjustCounter">
-                                    <string id="id">BOTTOMHP_0</string>
-                                    <string id="value">18</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
-                                <action id="adjustCounter">
-                                    <string id="id">BOTTOMHP_1</string>
-                                    <string id="value">118</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Waypoint</string>
-                                </action>
                                 <action id="adjustCounter">
                                     <string id="id">ABOVEBOTTOMFIRSTTOWER_0</string>
                                     <string id="value">20</string>
