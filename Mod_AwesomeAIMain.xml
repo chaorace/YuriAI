@@ -24,46 +24,95 @@
                         </action>
                     </normal>
                     <else>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Constants</string>
-                            <string id="Comment">Constants Toolkit, handles constants</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Ticker</string>
-                            <string id="Comment">Ticker Toolkit, handles time operations</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_MapInfo</string>
-                            <string id="Comment">MapInfo toolkit, provides information about the structures, the map, and the players on it.(WIP)</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection</string>
-                            <string id="Comment">Detection Toolkit, handles information from the world (WIP)</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Companion</string>
-                            <string id="Comment">Companion Toolkit, AI TEST</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Pathfinding</string>
-                            <string id="Comment">Pathfinding Toolkit, gets around to named locations (WIP)</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement</string>
-                            <string id="Comment">Movement Toolkit, handles basic movement</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Attack</string>
-                            <string id="Comment">Attack toolkit, handles basic skills</string>
-                            <string id="Minimized">yes</string>
-                        </action>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitConstantsDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <string id="Comment">Non-standard plugins should disable themselves on load and require to be explicitly enabled</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Constants</string>
+                                    <string id="Comment">Constants Toolkit, handles constants</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitTickerDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Ticker</string>
+                                    <string id="Comment">Ticker Toolkit, handles time operations</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitMapInfoDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_MapInfo</string>
+                                    <string id="Comment">MapInfo toolkit, provides information about the structures, the map, and the players on it.(WIP)</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitDetectionDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection</string>
+                                    <string id="Comment">Detection Toolkit, handles information from the world (WIP)</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitCompanionDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Companion</string>
+                                    <string id="Comment">Companion Toolkit, AI TEST</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitWaypointPlusDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus</string>
+                                    <string id="Comment">WaypointPlus Toolkit, builds on and enhances basic waypoints (WIP)</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitMovementDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement</string>
+                                    <string id="Comment">Movement Toolkit, handles basic movement</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAIMain_ToolkitAttackDisabled</string>
+                            <string id="value" values="yesno">yes</string>
+                            <else>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Attack</string>
+                                    <string id="Comment">Attack toolkit, handles basic skills</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </else>
+                        </condition>
                     </else>
                 </condition>
             </normal>
