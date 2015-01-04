@@ -120,6 +120,12 @@
                             <string id="Comment">Waypoint (auto-generated)</string>
                         </action>
                         <action id="adjustCounter">
+                            <string id="id">BELOWLAUNCH_0</string>
+                            <string id="value">17</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Exists because &quot;BELLOWLAUNCH_0&quot; is mispelled</string>
+                        </action>
+                        <action id="adjustCounter">
                             <string id="id">BELOWLAUNCH_1</string>
                             <string id="value">18</string>
                             <string id="adjust method" values="valueadjust">set</string>
@@ -127,6 +133,12 @@
                         </action>
                         <action id="adjustCounter">
                             <string id="id">BOTTEMLEFTTOWER_0</string>
+                            <string id="value">19</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint (auto-generated)</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">BOTTOMLEFTTOWER_0</string>
                             <string id="value">19</string>
                             <string id="adjust method" values="valueadjust">set</string>
                             <string id="Comment">Waypoint (auto-generated)</string>
