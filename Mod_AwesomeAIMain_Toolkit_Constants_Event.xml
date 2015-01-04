@@ -13,7 +13,7 @@
                             <string id="Comment">Necessary for modulus comparisons</string>
                         </action>
                         <condition id="once">
-                            <string id="Comment">Universal Waypoints</string>
+                            <string id="Comment">Waypoints</string>
                             <normal>
                                 <action id="adjustCounter">
                                     <string id="id">ABOVEBASE_0</string>
