@@ -288,6 +288,12 @@
                             <string id="Comment">Waypoint (auto-generated)</string>
                         </action>
                         <action id="adjustCounter">
+                            <string id="id">HIDEAREACENTER</string>
+                            <string id="value">43</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Waypoint exists alongside HIDEAREACENTRE</string>
+                        </action>
+                        <action id="adjustCounter">
                             <string id="id">HIDEAREASIDE_0</string>
                             <string id="value">44</string>
                             <string id="adjust method" values="valueadjust">set</string>
