@@ -533,6 +533,29 @@
                                 </action>
                             </normal>
                         </condition>
+                        <condition id="once">
+                            <string id="Comment">AI Station 404 Waypoints</string>
+                            <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">LEFTBUTTON</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">RIGHTBUTTON</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTEMLEFTTOWER_0</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
             </normal>
