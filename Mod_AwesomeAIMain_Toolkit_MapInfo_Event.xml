@@ -10,7 +10,7 @@
                             <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
                             <string id="value">-1</string>
                             <string id="adjust method" values="valueadjust">set</string>
-                            <string id="Comment">Index: -1:Unknown 0:RibbitIV 1:AIStation 2:Sorona 3:Aiguillon</string>
+                            <string id="Comment">Index: -1:Unknown 0:RibbitIV 1:AIStation404 2:Sorona 3:Aiguillon 4:AIStation205</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_MapInfo_Event_Turret10</string>
@@ -59,12 +59,11 @@
                     <string id="team" values="ownenemy">OWN_TEAM</string>
                     <string id="who" values="targetself">self</string>
                     <string id="Comment">Contains logic for map discovery</string>
-                    <string id="Minimized">yes</string>
                     <normal>
                         <condition id="once">
                             <normal>
                                 <orblock>
-                                    <string id="Comment">Returns true for Ribbit IV and AI Station 404</string>
+                                    <string id="Comment">Returns true for Ribbit IV, AI 404, AI 205</string>
                                     <normal>
                                         <orblock>
                                             <string id="Comment">Only returns true on AI404</string>
@@ -77,12 +76,53 @@
                                                 </action>
                                             </normal>
                                             <else>
-                                                <action id="adjustCounter">
-                                                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
-                                                    <string id="value">0</string>
-                                                    <string id="adjust method" values="valueadjust">set</string>
-                                                    <string id="Comment">It&apos;s Ribbit IV</string>
-                                                </action>
+                                                <orblock>
+                                                    <string id="Comment">Only returns true on AI205</string>
+                                                    <normal>
+                                                        <action id="adjustCounter">
+                                                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                                            <string id="value">4</string>
+                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                            <string id="Comment">It&apos;s &quot;new&quot; AI Station, woo...</string>
+                                                        </action>
+                                                    </normal>
+                                                    <else>
+                                                        <action id="adjustCounter">
+                                                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                                            <string id="value">0</string>
+                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                            <string id="Comment">It&apos;s Ribbit IV</string>
+                                                        </action>
+                                                    </else>
+                                                    <or>
+                                                        <condition id="isInArea">
+                                                            <string id="condition" values="yesno">yes</string>
+                                                            <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;DESTROYABLE_OBSTACLES;;</string>
+                                                            <string id="check green obstacles only" values="yesno">yes</string>
+                                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
+                                                            <string id="areaName"></string>
+                                                            <float id="xOffset">6.05</float>
+                                                            <float id="yOffset">2.30</float>
+                                                            <float id="width">0.50</float>
+                                                            <float id="height">0.30</float>
+                                                            <string id="check line of sight" values="yesno">no</string>
+                                                            <string id="ignore invisibility" values="yesno">no</string>
+                                                        </condition>
+                                                        <condition id="isInArea">
+                                                            <string id="condition" values="yesno">yes</string>
+                                                            <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;DESTROYABLE_OBSTACLES;;</string>
+                                                            <string id="check green obstacles only" values="yesno">yes</string>
+                                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
+                                                            <string id="areaName"></string>
+                                                            <float id="xOffset">-6.05</float>
+                                                            <float id="yOffset">2.30</float>
+                                                            <float id="width">0.50</float>
+                                                            <float id="height">0.30</float>
+                                                            <string id="check line of sight" values="yesno">no</string>
+                                                            <string id="ignore invisibility" values="yesno">no</string>
+                                                        </condition>
+                                                    </or>
+                                                </orblock>
                                             </else>
                                             <or>
                                                 <condition id="isInArea">
@@ -93,7 +133,7 @@
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">6.05</float>
                                                     <float id="yOffset">2.00</float>
-                                                    <float id="width">0.50</float>
+                                                    <float id="width">0.40</float>
                                                     <float id="height">0.30</float>
                                                     <string id="check line of sight" values="yesno">no</string>
                                                     <string id="ignore invisibility" values="yesno">no</string>
@@ -106,7 +146,7 @@
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">-6.05</float>
                                                     <float id="yOffset">2.00</float>
-                                                    <float id="width">0.50</float>
+                                                    <float id="width">0.40</float>
                                                     <float id="height">0.30</float>
                                                     <string id="check line of sight" values="yesno">no</string>
                                                     <string id="ignore invisibility" values="yesno">no</string>
