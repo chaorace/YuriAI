@@ -14,7 +14,6 @@
                         </action>
                         <condition id="once">
                             <string id="Comment">Universal Waypoints</string>
-                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="adjustCounter">
                                     <string id="id">REGENHOME_0</string>
@@ -406,6 +405,44 @@
                         </condition>
                         <condition id="once">
                             <string id="Comment">AI Station 202 Waypoints</string>
+                            <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMLANETHIRD_0</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">BOTTOMLANETHIRD_1</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">FREECREEPS_0</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">FREECREEPS_1</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">TOPHP_0</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">NEUTRALUPPERSPOT</string>
+                                    <string id="value">1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Waypoint</string>
+                                </action>
+                            </normal>
                         </condition>
                         <condition id="once">
                             <string id="Comment">Sorona Waypoints</string>
