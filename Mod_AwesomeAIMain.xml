@@ -35,13 +35,13 @@
                             <string id="Minimized">yes</string>
                         </action>
                         <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection</string>
-                            <string id="Comment">Detection Toolkit, handles information from the world (WIP)</string>
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_MapInfo</string>
+                            <string id="Comment">MapInfo toolkit, provides information about the structures, the map, and the players on it.(WIP)</string>
                             <string id="Minimized">yes</string>
                         </action>
                         <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_MapInfo</string>
-                            <string id="Comment">MapInfo toolkit, provides information about the structures, the map, and the players on it.(WIP)</string>
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection</string>
+                            <string id="Comment">Detection Toolkit, handles information from the world (WIP)</string>
                             <string id="Minimized">yes</string>
                         </action>
                         <action id="executeBehaviourTree">
