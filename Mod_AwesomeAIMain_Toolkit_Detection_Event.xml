@@ -3622,7 +3622,22 @@
                             <float id="time in seconds">-1.00</float>
                             <string id="compare method" values="valuecompare">greater or equal</string>
                             <string id="Comment">Corner Detection</string>
+                            <string id="Minimized">yes</string>
                             <normal>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_Detection_Event_AreaCorner</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Am I in a CornerStuck area?</string>
+                                    <normal>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_Detection_Event_CornerStuckTicks</string>
+                                            <string id="value">1</string>
+                                            <string id="adjust method" values="valueadjust">add</string>
+                                            <string id="Comment">Number of continuous ticks that the character may have been stuck in a corner</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </normal>
+                                </condition>
                                 <andblock>
                                     <string id="Comment">Row check top</string>
                                     <normal>
@@ -4038,6 +4053,7 @@
                             <string id="check line of sight" values="yesno">no</string>
                             <string id="ignore invisibility" values="yesno">yes</string>
                             <string id="Comment">Am I being blocked by a collidable entity?</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_Blocked</string>
@@ -4057,6 +4073,7 @@
                             <string id="id">Toolkit_Detection_Event_Blocked</string>
                             <string id="value" values="yesno">yes</string>
                             <string id="Comment">Identifies the blocking entity</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <condition id="isInArea">
                                     <string id="condition" values="yesno">yes</string>
