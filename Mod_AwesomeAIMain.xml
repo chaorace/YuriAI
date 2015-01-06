@@ -10,6 +10,51 @@
                             <string id="counter"></string>
                             <string id="bool"></string>
                         </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Constants</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Ticker</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_MapInfo</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Detection</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Companion</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_WaypointPlus</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Pathfinding</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Movement</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Attack</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
                     </normal>
                 </condition>
                 <condition id="getBoolEquals">
@@ -24,51 +69,105 @@
                         </action>
                     </normal>
                     <else>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Constants</string>
-                            <string id="Comment">Constants Toolkit, handles constants</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Ticker</string>
-                            <string id="Comment">Ticker Toolkit, handles time operations</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_MapInfo</string>
-                            <string id="Comment">MapInfo toolkit, provides information about the structures, the map, and the players on it.(WIP)</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection</string>
-                            <string id="Comment">Detection Toolkit, handles information from the world (WIP)</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Companion</string>
-                            <string id="Comment">Companion Toolkit, AI TEST</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus</string>
-                            <string id="Comment">WaypointPlus toolkit. Adds functionality to node handling</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Pathfinding</string>
-                            <string id="Comment">Pathfinding Toolkit, gets around to named locations (WIP)</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement</string>
-                            <string id="Comment">Movement Toolkit, handles basic movement</string>
-                            <string id="Minimized">yes</string>
-                        </action>
-                        <action id="executeBehaviourTree">
-                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Attack</string>
-                            <string id="Comment">Attack toolkit, handles basic skills</string>
-                            <string id="Minimized">yes</string>
-                        </action>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Constants</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Constants</string>
+                                    <string id="Comment">Constants Toolkit, handles constants</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Ticker</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Ticker</string>
+                                    <string id="Comment">Ticker Toolkit, handles time operations</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_MapInfo</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_MapInfo</string>
+                                    <string id="Comment">MapInfo toolkit, provides information about the structures, the map, and the players on it.(WIP)</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Detection</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection</string>
+                                    <string id="Comment">Detection Toolkit, handles information from the world (WIP)</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Companion</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Companion</string>
+                                    <string id="Comment">Companion Toolkit, AI TEST</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_WaypointPlus</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus</string>
+                                    <string id="Comment">WaypointPlus toolkit. Adds functionality to node handling</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Pathfinding</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Pathfinding</string>
+                                    <string id="Comment">Pathfinding Toolkit, gets around to named locations (WIP)</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Movement</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement</string>
+                                    <string id="Comment">Movement Toolkit, handles basic movement</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Attack</string>
+                            <string id="value" values="yesno">no</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Attack</string>
+                                    <string id="Comment">Attack toolkit, handles basic skills</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </else>
                 </condition>
             </normal>
