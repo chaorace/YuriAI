@@ -71,7 +71,7 @@
                     <else>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Constants</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Constants</string>
@@ -82,7 +82,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Ticker</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Ticker</string>
@@ -93,7 +93,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_MapInfo</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_MapInfo</string>
@@ -104,7 +104,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Detection</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Detection</string>
@@ -115,7 +115,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Companion</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Companion</string>
@@ -126,7 +126,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_WaypointPlus</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus</string>
@@ -137,7 +137,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Pathfinding</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Pathfinding</string>
@@ -148,7 +148,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Movement</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement</string>
@@ -159,7 +159,7 @@
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Attack</string>
-                            <string id="value" values="yesno">no</string>
+                            <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Attack</string>
