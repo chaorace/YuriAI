@@ -533,6 +533,18 @@
                             <string id="adjust method" values="valueadjust">set</string>
                             <string id="Comment">Waypoint (auto-generated)</string>
                         </action>
+                        <action id="adjustCounter">
+                            <string id="id">FIRSTWAYPOINT</string>
+                            <string id="value">ABOVEBASE_0</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">First Waypoint</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">LASTWAYPOINT</string>
+                            <string id="value">WORMBUTTON</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Last Waypoint</string>
+                        </action>
                     </normal>
                 </condition>
             </normal>
