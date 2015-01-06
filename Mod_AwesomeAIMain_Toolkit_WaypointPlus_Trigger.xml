@@ -13,6 +13,18 @@
                         </action>
                     </normal>
                 </condition>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                    <string id="value">-1</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">TargetWaypoint Trigger</string>
+                    <else>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </else>
+                </condition>
             </normal>
         </root>
     </behaviour>
