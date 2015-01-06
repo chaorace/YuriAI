@@ -8,23 +8,13 @@
                     <string id="Comment">Load AwesomeAI</string>
                     <string id="Minimized">yes</string>
                 </action>
-                <action id="selectDestWaypoint">
-                    <string id="name">REGENHOME</string>
-                    <string id="team" values="ownenemy">OWN_TEAM</string>
-                </action>
                 <action id="setBool">
-                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                    <string id="id">Toolkit_Companion_Trigger_Clingy</string>
                     <string id="value" values="flagtoggle">yes</string>
+                    <string id="Comment">Clingy Trigger</string>
+                    <string id="Minimized">yes</string>
                 </action>
             </normal>
         </root>
-    </behaviour>
-    <behaviour>
-        <action id="setBool" x="92" y="123">
-            <string id="id">Toolkit_Companion_Trigger_Clingy</string>
-            <string id="value" values="flagtoggle">yes</string>
-            <string id="Comment">Clingy Trigger</string>
-            <string id="Minimized">yes</string>
-        </action>
     </behaviour>
 </enemy>
