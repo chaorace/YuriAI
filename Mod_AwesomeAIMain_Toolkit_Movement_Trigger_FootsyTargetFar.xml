@@ -19,6 +19,12 @@
                                 <action id="selectTargetWaypoint">
                                     <string id="Comment">Set Destination Waypoint to near target</string>
                                 </action>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                                    <string id="value">-1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Invalidate the current target waypoint listing</string>
+                                </action>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
                                     <string id="value" values="flagtoggle">yes</string>

@@ -4,6 +4,7 @@
         <root x="110" y="40">
             <normal>
                 <condition id="once">
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="log">
                             <string id="text">AwesomeAI loaded!</string>
@@ -125,23 +126,23 @@
                             </normal>
                         </condition>
                         <condition id="getBoolEquals">
-                            <string id="id">AwesomeAI_WaypointPlus</string>
-                            <string id="value" values="yesno">yes</string>
-                            <normal>
-                                <action id="executeBehaviourTree">
-                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus</string>
-                                    <string id="Comment">WaypointPlus toolkit. Adds functionality to node handling</string>
-                                    <string id="Minimized">yes</string>
-                                </action>
-                            </normal>
-                        </condition>
-                        <condition id="getBoolEquals">
                             <string id="id">AwesomeAI_Pathfinding</string>
                             <string id="value" values="yesno">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Pathfinding</string>
                                     <string id="Comment">Pathfinding Toolkit, gets around to named locations (WIP)</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_WaypointPlus</string>
+                            <string id="value" values="yesno">yes</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus</string>
+                                    <string id="Comment">WaypointPlus toolkit. Adds functionality to node handling</string>
                                     <string id="Minimized">yes</string>
                                 </action>
                             </normal>
