@@ -8,13 +8,6 @@
                     <string id="value">-1</string>
                     <string id="compare method" values="valuecompare">equal</string>
                     <string id="Comment">Waypoint Enumerator Mapping</string>
-                    <normal>
-                        <action id="selectDestWaypoint">
-                            <string id="name"></string>
-                            <string id="team" values="ownenemy">OWN_TEAM</string>
-                            <string id="Comment">Stop having a target waypoint</string>
-                        </action>
-                    </normal>
                     <else>
                         <condition id="checkCounter">
                             <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
