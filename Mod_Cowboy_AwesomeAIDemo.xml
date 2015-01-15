@@ -8,11 +8,44 @@
                     <string id="Comment">Load AwesomeAI</string>
                     <string id="Minimized">yes</string>
                 </action>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                    <string id="value">-1</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Is my current map unknown?</string>
+                    <normal>
+                        <condition id="isFromTeam">
+                            <string id="team" values="teamswithnumbers">ZERO_TEAM</string>
+                            <string id="check on" values="targetself">self</string>
+                            <string id="Comment">Report to shop to update map</string>
+                            <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                                    <string id="value">REGENHOME_0</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                                    <string id="value">REGENHOME_1</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                </action>
+                            </else>
+                        </condition>
+                    </normal>
+                    <else>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                            <string id="value">PATH_SAMPLE</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                        </action>
+                    </else>
+                </condition>
                 <action id="setBool">
-                    <string id="id">Toolkit_Companion_Trigger_Clingy</string>
+                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
                     <string id="value" values="flagtoggle">yes</string>
-                    <string id="Comment">Clingy Trigger</string>
-                    <string id="Minimized">yes</string>
+                    <string id="Comment">Pathfind towards next target node</string>
                 </action>
             </normal>
         </root>

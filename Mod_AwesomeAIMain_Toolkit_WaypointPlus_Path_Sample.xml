@@ -11,7 +11,7 @@
                     <normal>
                         <action id="adjustCounter">
                             <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
-                            <string id="value">ABOVEUPPERFIRSTTOWER_0</string>
+                            <string id="value">UPPERFIRSTTOWER_0</string>
                             <string id="adjust method" values="valueadjust">set</string>
                         </action>
                     </normal>
@@ -24,7 +24,7 @@
                             <normal>
                                 <action id="adjustCounter">
                                     <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
-                                    <string id="value">ABOVEUPPERFIRSTTOWER_1</string>
+                                    <string id="value">UPPERFIRSTTOWER_1</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                 </action>
                             </normal>
