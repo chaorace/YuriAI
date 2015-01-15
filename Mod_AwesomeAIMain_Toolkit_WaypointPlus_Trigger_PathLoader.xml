@@ -56,7 +56,7 @@
                             </normal>
                             <else>
                                 <condition id="getBoolEquals">
-                                    <string id="id">Toolkit_WaypointPlus_Event_AtTargetWaypointOnce</string>
+                                    <string id="id">Toolkit_WaypointPlus_Event_AtTargetWaypoint</string>
                                     <string id="value" values="yesno">yes</string>
                                     <string id="Comment">Have I arrived at my target waypoint?</string>
                                     <normal>
