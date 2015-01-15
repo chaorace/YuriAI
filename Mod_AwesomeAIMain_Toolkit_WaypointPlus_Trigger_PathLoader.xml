@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                    <string id="value">-1</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Pathloader trigger -1 means no path to load</string>
+                    <normal>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
+                            <string id="value">-1</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Reset last active tick</string>
+                        </condition>
+                    </normal>
+                    <else>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
+                            <string id="value">Toolkit_Ticker_Event_1TickAgo</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Was a path loaded last tick?</string>
+                        </condition>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
+                            <string id="value">Toolkit_Ticker_Event_Ticks </string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Update last tick active</string>
+                        </action>
+                    </else>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>
