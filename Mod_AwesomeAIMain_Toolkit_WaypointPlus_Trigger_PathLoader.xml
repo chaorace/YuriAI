@@ -3,34 +3,164 @@
     <behaviour>
         <root x="110" y="40">
             <normal>
-                <condition id="checkCounter">
-                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
-                    <string id="value">-1</string>
-                    <string id="compare method" values="valuecompare">equal</string>
-                    <string id="Comment">Pathloader trigger -1 means no path to load</string>
+                <condition id="once">
+                    <string id="Comment">Define custom path enumerators here</string>
                     <normal>
-                        <condition id="checkCounter">
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE2</string>
+                            <string id="value">2</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE3</string>
+                            <string id="value">3</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE3_ALTERNATENAME</string>
+                            <string id="value">3</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="once">
+                    <normal>
+                        <action id="adjustCounter">
                             <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
                             <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">The last active tick</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastPath</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">The last loaded path</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathStep</string>
+                            <string id="value">0</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Represents the part of the path currently reached</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathFinished</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Returns true when a path has run it&apos;s course and is still being called</string>
+                        </action>
+                    </normal>
+                </condition>
+                <action id="setBool">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathFinished</string>
+                    <string id="value" values="flagtoggle">no</string>
+                    <string id="Comment">Resets the path so the custom path file can determine if it&apos;s completed</string>
+                </action>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
+                    <string id="value">Toolkit_Ticker_Event_1TickAgo</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Was a path loaded last tick?</string>
+                    <normal>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastPath</string>
+                            <string id="value">Toolkit_WaypointPlus_Trigger_PathLoader</string>
                             <string id="compare method" values="valuecompare">equal</string>
-                            <string id="Comment">Reset last active tick</string>
+                            <string id="Comment">Is my current path still the last path loaded?</string>
+                            <normal>
+                                <condition id="getBoolEquals">
+                                    <string id="id">Toolkit_WaypointPlus_Event_AtTargetWaypointOnce</string>
+                                    <string id="value" values="yesno">yes</string>
+                                    <string id="Comment">Have I arrived at my target waypoint?</string>
+                                    <normal>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathStep</string>
+                                            <string id="value">1</string>
+                                            <string id="adjust method" values="valueadjust">add</string>
+                                            <string id="Comment">Set up next part of the path</string>
+                                        </action>
+                                    </normal>
+                                </condition>
+                            </normal>
+                            <else>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathStep</string>
+                                    <string id="value">0</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">reset the path step to begining</string>
+                                </action>
+                            </else>
                         </condition>
                     </normal>
                     <else>
-                        <condition id="checkCounter">
-                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
-                            <string id="value">Toolkit_Ticker_Event_1TickAgo</string>
-                            <string id="compare method" values="valuecompare">equal</string>
-                            <string id="Comment">Was a path loaded last tick?</string>
-                        </condition>
                         <action id="adjustCounter">
-                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
-                            <string id="value">Toolkit_Ticker_Event_Ticks </string>
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathStep</string>
+                            <string id="value">0</string>
                             <string id="adjust method" values="valueadjust">set</string>
-                            <string id="Comment">Update last tick active</string>
+                            <string id="Comment">reset the path step to begining</string>
                         </action>
                     </else>
                 </condition>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                    <string id="value">PATH_SAMPLE</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Put new custom paths here</string>
+                    <normal>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus_Path_Sample</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                            <string id="value">PATH_SAMPLE2</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">And here</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName"></string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <condition id="checkCounter">
+                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                                    <string id="value">PATH_SAMPLE3</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                    <string id="Comment">and here, etc</string>
+                                    <normal>
+                                        <action id="executeBehaviourTree">
+                                            <string id="fileName"></string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </normal>
+                                </condition>
+                            </else>
+                        </condition>
+                    </else>
+                </condition>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_LastPath</string>
+                    <string id="value">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Remembers loaded path</string>
+                </condition>
+                <action id="adjustCounter">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_LastTick</string>
+                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                    <string id="adjust method" values="valueadjust">set</string>
+                    <string id="Comment">Update last tick active</string>
+                </action>
             </normal>
         </root>
     </behaviour>

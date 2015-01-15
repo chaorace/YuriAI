@@ -11,7 +11,25 @@
                             <string id="adjust method" values="valueadjust">set</string>
                             <string id="Comment">Represents the final target location you want to reach</string>
                         </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Represents the path you want to load</string>
+                        </action>
                     </normal>
+                </condition>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                    <string id="value">-1</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">PathLoader Trigger</string>
+                    <else>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </else>
                 </condition>
                 <condition id="checkCounter">
                     <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
