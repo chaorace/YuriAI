@@ -15,7 +15,38 @@
                     </normal>
                 </condition>
                 <condition id="once">
+                    <string id="Comment">Define custom path enumerators here</string>
+                    <string id="Minimized">yes</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE2</string>
+                            <string id="value">2</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE3</string>
+                            <string id="value">3</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">PATH_SAMPLE3_ALTERNATENAME</string>
+                            <string id="value">3</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Included as an example</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="once">
                     <string id="Comment">Waypoint Enumerators</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="adjustCounter">
                             <string id="id">ABOVEBASE_0</string>
