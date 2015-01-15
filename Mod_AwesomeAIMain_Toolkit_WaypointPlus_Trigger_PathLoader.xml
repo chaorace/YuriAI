@@ -47,6 +47,14 @@
                             <string id="compare method" values="valuecompare">equal</string>
                             <string id="Comment">Is my current path still the last path loaded?</string>
                             <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathStep</string>
+                                    <string id="value">0</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">reset the path step to begining</string>
+                                </action>
+                            </normal>
+                            <else>
                                 <condition id="getBoolEquals">
                                     <string id="id">Toolkit_WaypointPlus_Event_AtTargetWaypointOnce</string>
                                     <string id="value" values="yesno">yes</string>
@@ -60,14 +68,6 @@
                                         </action>
                                     </normal>
                                 </condition>
-                            </normal>
-                            <else>
-                                <action id="adjustCounter">
-                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader_PathStep</string>
-                                    <string id="value">0</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">reset the path step to begining</string>
-                                </action>
                             </else>
                         </condition>
                     </normal>
