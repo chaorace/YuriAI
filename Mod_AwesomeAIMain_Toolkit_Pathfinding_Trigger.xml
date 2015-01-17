@@ -7,14 +7,14 @@
                     <string id="Comment">Pathfinding Triggers. Listed in order of precedence</string>
                     <normal>
                         <action id="setBool">
-                            <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                            <string id="id">Toolkit_Pathfinding_Trigger__MoveTowardNextNode</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">Node Based- Movement Trigger</string>
                         </action>
                     </normal>
                 </condition>
                 <condition id="getBoolEquals">
-                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                    <string id="id">Toolkit_Pathfinding_Trigger__MoveTowardNextNode</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Node-based movement trigger</string>
                     <normal>

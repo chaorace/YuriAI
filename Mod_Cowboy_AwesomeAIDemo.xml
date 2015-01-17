@@ -43,7 +43,7 @@
                     </else>
                 </condition>
                 <action id="setBool">
-                    <string id="id">Toolkit_Pathfinding_Trigger_NodeMovement</string>
+                    <string id="id">Toolkit_Pathfinding_Trigger__MoveTowardNextNode</string>
                     <string id="value" values="flagtoggle">yes</string>
                     <string id="Comment">Pathfind towards next target node</string>
                 </action>

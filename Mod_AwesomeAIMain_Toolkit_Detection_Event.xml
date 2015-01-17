@@ -788,10 +788,9 @@
                             <string id="compare method" values="valuecompare">less or equal</string>
                             <string id="check on" values="targetself">self</string>
                             <string id="Comment">Self Health Checks</string>
-                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
-                                    <string id="id">Toolkit_Detection_Event_SelfDamaged</string>
+                                    <string id="id">Toolkit_Detection_Event_SelfHurt</string>
                                     <string id="value" values="flagtoggle">yes</string>
                                     <string id="Comment">Am I below 90%?</string>
                                     <string id="Minimized">yes</string>
@@ -964,7 +963,6 @@
                             <string id="compare method" values="valuecompare">less or equal</string>
                             <string id="check on" values="targetself">target</string>
                             <string id="Comment">Target Health Checks</string>
-                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="setBool">
                                     <string id="id">Toolkit_Detection_Event_TargetHurt</string>
