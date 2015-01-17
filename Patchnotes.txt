@@ -1,0 +1,2 @@
+Changed Toolkit_Pathfinding_Trigger_NodeMovement to Toolkit_Pathfinding_Trigger__MoveTowardNextNode to match the expected conventions
+Fixed a bug that broke SelfHurt event working correctly
