@@ -179,7 +179,7 @@
                 <condition id="getBoolEquals">
                     <string id="id">Toolkit_Movement_Trigger_Teleport</string>
                     <string id="value" values="yesno">yes</string>
-                    <string id="Comment">Boilerplate teleportation</string>
+                    <string id="Comment">Boilerplate teleportation/movement</string>
                     <string id="Minimized">yes</string>
                     <normal>
                         <action id="executeBehaviourTree">
