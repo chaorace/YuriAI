@@ -14,7 +14,7 @@
                 </condition>
                 <action id="executeBehaviourTree">
                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_WaypointPlus_Event</string>
-                    <string id="Comment">Events file</string>
+                    <string id="Comment">This event breaks most of the rules for events in order to hack in the necessary functionality to detect nodes as they are crossed. This file shouldn&apos;t really be referenced when making your own toolkits, since it&apos;s really unconventional and sloppy</string>
                     <string id="Minimized">yes</string>
                 </action>
                 <action id="executeBehaviourTree">
@@ -30,7 +30,13 @@
                             <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
                             <string id="value">-1</string>
                             <string id="adjust method" values="valueadjust">set</string>
-                            <string id="Comment">Represents the final target location you want to reach(-1 is null). </string>
+                            <string id="Comment">Represents the final target location you want to reach(-1 is null).</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Represents the final target location you want to reach(-1 is null).</string>
                         </action>
                     </normal>
                 </sequence>
