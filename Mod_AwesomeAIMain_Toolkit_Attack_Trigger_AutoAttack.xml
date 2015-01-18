@@ -7,7 +7,7 @@
                     <string id="Comment">Document variables</string>
                     <normal>
                         <action id="adjustCounter">
-                            <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                            <string id="id">Toolkit_Attack_Trigger_AutoAttack_BackwardsAASpeed</string>
                             <string id="value">2</string>
                             <string id="adjust method" values="valueadjust">set</string>
                             <string id="Comment">How fast backwards AA fires. 0 = Do not fire. 1 = fire every 1s. 2 = fire every 0.5s, 3 = fire as often as possible</string>
@@ -24,7 +24,7 @@
                             <string id="Comment">Am I moving away from my target?</string>
                             <normal>
                                 <condition id="checkCounter">
-                                    <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                                    <string id="id">Toolkit_Attack_Trigger_AutoAttack_BackwardsAASpeed</string>
                                     <string id="value">3</string>
                                     <string id="compare method" values="valuecompare">equal</string>
                                     <string id="Comment">Attack speed 3: attack as often as possible</string>
@@ -32,6 +32,11 @@
                                         <action id="aimStickAtTarget">
                                             <float id="duration seconds">0.01</float>
                                             <string id="only aim when needed" values="yesno">no</string>
+                                            <string id="use rotation speed limits" values="yesno">no</string>
+                                            <float id="min rotation speed per second in degrees">0.00</float>
+                                            <float id="max rotation speed per second in degrees">0.00</float>
+                                            <float id="use min rotation speed when angle to target under">0.00</float>
+                                            <float id="use max rotation speed when angle to target over">0.00</float>
                                             <string id="Comment">Take Aim - Innacurate, but fast</string>
                                         </action>
                                         <action id="pressButton">
@@ -43,7 +48,7 @@
                                     <else>
                                         <condition id="checkCounter">
                                             <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
-                                            <string id="value">2</string>
+                                            <string id="value">Toolkit_Attack_Trigger_AutoAttack_BackwardsAASpeed</string>
                                             <string id="compare method" values="valuecompare">equal</string>
                                             <string id="Comment">Attack speed 2: attack every 0.5s</string>
                                             <normal>
@@ -55,6 +60,11 @@
                                                         <action id="aimStickAtTarget">
                                                             <float id="duration seconds">0.01</float>
                                                             <string id="only aim when needed" values="yesno">no</string>
+                                                            <string id="use rotation speed limits" values="yesno">no</string>
+                                                            <float id="min rotation speed per second in degrees">0.00</float>
+                                                            <float id="max rotation speed per second in degrees">0.00</float>
+                                                            <float id="use min rotation speed when angle to target under">0.00</float>
+                                                            <float id="use max rotation speed when angle to target over">0.00</float>
                                                             <string id="Comment">Take Aim - Innacurate, but fast</string>
                                                         </action>
                                                         <action id="pressButton">
@@ -67,7 +77,7 @@
                                             </normal>
                                             <else>
                                                 <condition id="checkCounter">
-                                                    <string id="id">Toolkit_Attack_Trigger_BackwardsAASpeed</string>
+                                                    <string id="id">Toolkit_Attack_Trigger_AutoAttack_BackwardsAASpeed</string>
                                                     <string id="value">1</string>
                                                     <string id="compare method" values="valuecompare">equal</string>
                                                     <string id="Comment">Attack speed 1: attack every 1s</string>
@@ -80,6 +90,11 @@
                                                                 <action id="aimStickAtTarget">
                                                                     <float id="duration seconds">0.01</float>
                                                                     <string id="only aim when needed" values="yesno">no</string>
+                                                                    <string id="use rotation speed limits" values="yesno">no</string>
+                                                                    <float id="min rotation speed per second in degrees">0.00</float>
+                                                                    <float id="max rotation speed per second in degrees">0.00</float>
+                                                                    <float id="use min rotation speed when angle to target under">0.00</float>
+                                                                    <float id="use max rotation speed when angle to target over">0.00</float>
                                                                     <string id="Comment">Take Aim - Innacurate, but fast</string>
                                                                 </action>
                                                                 <action id="pressButton">
@@ -115,6 +130,11 @@
                                 <action id="aimStickAtTarget">
                                     <float id="duration seconds">0.01</float>
                                     <string id="only aim when needed" values="yesno">no</string>
+                                    <string id="use rotation speed limits" values="yesno">no</string>
+                                    <float id="min rotation speed per second in degrees">0.00</float>
+                                    <float id="max rotation speed per second in degrees">0.00</float>
+                                    <float id="use min rotation speed when angle to target under">0.00</float>
+                                    <float id="use max rotation speed when angle to target over">0.00</float>
                                     <string id="Comment">Take Aim</string>
                                 </action>
                                 <action id="pressButton">

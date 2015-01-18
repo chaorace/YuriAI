@@ -4,3 +4,4 @@ Changed Toolkit_Pathfinding_Trigger_NodeMovement to Toolkit_Pathfinding_Trigger_
 Fixed a bug that broke SelfHurt event working correctly
 Delegated trigger resets to the trigger root file instead of the toolkit root file
 Fixed the Pathloader trigger not unloading paths after trigger was released
+Renamed Toolkit_Attack_Trigger_BackwardsAASpeed to Toolkit_Attack_Trigger_AutoAttack_BackwardsAASpeed to match the expected conventions
