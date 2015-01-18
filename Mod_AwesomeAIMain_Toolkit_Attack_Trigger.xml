@@ -59,6 +59,30 @@
                         </action>
                     </normal>
                 </condition>
+                <sequence>
+                    <string id="Is blocking">no</string>
+                    <string id="Comment">Trigger resets</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Attack_Trigger_AutoAttack</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Auto Attack Trigger</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Attack_Trigger_Primary</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Primary Attack Trigger</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Attack_Trigger_Secondary</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Secondary Attack Trigger</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </sequence>
             </normal>
         </root>
     </behaviour>

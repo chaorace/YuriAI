@@ -22,24 +22,6 @@
                     <string id="Comment">Triggers File</string>
                     <string id="Minimized">yes</string>
                 </action>
-                <sequence>
-                    <string id="Is blocking">no</string>
-                    <string id="Comment">Trigger resets</string>
-                    <normal>
-                        <action id="adjustCounter">
-                            <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
-                            <string id="value">-1</string>
-                            <string id="adjust method" values="valueadjust">set</string>
-                            <string id="Comment">Represents the final target location you want to reach(-1 is null).</string>
-                        </action>
-                        <action id="adjustCounter">
-                            <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
-                            <string id="value">-1</string>
-                            <string id="adjust method" values="valueadjust">set</string>
-                            <string id="Comment">Represents the final target location you want to reach(-1 is null).</string>
-                        </action>
-                    </normal>
-                </sequence>
             </normal>
         </root>
     </behaviour>

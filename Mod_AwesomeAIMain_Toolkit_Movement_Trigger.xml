@@ -5,66 +5,79 @@
             <normal>
                 <condition id="once">
                     <string id="Comment">movement triggers Non-sticky. Listed in order of abstraction</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to stay far from target. Takes precedence over FootsyTargetMedium</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to stay near to target. Takes precedence over FootsyTargetClose</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to stay close to target</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveTowardTarget</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going backward. Takes precedence over Move Away in conflicts</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveAwayFromTarget</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going backward.</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going backward.</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_Teleport</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep teleporting. Takes precedence over all the lowest level move actions</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going up.</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveDown</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going down. Takes precedence over MoveUp in conflicts</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveLeft</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going left. Takes precedence over right in conflicts</string>
+                            <string id="Minimized">yes</string>
                         </action>
                         <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveRight</string>
                             <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">non-sticky. Keep enabled to keep going right</string>
+                            <string id="Minimized">yes</string>
                         </action>
                     </normal>
                 </condition>
@@ -72,6 +85,7 @@
                     <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Footsy movement. Moves relative to target</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="executeBehaviourTree">
                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetFar</string>
@@ -83,6 +97,7 @@
                         <condition id="getBoolEquals">
                             <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
                             <string id="value" values="yesno">yes</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetMedium</string>
@@ -94,6 +109,7 @@
                                 <condition id="getBoolEquals">
                                     <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
                                     <string id="value" values="yesno">yes</string>
+                                    <string id="Minimized">yes</string>
                                     <normal>
                                         <action id="executeBehaviourTree">
                                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_FootsyTargetClose</string>
@@ -110,6 +126,7 @@
                     <string id="id">Toolkit_Movement_Trigger_MoveTowardTarget</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Toward/Away movement. Move relative to target</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="executeBehaviourTree">
                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveTowardTarget</string>
@@ -121,6 +138,7 @@
                         <condition id="getBoolEquals">
                             <string id="id">Toolkit_Movement_Trigger_MoveAwayFromTarget</string>
                             <string id="value" values="yesno">yes</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveAwayFromTarget</string>
@@ -135,6 +153,7 @@
                     <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Forward/Backward movement. Move relative to bases</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="executeBehaviourTree">
                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveForward</string>
@@ -146,6 +165,7 @@
                         <condition id="getBoolEquals">
                             <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
                             <string id="value" values="yesno">yes</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveBackward</string>
@@ -160,6 +180,7 @@
                     <string id="id">Toolkit_Movement_Trigger_Teleport</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Boilerplate teleportation</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="executeBehaviourTree">
                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_Teleport</string>
@@ -169,6 +190,7 @@
                     </normal>
                     <else>
                         <orblock>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveDown</string>
@@ -181,6 +203,7 @@
                                     <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
                                     <string id="value" values="yesno">yes</string>
                                     <string id="Comment">Boilerplate vertical movement</string>
+                                    <string id="Minimized">yes</string>
                                     <normal>
                                         <action id="executeBehaviourTree">
                                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveUp</string>
@@ -196,10 +219,12 @@
                                     <string id="value">10</string>
                                     <string id="compare method" values="valuecompare">greater or equal</string>
                                     <string id="Comment">Have I exceeded my possible stuck corner threshold? (every &quot;1&quot; in this counter is 2 real ticks)</string>
+                                    <string id="Minimized">yes</string>
                                 </condition>
                                 <condition id="getBoolEquals">
                                     <string id="id">Toolkit_Movement_Trigger_MoveDown</string>
                                     <string id="value" values="yesno">yes</string>
+                                    <string id="Minimized">yes</string>
                                 </condition>
                             </or>
                         </orblock>
@@ -207,6 +232,7 @@
                             <string id="id">Toolkit_Movement_Trigger_MoveLeft</string>
                             <string id="value" values="yesno">yes</string>
                             <string id="Comment">Boilerplate horizontal movement</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveLeft</string>
@@ -218,6 +244,7 @@
                                 <condition id="getBoolEquals">
                                     <string id="id">Toolkit_Movement_Trigger_MoveRight</string>
                                     <string id="value" values="yesno">yes</string>
+                                    <string id="Minimized">yes</string>
                                     <normal>
                                         <action id="executeBehaviourTree">
                                             <string id="fileName">Mod_AwesomeAIMain_Toolkit_Movement_Trigger_MoveRight</string>
@@ -230,6 +257,85 @@
                         </condition>
                     </else>
                 </condition>
+                <sequence>
+                    <string id="Is blocking">yes</string>
+                    <string id="Comment">Resets all non-sticky triggers</string>
+                    <string id="Minimized">yes</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetFar</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to stay far from target. Takes precedence over FootsyTargetMedium</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetMedium</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to stay near to target. Takes precedence over FootsyTargetClose</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_FootsyTargetClose</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to stay close to target</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveTowardTarget</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over Move Away in conflicts</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveAwayFromTarget</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going backward.</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going forward. Takes precedence over backward in conflicts</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveBackward</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going backward.</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_Teleport</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep teleporting. Takes precedence over all the lowest level move actions</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going up. Takes precedence over down in conflicts</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveDown</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going down</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveLeft</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going left. Takes precedence over right in conflicts</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Movement_Trigger_MoveRight</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">non-sticky. Keep enabled to keep going right</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </sequence>
             </normal>
         </root>
     </behaviour>
