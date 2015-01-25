@@ -63,7 +63,7 @@
                             <string id="id">Toolkits_Movement_Trigger_MoveUp_JumpTicks</string>
                             <string id="value">3</string>
                             <string id="compare method" values="valuecompare">greater or equal</string>
-                            <string id="Comment">This is probably where you should start adjusting jump behavior for individual characters, The code from this block forward is designed for characters with tall, multiple jumps</string>
+                            <string id="Comment">How long to wait between jumps in ticks &lt;-- ADJUST THIS ONE FOR TWEAKING JUMPS</string>
                         </condition>
                         <condition id="getBoolEquals">
                             <string id="id">Toolkit_Detection_Event_WallAtDirectTop</string>
