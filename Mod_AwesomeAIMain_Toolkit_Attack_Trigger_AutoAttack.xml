@@ -32,12 +32,12 @@
                                         <action id="aimStickAtTarget">
                                             <float id="duration seconds">0.01</float>
                                             <string id="only aim when needed" values="yesno">no</string>
-                                            <string id="use rotation speed limits" values="yesno">no</string>
-                                            <float id="min rotation speed per second in degrees">0.00</float>
-                                            <float id="max rotation speed per second in degrees">0.00</float>
-                                            <float id="use min rotation speed when angle to target under">0.00</float>
-                                            <float id="use max rotation speed when angle to target over">0.00</float>
-                                            <string id="Comment">Take Aim - Innacurate, but fast</string>
+                                            <string id="use rotation speed limits" values="yesno">yes</string>
+                                            <float id="min rotation speed per second in degrees">55.00</float>
+                                            <float id="max rotation speed per second in degrees">720.00</float>
+                                            <float id="use min rotation speed when angle to target under">10.00</float>
+                                            <float id="use max rotation speed when angle to target over">40.00</float>
+                                            <string id="Comment">Take Aim</string>
                                         </action>
                                         <action id="pressButton">
                                             <string id="button" values="buttons">FACE_LEFT</string>
@@ -60,12 +60,12 @@
                                                         <action id="aimStickAtTarget">
                                                             <float id="duration seconds">0.01</float>
                                                             <string id="only aim when needed" values="yesno">no</string>
-                                                            <string id="use rotation speed limits" values="yesno">no</string>
-                                                            <float id="min rotation speed per second in degrees">0.00</float>
-                                                            <float id="max rotation speed per second in degrees">0.00</float>
-                                                            <float id="use min rotation speed when angle to target under">0.00</float>
-                                                            <float id="use max rotation speed when angle to target over">0.00</float>
-                                                            <string id="Comment">Take Aim - Innacurate, but fast</string>
+                                                            <string id="use rotation speed limits" values="yesno">yes</string>
+                                                            <float id="min rotation speed per second in degrees">55.00</float>
+                                                            <float id="max rotation speed per second in degrees">720.00</float>
+                                                            <float id="use min rotation speed when angle to target under">10.00</float>
+                                                            <float id="use max rotation speed when angle to target over">40.00</float>
+                                                            <string id="Comment">Take Aim</string>
                                                         </action>
                                                         <action id="pressButton">
                                                             <string id="button" values="buttons">FACE_LEFT</string>
@@ -90,12 +90,12 @@
                                                                 <action id="aimStickAtTarget">
                                                                     <float id="duration seconds">0.01</float>
                                                                     <string id="only aim when needed" values="yesno">no</string>
-                                                                    <string id="use rotation speed limits" values="yesno">no</string>
-                                                                    <float id="min rotation speed per second in degrees">0.00</float>
-                                                                    <float id="max rotation speed per second in degrees">0.00</float>
-                                                                    <float id="use min rotation speed when angle to target under">0.00</float>
-                                                                    <float id="use max rotation speed when angle to target over">0.00</float>
-                                                                    <string id="Comment">Take Aim - Innacurate, but fast</string>
+                                                                    <string id="use rotation speed limits" values="yesno">yes</string>
+                                                                    <float id="min rotation speed per second in degrees">55.00</float>
+                                                                    <float id="max rotation speed per second in degrees">720.00</float>
+                                                                    <float id="use min rotation speed when angle to target under">10.00</float>
+                                                                    <float id="use max rotation speed when angle to target over">40.00</float>
+                                                                    <string id="Comment">Take Aim</string>
                                                                 </action>
                                                                 <action id="pressButton">
                                                                     <string id="button" values="buttons">FACE_LEFT</string>
@@ -130,11 +130,11 @@
                                 <action id="aimStickAtTarget">
                                     <float id="duration seconds">0.01</float>
                                     <string id="only aim when needed" values="yesno">no</string>
-                                    <string id="use rotation speed limits" values="yesno">no</string>
-                                    <float id="min rotation speed per second in degrees">0.00</float>
-                                    <float id="max rotation speed per second in degrees">0.00</float>
-                                    <float id="use min rotation speed when angle to target under">0.00</float>
-                                    <float id="use max rotation speed when angle to target over">0.00</float>
+                                    <string id="use rotation speed limits" values="yesno">yes</string>
+                                    <float id="min rotation speed per second in degrees">55.00</float>
+                                    <float id="max rotation speed per second in degrees">720.00</float>
+                                    <float id="use min rotation speed when angle to target under">10.00</float>
+                                    <float id="use max rotation speed when angle to target over">40.00</float>
                                     <string id="Comment">Take Aim</string>
                                 </action>
                                 <action id="pressButton">
