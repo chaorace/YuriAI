@@ -8,7 +8,6 @@
                     <string id="value">-1</string>
                     <string id="compare method" values="valuecompare">equal</string>
                     <string id="Comment">Waypoint Enumerator Mapping</string>
-                    <string id="Minimized">yes</string>
                     <else>
                         <condition id="checkCounter">
                             <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
@@ -293,20 +292,45 @@
                                                                                                                     <string id="value">ABOVEUPPERFIRSTTOWER_1</string>
                                                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                                                     <normal>
-                                                                                                                        <condition id="isFromTeam">
-                                                                                                                            <string id="team" values="teamswithnumbers">ONE_TEAM</string>
-                                                                                                                            <string id="check on" values="targetself">self</string>
+                                                                                                                        <condition id="checkCounter">
+                                                                                                                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                                                                                                            <string id="value">1</string>
+                                                                                                                            <string id="compare method" values="valuecompare">equal</string>
                                                                                                                             <normal>
-                                                                                                                                <action id="selectDestWaypoint">
-                                                                                                                                    <string id="name">aboveUpperFirstTower_1</string>
-                                                                                                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
-                                                                                                                                </action>
+                                                                                                                                <condition id="isFromTeam">
+                                                                                                                                    <string id="team" values="teamswithnumbers">ONE_TEAM</string>
+                                                                                                                                    <string id="check on" values="targetself">self</string>
+                                                                                                                                    <normal>
+                                                                                                                                        <action id="selectDestWaypoint">
+                                                                                                                                            <string id="name">AboveUpperFirstTower_1</string>
+                                                                                                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                                                                                        </action>
+                                                                                                                                    </normal>
+                                                                                                                                    <else>
+                                                                                                                                        <action id="selectDestWaypoint">
+                                                                                                                                            <string id="name">AboveUpperFirstTower_1</string>
+                                                                                                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                                                                                                        </action>
+                                                                                                                                    </else>
+                                                                                                                                </condition>
                                                                                                                             </normal>
                                                                                                                             <else>
-                                                                                                                                <action id="selectDestWaypoint">
-                                                                                                                                    <string id="name">aboveUpperFirstTower_1</string>
-                                                                                                                                    <string id="team" values="ownenemy">ENEMY_TEAM</string>
-                                                                                                                                </action>
+                                                                                                                                <condition id="isFromTeam">
+                                                                                                                                    <string id="team" values="teamswithnumbers">ONE_TEAM</string>
+                                                                                                                                    <string id="check on" values="targetself">self</string>
+                                                                                                                                    <normal>
+                                                                                                                                        <action id="selectDestWaypoint">
+                                                                                                                                            <string id="name">aboveUpperFirstTower_1</string>
+                                                                                                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                                                                                        </action>
+                                                                                                                                    </normal>
+                                                                                                                                    <else>
+                                                                                                                                        <action id="selectDestWaypoint">
+                                                                                                                                            <string id="name">aboveUpperFirstTower_1</string>
+                                                                                                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                                                                                                        </action>
+                                                                                                                                    </else>
+                                                                                                                                </condition>
                                                                                                                             </else>
                                                                                                                         </condition>
                                                                                                                     </normal>
