@@ -66,24 +66,24 @@
                                     <string id="Comment">Returns true for Ribbit IV, AI 404, AI 205</string>
                                     <normal>
                                         <orblock>
-                                            <string id="Comment">Only returns true on AI404</string>
+                                            <string id="Comment">Only returns true on AI205</string>
                                             <normal>
                                                 <action id="adjustCounter">
                                                     <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
-                                                    <string id="value">1</string>
+                                                    <string id="value">4</string>
                                                     <string id="adjust method" values="valueadjust">set</string>
-                                                    <string id="Comment">It&apos;s AI Station, woo...</string>
+                                                    <string id="Comment">It&apos;s &quot;new&quot; AI Station, woo...</string>
                                                 </action>
                                             </normal>
                                             <else>
                                                 <orblock>
-                                                    <string id="Comment">Only returns true on AI205</string>
+                                                    <string id="Comment">Only returns true on AI404</string>
                                                     <normal>
                                                         <action id="adjustCounter">
                                                             <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
-                                                            <string id="value">4</string>
+                                                            <string id="value">1</string>
                                                             <string id="adjust method" values="valueadjust">set</string>
-                                                            <string id="Comment">It&apos;s &quot;new&quot; AI Station, woo...</string>
+                                                            <string id="Comment">It&apos;s AI Station, woo...</string>
                                                         </action>
                                                     </normal>
                                                     <else>
@@ -102,8 +102,8 @@
                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                             <string id="areaName"></string>
                                                             <float id="xOffset">6.05</float>
-                                                            <float id="yOffset">2.30</float>
-                                                            <float id="width">0.50</float>
+                                                            <float id="yOffset">2.00</float>
+                                                            <float id="width">0.40</float>
                                                             <float id="height">0.30</float>
                                                             <string id="check line of sight" values="yesno">no</string>
                                                             <string id="ignore invisibility" values="yesno">no</string>
@@ -115,8 +115,8 @@
                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                             <string id="areaName"></string>
                                                             <float id="xOffset">-6.05</float>
-                                                            <float id="yOffset">2.30</float>
-                                                            <float id="width">0.50</float>
+                                                            <float id="yOffset">2.00</float>
+                                                            <float id="width">0.40</float>
                                                             <float id="height">0.30</float>
                                                             <string id="check line of sight" values="yesno">no</string>
                                                             <string id="ignore invisibility" values="yesno">no</string>
@@ -132,8 +132,8 @@
                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">6.05</float>
-                                                    <float id="yOffset">2.00</float>
-                                                    <float id="width">0.40</float>
+                                                    <float id="yOffset">2.30</float>
+                                                    <float id="width">0.50</float>
                                                     <float id="height">0.30</float>
                                                     <string id="check line of sight" values="yesno">no</string>
                                                     <string id="ignore invisibility" values="yesno">no</string>
@@ -145,8 +145,8 @@
                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">-6.05</float>
-                                                    <float id="yOffset">2.00</float>
-                                                    <float id="width">0.40</float>
+                                                    <float id="yOffset">2.30</float>
+                                                    <float id="width">0.50</float>
                                                     <float id="height">0.30</float>
                                                     <string id="check line of sight" values="yesno">no</string>
                                                     <string id="ignore invisibility" values="yesno">no</string>
