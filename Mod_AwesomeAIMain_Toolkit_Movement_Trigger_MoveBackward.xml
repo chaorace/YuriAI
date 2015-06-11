@@ -53,11 +53,44 @@
                             <normal>
                                 <orblock>
                                     <normal>
-                                        <action id="setBool">
-                                            <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
-                                            <string id="value" values="flagtoggle">yes</string>
-                                            <string id="Comment">Jump!</string>
-                                        </action>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">Toolkit_Detection_Event_WallAtDirectBottom</string>
+                                            <string id="value" values="yesno">yes</string>
+                                            <string id="Comment">Am I on the ground?</string>
+                                            <normal>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">Jump!</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <orblock>
+                                                    <string id="Comment">Am I falling into a passageway?</string>
+                                                    <else>
+                                                        <action id="setBool">
+                                                            <string id="id">Toolkit_Movement_Trigger_MoveUp</string>
+                                                            <string id="value" values="flagtoggle">yes</string>
+                                                            <string id="Comment">Jump!</string>
+                                                        </action>
+                                                    </else>
+                                                    <or>
+                                                        <condition id="getBoolEquals">
+                                                            <string id="id">Toolkit_Detection_Event_WallAt~1~1</string>
+                                                            <string id="value" values="yesno">yes</string>
+                                                        </condition>
+                                                        <condition id="getBoolEquals">
+                                                            <string id="id">Toolkit_Detection_Event_WallAt~1~2</string>
+                                                            <string id="value" values="yesno">yes</string>
+                                                        </condition>
+                                                        <condition id="getBoolEquals">
+                                                            <string id="id">Toolkit_Detection_Event_WallAt~1~3</string>
+                                                            <string id="value" values="yesno">yes</string>
+                                                        </condition>
+                                                    </or>
+                                                </orblock>
+                                            </else>
+                                        </condition>
                                     </normal>
                                     <or>
                                         <condition id="getBoolEquals">
