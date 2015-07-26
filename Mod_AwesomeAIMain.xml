@@ -22,7 +22,7 @@
                         </action>
                         <action id="setBool">
                             <string id="id">AwesomeAI_Players</string>
-                            <string id="value" values="flagtoggle">no</string>
+                            <string id="value" values="flagtoggle">yes</string>
                             <string id="Comment">Allows plugin to load</string>
                         </action>
                         <action id="setBool">
