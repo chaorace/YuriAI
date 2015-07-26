@@ -1,7 +1,9 @@
 #What is AwesomeAI?
+AwesomeAI is a WIP AI framework made for Awesomenauts, a commercial game created by Ronimo.
+
 AwesomeAI is a completely rewritten replacement for GeneralAI. AwesomeAI is designed with an emphasis on flexibility, added features, and putting more control in the hands of the modder. It's currently a WIP with no projected release date. Beware though, this new framework requires a different mindset to reap it's benefits
 
-[b]What can AwesomeAI do that GeneralAI can't?[/b]
+#What can AwesomeAI do that GeneralAI can't?
 AwesomeAI provides features that do not exist in GeneralAI such as:
 * Map detection: Tailor your AI to the map!
 * Turret detection: Always know which turrets are up!
