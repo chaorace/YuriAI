@@ -80,8 +80,8 @@
                             <string id="character minimum">2</string>
                             <float id="xOffset">0.00</float>
                             <float id="yOffset">0.00</float>
-                            <float id="width">50.00</float>
-                            <float id="height">50.00</float>
+                            <float id="width">40.00</float>
+                            <float id="height">40.00</float>
                             <string id="check line of sight" values="yesno">no</string>
                             <string id="Comment">Are there two allies?</string>
                             <normal>
@@ -103,8 +103,8 @@
                                     <string id="character minimum">1</string>
                                     <float id="xOffset">0.00</float>
                                     <float id="yOffset">0.00</float>
-                                    <float id="width">50.00</float>
-                                    <float id="height">50.00</float>
+                                    <float id="width">40.00</float>
+                                    <float id="height">40.00</float>
                                     <string id="check line of sight" values="yesno">no</string>
                                     <string id="Comment">Is there one ally?</string>
                                     <normal>
@@ -143,8 +143,8 @@
                             <string id="character minimum">3</string>
                             <float id="xOffset">0.00</float>
                             <float id="yOffset">0.00</float>
-                            <float id="width">50.00</float>
-                            <float id="height">50.00</float>
+                            <float id="width">40.00</float>
+                            <float id="height">40.00</float>
                             <string id="check line of sight" values="yesno">no</string>
                             <string id="Comment">Are there three foes?</string>
                             <normal>
@@ -166,8 +166,8 @@
                                     <string id="character minimum">2</string>
                                     <float id="xOffset">0.00</float>
                                     <float id="yOffset">0.00</float>
-                                    <float id="width">50.00</float>
-                                    <float id="height">50.00</float>
+                                    <float id="width">40.00</float>
+                                    <float id="height">40.00</float>
                                     <string id="check line of sight" values="yesno">no</string>
                                     <string id="Comment">Are there two foes?</string>
                                     <normal>
@@ -189,8 +189,8 @@
                                             <string id="character minimum">1</string>
                                             <float id="xOffset">0.00</float>
                                             <float id="yOffset">0.00</float>
-                                            <float id="width">50.00</float>
-                                            <float id="height">50.00</float>
+                                            <float id="width">40.00</float>
+                                            <float id="height">40.00</float>
                                             <string id="check line of sight" values="yesno">no</string>
                                             <string id="Comment">Is there one foe?</string>
                                             <normal>
@@ -2702,13 +2702,13 @@
                                                                                                             <else>
                                                                                                                 <condition id="checkCharacterValue">
                                                                                                                     <string id="property" values="charactervaluesCheckable">health percentage</string>
-                                                                                                                    <float id="value">50.00</float>
+                                                                                                                    <float id="value">40.00</float>
                                                                                                                     <string id="compare method" values="valuecompare">greater or equal</string>
                                                                                                                     <string id="check on" values="targetself">target</string>
                                                                                                                     <normal>
                                                                                                                         <action id="adjustCounter">
                                                                                                                             <string id="id">Toolkit_Players_Event_Ally1Health</string>
-                                                                                                                            <string id="value">50.0</string>
+                                                                                                                            <string id="value">40.0</string>
                                                                                                                             <string id="adjust method" values="valueadjust">set</string>
                                                                                                                             <string id="Comment">Percentage Health of Ally1</string>
                                                                                                                         </action>
