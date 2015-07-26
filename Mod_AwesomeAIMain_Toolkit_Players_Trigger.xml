@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="once">
+                    <string id="Comment">Triggers</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Players_Trigger_TargetAlly0</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Targets Ally0</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Players_Trigger_TargetAlly1</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Targets Ally1</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Players_Trigger_TargetAlly0</string>
+                    <string id="value" values="yesno">yes</string>
+                    <string id="Comment">Target Ally0</string>
+                    <normal>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Players_Trigger_TargetAlly0</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Players_Trigger_TargetAlly1</string>
+                    <string id="value" values="yesno">yes</string>
+                    <string id="Comment">Target Ally1</string>
+                    <normal>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Players_Trigger_TargetAlly1</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <sequence>
+                    <string id="Is blocking">no</string>
+                    <string id="Comment">Trigger resets</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Players_Trigger_TargetAlly0</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Targets Ally0</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Players_Trigger_TargetAlly1</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Targets Ally1</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </sequence>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>
