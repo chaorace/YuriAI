@@ -12,3 +12,11 @@ Fixed the AtTargetWaypointOnce event doing the opposite of what was expected
 Added Toolkit_Detection_Event_Gold which keeps track of solar
 Fixed bug that broke map detection on AI 205 (Thanks FlawlessHair!)
 Fixed bug that caused stuttering
+
+2.2 to 3.0
+
+Fixed Sorona turret detection, which broke in 2.10
+Added Class enumerators
+Added Players Toolkit:
+    Detect ally health, lane, and class!
+    Detect number of foes and allies!

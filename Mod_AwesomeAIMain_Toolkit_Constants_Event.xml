@@ -5,6 +5,7 @@
             <normal>
                 <condition id="once">
                     <string id="Comment">Math Constants</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="adjustCounter">
                             <string id="id">Toolkit_Constants_Event_ConstantZero</string>
@@ -533,6 +534,144 @@
                             <string id="value">80</string>
                             <string id="adjust method" values="valueadjust">set</string>
                             <string id="Comment">Waypoint (auto-generated)</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="once">
+                    <string id="Comment">Class Enumerators</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_VAMPIRE</string>
+                            <string id="value">1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Ayla</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_TANK</string>
+                            <string id="value">2</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Clunk</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_BLAZER</string>
+                            <string id="value">3</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Coco</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_HEAVY</string>
+                            <string id="value">4</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Derpl</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_DASHER</string>
+                            <string id="value">5</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Froggy G</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_BUTTERFLY</string>
+                            <string id="value">6</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Genji</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_MAW</string>
+                            <string id="value">7</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Gnaw</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_CHAMELEON</string>
+                            <string id="value">8</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Leon</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_COWBOY</string>
+                            <string id="value">9</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Lonestar</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_BLINKER</string>
+                            <string id="value">10</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Nibbs</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_ASSASSIN</string>
+                            <string id="value">11</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Penny Fox</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_HUNTER</string>
+                            <string id="value">12</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Raelynn</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_PALADIN</string>
+                            <string id="value">13</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Scoop</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_SPY</string>
+                            <string id="value">14</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Sentry X-58</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_BRUTE</string>
+                            <string id="value">15</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Skolldir</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_SHAMAN</string>
+                            <string id="value">16</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Skree</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_CAPTAIN</string>
+                            <string id="value">17</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Swiggins</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_COMMANDO</string>
+                            <string id="value">18</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Ted McPain</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_BIRD</string>
+                            <string id="value">19</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Vinnie &amp; Spike</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_SUMMONER</string>
+                            <string id="value">20</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Voltar</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_JETTER</string>
+                            <string id="value">21</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Yuri</string>
+                        </action>
+                        <action id="adjustCounter">
+                            <string id="id">CLASS_WOZZLE</string>
+                            <string id="value">22</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Rocco</string>
                         </action>
                     </normal>
                 </condition>

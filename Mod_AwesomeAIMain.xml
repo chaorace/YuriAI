@@ -4,7 +4,6 @@
         <root x="110" y="40">
             <normal>
                 <condition id="once">
-                    <string id="Minimized">yes</string>
                     <normal>
                         <action id="log">
                             <string id="text">AwesomeAI loaded!</string>
@@ -19,6 +18,11 @@
                         <action id="setBool">
                             <string id="id">AwesomeAI_Ticker</string>
                             <string id="value" values="flagtoggle">yes</string>
+                            <string id="Comment">Allows plugin to load</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">AwesomeAI_Players</string>
+                            <string id="value" values="flagtoggle">no</string>
                             <string id="Comment">Allows plugin to load</string>
                         </action>
                         <action id="setBool">
@@ -88,6 +92,17 @@
                                 <action id="executeBehaviourTree">
                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Ticker</string>
                                     <string id="Comment">Ticker Toolkit, handles time operations</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">AwesomeAI_Players</string>
+                            <string id="value" values="yesno">yes</string>
+                            <normal>
+                                <action id="executeBehaviourTree">
+                                    <string id="fileName">Mod_AwesomeAIMain_Toolkit_Players</string>
+                                    <string id="Comment">Players Toolkit, handles information about other players</string>
                                     <string id="Minimized">yes</string>
                                 </action>
                             </normal>
