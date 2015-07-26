@@ -132,26 +132,25 @@
                     <float id="time in seconds">-1.00</float>
                     <string id="compare method" values="valuecompare">greater</string>
                     <string id="Comment">Discover how many foes are alive</string>
-                    <string id="Minimized">yes</string>
                     <normal>
                         <condition id="isCharacterInArea">
                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                             <string id="class"></string>
                             <string id="condition" values="charactervaluesCheckable">health</string>
-                            <string id="comparison" values="valuecompare">equal</string>
+                            <string id="comparison" values="valuecompare">greater or equal</string>
                             <float id="value">0.00</float>
-                            <string id="character minimum">2</string>
+                            <string id="character minimum">3</string>
                             <float id="xOffset">0.00</float>
                             <float id="yOffset">0.00</float>
                             <float id="width">50.00</float>
                             <float id="height">50.00</float>
                             <string id="check line of sight" values="yesno">no</string>
-                            <string id="Comment">Are there two foes?</string>
+                            <string id="Comment">Are there three foes?</string>
                             <normal>
                                 <action id="adjustCounter">
                                     <string id="id">Toolkit_Players_Event_FoeCount</string>
-                                    <string id="value">2</string>
+                                    <string id="value">3</string>
                                     <string id="adjust method" values="valueadjust">set</string>
                                     <string id="Comment">Number of foes alive</string>
                                 </action>
@@ -164,28 +163,53 @@
                                     <string id="condition" values="charactervaluesCheckable">health</string>
                                     <string id="comparison" values="valuecompare">greater or equal</string>
                                     <float id="value">0.00</float>
-                                    <string id="character minimum">1</string>
+                                    <string id="character minimum">2</string>
                                     <float id="xOffset">0.00</float>
                                     <float id="yOffset">0.00</float>
                                     <float id="width">50.00</float>
                                     <float id="height">50.00</float>
                                     <string id="check line of sight" values="yesno">no</string>
-                                    <string id="Comment">Is there one foe?</string>
+                                    <string id="Comment">Are there two foes?</string>
                                     <normal>
                                         <action id="adjustCounter">
                                             <string id="id">Toolkit_Players_Event_FoeCount</string>
-                                            <string id="value">1</string>
+                                            <string id="value">2</string>
                                             <string id="adjust method" values="valueadjust">set</string>
                                             <string id="Comment">Number of foes alive</string>
                                         </action>
                                     </normal>
                                     <else>
-                                        <action id="adjustCounter">
-                                            <string id="id">Toolkit_Players_Event_FoeCount</string>
-                                            <string id="value">0</string>
-                                            <string id="adjust method" values="valueadjust">set</string>
-                                            <string id="Comment">Number of foes alive</string>
-                                        </action>
+                                        <condition id="isCharacterInArea">
+                                            <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
+                                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                                            <string id="class"></string>
+                                            <string id="condition" values="charactervaluesCheckable">health</string>
+                                            <string id="comparison" values="valuecompare">greater or equal</string>
+                                            <float id="value">0.00</float>
+                                            <string id="character minimum">1</string>
+                                            <float id="xOffset">0.00</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">50.00</float>
+                                            <float id="height">50.00</float>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="Comment">Is there one foe?</string>
+                                            <normal>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_Players_Event_FoeCount</string>
+                                                    <string id="value">1</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Number of foes alive</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_Players_Event_FoeCount</string>
+                                                    <string id="value">0</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Number of foes alive</string>
+                                                </action>
+                                            </else>
+                                        </condition>
                                     </else>
                                 </condition>
                             </else>
