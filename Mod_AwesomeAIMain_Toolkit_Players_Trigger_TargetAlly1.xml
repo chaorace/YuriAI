@@ -3,44 +3,24 @@
     <behaviour>
         <root x="110" y="40">
             <normal>
-                <condition id="checkCounter">
-                    <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                    <string id="value">CLASS_VAMPIRE</string>
-                    <string id="compare method" values="valuecompare">equal</string>
-                    <string id="Comment">Target Ally1</string>
-                    <string id="Minimized">yes</string>
-                    <normal>
-                        <action id="selectTarget">
-                            <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
-                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                            <string id="class">Vampire</string>
-                            <string id="remove if not found" values="yesno">no</string>
-                            <float id="xOffset">0.00</float>
-                            <float id="yOffset">0.00</float>
-                            <float id="width">40.00</float>
-                            <float id="height">40.00</float>
-                            <string id="compare method" values="valuecompare2">greater or equal</string>
-                            <float id="health value">0.00</float>
-                            <string id="distance check" values="distance check">FURTHEST</string>
-                            <string id="check line of sight" values="yesno">no</string>
-                            <string id="ignore invisibility" values="yesno">yes</string>
-                        </action>
-                    </normal>
+                <andblock>
                     <else>
                         <condition id="checkCounter">
                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                            <string id="value">CLASS_TANK</string>
+                            <string id="value">CLASS_VAMPIRE</string>
                             <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Target Ally1</string>
+                            <string id="Minimized">yes</string>
                             <normal>
                                 <action id="selectTarget">
                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                    <string id="class">Tank</string>
+                                    <string id="class">Vampire</string>
                                     <string id="remove if not found" values="yesno">no</string>
                                     <float id="xOffset">0.00</float>
                                     <float id="yOffset">0.00</float>
-                                    <float id="width">40.00</float>
-                                    <float id="height">40.00</float>
+                                    <float id="width">30.00</float>
+                                    <float id="height">15.00</float>
                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                     <float id="health value">0.00</float>
                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -51,18 +31,18 @@
                             <else>
                                 <condition id="checkCounter">
                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                    <string id="value">CLASS_BLAZER</string>
+                                    <string id="value">CLASS_TANK</string>
                                     <string id="compare method" values="valuecompare">equal</string>
                                     <normal>
                                         <action id="selectTarget">
                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                            <string id="class">Blazer</string>
+                                            <string id="class">Tank</string>
                                             <string id="remove if not found" values="yesno">no</string>
                                             <float id="xOffset">0.00</float>
                                             <float id="yOffset">0.00</float>
-                                            <float id="width">40.00</float>
-                                            <float id="height">40.00</float>
+                                            <float id="width">30.00</float>
+                                            <float id="height">15.00</float>
                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                             <float id="health value">0.00</float>
                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -73,18 +53,18 @@
                                     <else>
                                         <condition id="checkCounter">
                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                            <string id="value">CLASS_HEAVY</string>
+                                            <string id="value">CLASS_BLAZER</string>
                                             <string id="compare method" values="valuecompare">equal</string>
                                             <normal>
                                                 <action id="selectTarget">
                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                    <string id="class">Heavy</string>
+                                                    <string id="class">Blazer</string>
                                                     <string id="remove if not found" values="yesno">no</string>
                                                     <float id="xOffset">0.00</float>
                                                     <float id="yOffset">0.00</float>
-                                                    <float id="width">40.00</float>
-                                                    <float id="height">40.00</float>
+                                                    <float id="width">30.00</float>
+                                                    <float id="height">15.00</float>
                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                     <float id="health value">0.00</float>
                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -95,18 +75,18 @@
                                             <else>
                                                 <condition id="checkCounter">
                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                    <string id="value">CLASS_DASHER</string>
+                                                    <string id="value">CLASS_HEAVY</string>
                                                     <string id="compare method" values="valuecompare">equal</string>
                                                     <normal>
                                                         <action id="selectTarget">
                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                            <string id="class">Dasher</string>
+                                                            <string id="class">Heavy</string>
                                                             <string id="remove if not found" values="yesno">no</string>
                                                             <float id="xOffset">0.00</float>
                                                             <float id="yOffset">0.00</float>
-                                                            <float id="width">40.00</float>
-                                                            <float id="height">40.00</float>
+                                                            <float id="width">30.00</float>
+                                                            <float id="height">15.00</float>
                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                             <float id="health value">0.00</float>
                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -117,18 +97,18 @@
                                                     <else>
                                                         <condition id="checkCounter">
                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                            <string id="value">CLASS_BUTTERFLY</string>
+                                                            <string id="value">CLASS_DASHER</string>
                                                             <string id="compare method" values="valuecompare">equal</string>
                                                             <normal>
                                                                 <action id="selectTarget">
                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                    <string id="class">Butterfly</string>
+                                                                    <string id="class">Dasher</string>
                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                     <float id="xOffset">0.00</float>
                                                                     <float id="yOffset">0.00</float>
-                                                                    <float id="width">40.00</float>
-                                                                    <float id="height">40.00</float>
+                                                                    <float id="width">30.00</float>
+                                                                    <float id="height">15.00</float>
                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                     <float id="health value">0.00</float>
                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -139,18 +119,18 @@
                                                             <else>
                                                                 <condition id="checkCounter">
                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                    <string id="value">CLASS_MAW</string>
+                                                                    <string id="value">CLASS_BUTTERFLY</string>
                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                     <normal>
                                                                         <action id="selectTarget">
                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                            <string id="class">Maw</string>
+                                                                            <string id="class">Butterfly</string>
                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                             <float id="xOffset">0.00</float>
                                                                             <float id="yOffset">0.00</float>
-                                                                            <float id="width">40.00</float>
-                                                                            <float id="height">40.00</float>
+                                                                            <float id="width">30.00</float>
+                                                                            <float id="height">15.00</float>
                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                             <float id="health value">0.00</float>
                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -161,18 +141,18 @@
                                                                     <else>
                                                                         <condition id="checkCounter">
                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                            <string id="value">CLASS_CHAMELEON</string>
+                                                                            <string id="value">CLASS_MAW</string>
                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                             <normal>
                                                                                 <action id="selectTarget">
                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                    <string id="class">Chameleon</string>
+                                                                                    <string id="class">Maw</string>
                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                     <float id="xOffset">0.00</float>
                                                                                     <float id="yOffset">0.00</float>
-                                                                                    <float id="width">40.00</float>
-                                                                                    <float id="height">40.00</float>
+                                                                                    <float id="width">30.00</float>
+                                                                                    <float id="height">15.00</float>
                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                     <float id="health value">0.00</float>
                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -183,18 +163,18 @@
                                                                             <else>
                                                                                 <condition id="checkCounter">
                                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                    <string id="value">CLASS_COWBOY</string>
+                                                                                    <string id="value">CLASS_CHAMELEON</string>
                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                     <normal>
                                                                                         <action id="selectTarget">
                                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                            <string id="class">Cowboy</string>
+                                                                                            <string id="class">Chameleon</string>
                                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                                             <float id="xOffset">0.00</float>
                                                                                             <float id="yOffset">0.00</float>
-                                                                                            <float id="width">40.00</float>
-                                                                                            <float id="height">40.00</float>
+                                                                                            <float id="width">30.00</float>
+                                                                                            <float id="height">15.00</float>
                                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                             <float id="health value">0.00</float>
                                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -205,18 +185,18 @@
                                                                                     <else>
                                                                                         <condition id="checkCounter">
                                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                            <string id="value">CLASS_BLINKER</string>
+                                                                                            <string id="value">CLASS_COWBOY</string>
                                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                                             <normal>
                                                                                                 <action id="selectTarget">
                                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                    <string id="class">Blinker</string>
+                                                                                                    <string id="class">Cowboy</string>
                                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                                     <float id="xOffset">0.00</float>
                                                                                                     <float id="yOffset">0.00</float>
-                                                                                                    <float id="width">40.00</float>
-                                                                                                    <float id="height">40.00</float>
+                                                                                                    <float id="width">30.00</float>
+                                                                                                    <float id="height">15.00</float>
                                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                     <float id="health value">0.00</float>
                                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -227,18 +207,18 @@
                                                                                             <else>
                                                                                                 <condition id="checkCounter">
                                                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                    <string id="value">CLASS_ASSASSIN</string>
+                                                                                                    <string id="value">CLASS_BLINKER</string>
                                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                                     <normal>
                                                                                                         <action id="selectTarget">
                                                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                            <string id="class">Assassin</string>
+                                                                                                            <string id="class">Blinker</string>
                                                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                                                             <float id="xOffset">0.00</float>
                                                                                                             <float id="yOffset">0.00</float>
-                                                                                                            <float id="width">40.00</float>
-                                                                                                            <float id="height">40.00</float>
+                                                                                                            <float id="width">30.00</float>
+                                                                                                            <float id="height">15.00</float>
                                                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                             <float id="health value">0.00</float>
                                                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -249,18 +229,18 @@
                                                                                                     <else>
                                                                                                         <condition id="checkCounter">
                                                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                            <string id="value">CLASS_HUNTER</string>
+                                                                                                            <string id="value">CLASS_ASSASSIN</string>
                                                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                                                             <normal>
                                                                                                                 <action id="selectTarget">
                                                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                    <string id="class">Hunter</string>
+                                                                                                                    <string id="class">Assassin</string>
                                                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                                                     <float id="xOffset">0.00</float>
                                                                                                                     <float id="yOffset">0.00</float>
-                                                                                                                    <float id="width">40.00</float>
-                                                                                                                    <float id="height">40.00</float>
+                                                                                                                    <float id="width">30.00</float>
+                                                                                                                    <float id="height">15.00</float>
                                                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                     <float id="health value">0.00</float>
                                                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -271,18 +251,18 @@
                                                                                                             <else>
                                                                                                                 <condition id="checkCounter">
                                                                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                    <string id="value">CLASS_PALADIN</string>
+                                                                                                                    <string id="value">CLASS_HUNTER</string>
                                                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                                                     <normal>
                                                                                                                         <action id="selectTarget">
                                                                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                            <string id="class">Paladin</string>
+                                                                                                                            <string id="class">Hunter</string>
                                                                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                                                                             <float id="xOffset">0.00</float>
                                                                                                                             <float id="yOffset">0.00</float>
-                                                                                                                            <float id="width">40.00</float>
-                                                                                                                            <float id="height">40.00</float>
+                                                                                                                            <float id="width">30.00</float>
+                                                                                                                            <float id="height">15.00</float>
                                                                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                             <float id="health value">0.00</float>
                                                                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -293,18 +273,18 @@
                                                                                                                     <else>
                                                                                                                         <condition id="checkCounter">
                                                                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                            <string id="value">CLASS_SPY</string>
+                                                                                                                            <string id="value">CLASS_PALADIN</string>
                                                                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                                                                             <normal>
                                                                                                                                 <action id="selectTarget">
                                                                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                    <string id="class">Spy</string>
+                                                                                                                                    <string id="class">Paladin</string>
                                                                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                                                                     <float id="xOffset">0.00</float>
                                                                                                                                     <float id="yOffset">0.00</float>
-                                                                                                                                    <float id="width">40.00</float>
-                                                                                                                                    <float id="height">40.00</float>
+                                                                                                                                    <float id="width">30.00</float>
+                                                                                                                                    <float id="height">15.00</float>
                                                                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                     <float id="health value">0.00</float>
                                                                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -315,18 +295,18 @@
                                                                                                                             <else>
                                                                                                                                 <condition id="checkCounter">
                                                                                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                    <string id="value">CLASS_BRUTE</string>
+                                                                                                                                    <string id="value">CLASS_SPY</string>
                                                                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                     <normal>
                                                                                                                                         <action id="selectTarget">
                                                                                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                            <string id="class">Brute</string>
+                                                                                                                                            <string id="class">Spy</string>
                                                                                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                                                                                             <float id="xOffset">0.00</float>
                                                                                                                                             <float id="yOffset">0.00</float>
-                                                                                                                                            <float id="width">40.00</float>
-                                                                                                                                            <float id="height">40.00</float>
+                                                                                                                                            <float id="width">30.00</float>
+                                                                                                                                            <float id="height">15.00</float>
                                                                                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                             <float id="health value">0.00</float>
                                                                                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -337,18 +317,18 @@
                                                                                                                                     <else>
                                                                                                                                         <condition id="checkCounter">
                                                                                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                            <string id="value">CLASS_SHAMAN</string>
+                                                                                                                                            <string id="value">CLASS_BRUTE</string>
                                                                                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                             <normal>
                                                                                                                                                 <action id="selectTarget">
                                                                                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                                    <string id="class">Shaman</string>
+                                                                                                                                                    <string id="class">Brute</string>
                                                                                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                                                                                     <float id="xOffset">0.00</float>
                                                                                                                                                     <float id="yOffset">0.00</float>
-                                                                                                                                                    <float id="width">40.00</float>
-                                                                                                                                                    <float id="height">40.00</float>
+                                                                                                                                                    <float id="width">30.00</float>
+                                                                                                                                                    <float id="height">15.00</float>
                                                                                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                                     <float id="health value">0.00</float>
                                                                                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -359,18 +339,18 @@
                                                                                                                                             <else>
                                                                                                                                                 <condition id="checkCounter">
                                                                                                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                                    <string id="value">CLASS_CAPTAIN</string>
+                                                                                                                                                    <string id="value">CLASS_SHAMAN</string>
                                                                                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                                     <normal>
                                                                                                                                                         <action id="selectTarget">
                                                                                                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                                            <string id="class">Captain</string>
+                                                                                                                                                            <string id="class">Shaman</string>
                                                                                                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                                                                                                             <float id="xOffset">0.00</float>
                                                                                                                                                             <float id="yOffset">0.00</float>
-                                                                                                                                                            <float id="width">40.00</float>
-                                                                                                                                                            <float id="height">40.00</float>
+                                                                                                                                                            <float id="width">30.00</float>
+                                                                                                                                                            <float id="height">15.00</float>
                                                                                                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                                             <float id="health value">0.00</float>
                                                                                                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -381,18 +361,18 @@
                                                                                                                                                     <else>
                                                                                                                                                         <condition id="checkCounter">
                                                                                                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                                            <string id="value">CLASS_COMMANDO</string>
+                                                                                                                                                            <string id="value">CLASS_CAPTAIN</string>
                                                                                                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                                             <normal>
                                                                                                                                                                 <action id="selectTarget">
                                                                                                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                                                    <string id="class">Commando</string>
+                                                                                                                                                                    <string id="class">Captain</string>
                                                                                                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                                                                                                     <float id="xOffset">0.00</float>
                                                                                                                                                                     <float id="yOffset">0.00</float>
-                                                                                                                                                                    <float id="width">40.00</float>
-                                                                                                                                                                    <float id="height">40.00</float>
+                                                                                                                                                                    <float id="width">30.00</float>
+                                                                                                                                                                    <float id="height">15.00</float>
                                                                                                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                                                     <float id="health value">0.00</float>
                                                                                                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -403,18 +383,18 @@
                                                                                                                                                             <else>
                                                                                                                                                                 <condition id="checkCounter">
                                                                                                                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                                                    <string id="value">CLASS_BIRD</string>
+                                                                                                                                                                    <string id="value">CLASS_COMMANDO</string>
                                                                                                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                                                     <normal>
                                                                                                                                                                         <action id="selectTarget">
                                                                                                                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                                                            <string id="class">Bird</string>
+                                                                                                                                                                            <string id="class">Commando</string>
                                                                                                                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                                                                                                                             <float id="xOffset">0.00</float>
                                                                                                                                                                             <float id="yOffset">0.00</float>
-                                                                                                                                                                            <float id="width">40.00</float>
-                                                                                                                                                                            <float id="height">40.00</float>
+                                                                                                                                                                            <float id="width">30.00</float>
+                                                                                                                                                                            <float id="height">15.00</float>
                                                                                                                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                                                             <float id="health value">0.00</float>
                                                                                                                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -425,18 +405,18 @@
                                                                                                                                                                     <else>
                                                                                                                                                                         <condition id="checkCounter">
                                                                                                                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                                                            <string id="value">CLASS_SUMMONER</string>
+                                                                                                                                                                            <string id="value">CLASS_BIRD</string>
                                                                                                                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                                                             <normal>
                                                                                                                                                                                 <action id="selectTarget">
                                                                                                                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                                                                    <string id="class">Summoner</string>
+                                                                                                                                                                                    <string id="class">Bird</string>
                                                                                                                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                                                                                                                     <float id="xOffset">0.00</float>
                                                                                                                                                                                     <float id="yOffset">0.00</float>
-                                                                                                                                                                                    <float id="width">40.00</float>
-                                                                                                                                                                                    <float id="height">40.00</float>
+                                                                                                                                                                                    <float id="width">30.00</float>
+                                                                                                                                                                                    <float id="height">15.00</float>
                                                                                                                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                                                                     <float id="health value">0.00</float>
                                                                                                                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -447,18 +427,18 @@
                                                                                                                                                                             <else>
                                                                                                                                                                                 <condition id="checkCounter">
                                                                                                                                                                                     <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                                                                    <string id="value">CLASS_JETTER</string>
+                                                                                                                                                                                    <string id="value">CLASS_SUMMONER</string>
                                                                                                                                                                                     <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                                                                     <normal>
                                                                                                                                                                                         <action id="selectTarget">
                                                                                                                                                                                             <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                                                                            <string id="class">Jetter</string>
+                                                                                                                                                                                            <string id="class">Summoner</string>
                                                                                                                                                                                             <string id="remove if not found" values="yesno">no</string>
                                                                                                                                                                                             <float id="xOffset">0.00</float>
                                                                                                                                                                                             <float id="yOffset">0.00</float>
-                                                                                                                                                                                            <float id="width">40.00</float>
-                                                                                                                                                                                            <float id="height">40.00</float>
+                                                                                                                                                                                            <float id="width">30.00</float>
+                                                                                                                                                                                            <float id="height">15.00</float>
                                                                                                                                                                                             <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                                                                             <float id="health value">0.00</float>
                                                                                                                                                                                             <string id="distance check" values="distance check">FURTHEST</string>
@@ -469,18 +449,18 @@
                                                                                                                                                                                     <else>
                                                                                                                                                                                         <condition id="checkCounter">
                                                                                                                                                                                             <string id="id">Toolkit_Players_Event_Ally1Class</string>
-                                                                                                                                                                                            <string id="value">CLASS_WOZZLE</string>
+                                                                                                                                                                                            <string id="value">CLASS_JETTER</string>
                                                                                                                                                                                             <string id="compare method" values="valuecompare">equal</string>
                                                                                                                                                                                             <normal>
                                                                                                                                                                                                 <action id="selectTarget">
                                                                                                                                                                                                     <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
                                                                                                                                                                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
-                                                                                                                                                                                                    <string id="class">Wozzle</string>
+                                                                                                                                                                                                    <string id="class">Jetter</string>
                                                                                                                                                                                                     <string id="remove if not found" values="yesno">no</string>
                                                                                                                                                                                                     <float id="xOffset">0.00</float>
                                                                                                                                                                                                     <float id="yOffset">0.00</float>
-                                                                                                                                                                                                    <float id="width">40.00</float>
-                                                                                                                                                                                                    <float id="height">40.00</float>
+                                                                                                                                                                                                    <float id="width">30.00</float>
+                                                                                                                                                                                                    <float id="height">15.00</float>
                                                                                                                                                                                                     <string id="compare method" values="valuecompare2">greater or equal</string>
                                                                                                                                                                                                     <float id="health value">0.00</float>
                                                                                                                                                                                                     <string id="distance check" values="distance check">FURTHEST</string>
@@ -488,6 +468,30 @@
                                                                                                                                                                                                     <string id="ignore invisibility" values="yesno">yes</string>
                                                                                                                                                                                                 </action>
                                                                                                                                                                                             </normal>
+                                                                                                                                                                                            <else>
+                                                                                                                                                                                                <condition id="checkCounter">
+                                                                                                                                                                                                    <string id="id">Toolkit_Players_Event_Ally1Class</string>
+                                                                                                                                                                                                    <string id="value">CLASS_WOZZLE</string>
+                                                                                                                                                                                                    <string id="compare method" values="valuecompare">equal</string>
+                                                                                                                                                                                                    <normal>
+                                                                                                                                                                                                        <action id="selectTarget">
+                                                                                                                                                                                                            <string id="groups to select" values="target groups" multiselect="true">PLAYERS;;</string>
+                                                                                                                                                                                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                                                                                                                                                                                            <string id="class">Wozzle</string>
+                                                                                                                                                                                                            <string id="remove if not found" values="yesno">no</string>
+                                                                                                                                                                                                            <float id="xOffset">0.00</float>
+                                                                                                                                                                                                            <float id="yOffset">0.00</float>
+                                                                                                                                                                                                            <float id="width">30.00</float>
+                                                                                                                                                                                                            <float id="height">15.00</float>
+                                                                                                                                                                                                            <string id="compare method" values="valuecompare2">greater or equal</string>
+                                                                                                                                                                                                            <float id="health value">0.00</float>
+                                                                                                                                                                                                            <string id="distance check" values="distance check">FURTHEST</string>
+                                                                                                                                                                                                            <string id="check line of sight" values="yesno">no</string>
+                                                                                                                                                                                                            <string id="ignore invisibility" values="yesno">yes</string>
+                                                                                                                                                                                                        </action>
+                                                                                                                                                                                                    </normal>
+                                                                                                                                                                                                </condition>
+                                                                                                                                                                                            </else>
                                                                                                                                                                                         </condition>
                                                                                                                                                                                     </else>
                                                                                                                                                                                 </condition>
@@ -530,7 +534,25 @@
                             </else>
                         </condition>
                     </else>
-                </condition>
+                    <or>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_Players_Event_TargetAlly1LastTick</string>
+                            <string id="value">Toolkit_Ticker_Event_1TickAgo</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Was this targetting last tick?</string>
+                        </condition>
+                        <condition id="hasTarget">
+                            <string id="condition" values="yesno">yes</string>
+                            <string id="Comment">Do I still have a target?</string>
+                        </condition>
+                    </or>
+                </andblock>
+                <action id="adjustCounter">
+                    <string id="id">Toolkit_Players_Event_TargetAlly1LastTick</string>
+                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                    <string id="adjust method" values="valueadjust">set</string>
+                    <string id="Comment">This is now the last active tick</string>
+                </action>
             </normal>
         </root>
     </behaviour>
