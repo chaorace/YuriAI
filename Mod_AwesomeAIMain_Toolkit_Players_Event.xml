@@ -79,7 +79,6 @@
                     <string id="id">Toolkit_Ticker_Event_3rdTick</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Spreads intensive checks across three ticks</string>
-                    <string id="Minimized">yes</string>
                     <normal>
                         <condition id="checkGameTime">
                             <float id="time in seconds">-1.00</float>
@@ -185,7 +184,6 @@
                                             <string id="value">1</string>
                                             <string id="compare method" values="valuecompare">greater or equal</string>
                                             <string id="Comment">Are there any allies to speak of?</string>
-                                            <string id="Minimized">yes</string>
                                             <normal>
                                                 <condition id="checkGameTime">
                                                     <float id="time in seconds">-1.00</float>
@@ -276,6 +274,11 @@
                                                         </condition>
                                                     </normal>
                                                 </condition>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Players_BypassTimekeeping</string>
+                                                    <string id="value" values="flagtoggle">yes</string>
+                                                    <string id="Comment">Hack used to allow targetting without breaking normal timekeeping</string>
+                                                </action>
                                                 <action id="executeBehaviourTree">
                                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Players_Trigger_TargetAlly0</string>
                                                     <string id="Comment">Target Ally0</string>
@@ -959,6 +962,11 @@
                                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Players_Trigger_TargetAlly1</string>
                                                     <string id="Comment">Target Ally1</string>
                                                     <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="setBool">
+                                                    <string id="id">Toolkit_Players_BypassTimekeeping</string>
+                                                    <string id="value" values="flagtoggle">no</string>
+                                                    <string id="Comment">Hack used to allow targetting without breaking normal timekeeping</string>
                                                 </action>
                                                 <condition id="checkCharacterValue">
                                                     <string id="property" values="charactervaluesCheckable">health percentage</string>

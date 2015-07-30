@@ -547,12 +547,18 @@
                         </condition>
                     </or>
                 </andblock>
-                <action id="adjustCounter">
-                    <string id="id">Toolkit_Players_Event_TargetAlly1LastTick</string>
-                    <string id="value">Toolkit_Ticker_Event_Ticks</string>
-                    <string id="adjust method" values="valueadjust">set</string>
-                    <string id="Comment">This is now the last active tick</string>
-                </action>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Players_BypassTimekeeping</string>
+                    <string id="value" values="yesno">no</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Players_Event_TargetAlly1LastTick</string>
+                            <string id="value">Toolkit_Ticker_Event_Ticks</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">This is now the last active tick</string>
+                        </action>
+                    </normal>
+                </condition>
             </normal>
         </root>
     </behaviour>
