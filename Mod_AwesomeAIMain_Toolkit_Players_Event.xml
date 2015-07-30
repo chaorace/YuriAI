@@ -274,11 +274,6 @@
                                                         </condition>
                                                     </normal>
                                                 </condition>
-                                                <action id="setBool">
-                                                    <string id="id">Toolkit_Players_BypassTimekeeping</string>
-                                                    <string id="value" values="flagtoggle">yes</string>
-                                                    <string id="Comment">Hack used to allow targetting without breaking normal timekeeping</string>
-                                                </action>
                                                 <action id="executeBehaviourTree">
                                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Players_Trigger_TargetAlly0</string>
                                                     <string id="Comment">Target Ally0</string>
@@ -962,11 +957,6 @@
                                                     <string id="fileName">Mod_AwesomeAIMain_Toolkit_Players_Trigger_TargetAlly1</string>
                                                     <string id="Comment">Target Ally1</string>
                                                     <string id="Minimized">yes</string>
-                                                </action>
-                                                <action id="setBool">
-                                                    <string id="id">Toolkit_Players_BypassTimekeeping</string>
-                                                    <string id="value" values="flagtoggle">no</string>
-                                                    <string id="Comment">Hack used to allow targetting without breaking normal timekeeping</string>
                                                 </action>
                                                 <condition id="checkCharacterValue">
                                                     <string id="property" values="charactervaluesCheckable">health percentage</string>
