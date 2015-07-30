@@ -7308,12 +7308,28 @@
                         <orblock>
                             <string id="Comment">Am I in the top lane?</string>
                             <normal>
-                                <action id="adjustCounter">
-                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
-                                    <string id="value">0</string>
-                                    <string id="adjust method" values="valueadjust">set</string>
-                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
-                                </action>
+                                <condition id="isInNamedArea">
+                                    <string id="area name">AREAJUNGLE</string>
+                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                    <string id="who" values="targetself">self</string>
+                                    <string id="Comment">Am I in the jungle?</string>
+                                    <normal>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                            <string id="value">0</string>
+                                            <string id="adjust method" values="valueadjust">set</string>
+                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                            <string id="value">-1</string>
+                                            <string id="adjust method" values="valueadjust">set</string>
+                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                        </action>
+                                    </else>
+                                </condition>
                             </normal>
                             <else>
                                 <orblock>
