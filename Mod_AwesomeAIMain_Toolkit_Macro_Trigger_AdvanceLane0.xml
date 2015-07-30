@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                    <string id="value">0</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Am I currently in Lane0?</string>
+                    <normal>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
+                            <string id="value">true</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Advance!</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                            <string id="value">0</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">Ribbit?</string>
+                            <normal>
+                                <condition id="isInNamedArea">
+                                    <string id="area name">AREAHOME</string>
+                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                    <string id="who" values="targetself">self</string>
+                                    <string id="Comment">Am I at my base?</string>
+                                    <normal>
+                                        <condition id="isFromTeam">
+                                            <string id="team" values="teamswithnumbers">ZERO_TEAM</string>
+                                            <string id="check on" values="targetself">self</string>
+                                            <string id="Comment">Walk the shortest path to the top lane</string>
+                                            <normal>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                                                    <string id="value">UPPERSECONDTOWER_0</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                                                    <string id="value">UPPERSECONDTOWER_1</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                </action>
+                                            </else>
+                                        </condition>
+                                    </normal>
+                                    <else>
+                                        <condition id="checkCounter">
+                                            <string id="id">Toolkit_Players_Event_Lane1LastAggro</string>
+                                            <string id="value">Toolkit_Players_Event_Lane0LastAggro</string>
+                                            <string id="compare method" values="valuecompare">greater or equal</string>
+                                            <string id="Comment">Have I run into an enemy in lane1 more recently than lane0?</string>
+                                            <normal>
+                                                <andblock>
+                                                    <string id="Comment">Try lane0 first</string>
+                                                    <normal>
+                                                        <action id="adjustCounter">
+                                                            <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                                                            <string id="value">UPPERLANE</string>
+                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                            <string id="Comment">Just go straight to the center</string>
+                                                        </action>
+                                                    </normal>
+                                                    <else>
+                                                        <condition id="getBoolEquals">
+                                                            <string id="id">Toolkit_MapInfo_Event_MyTurret2</string>
+                                                            <string id="value" values="yesno">yes</string>
+                                                            <string id="Comment">Is my top front turret up?</string>
+                                                            <normal>
+                                                                <action id="adjustCounter">
+                                                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                                                                    <string id="value">PATH_ADVANCELANE0_0</string>
+                                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                                    <string id="Comment">Loop through jungle between the top two turrets</string>
+                                                                </action>
+                                                            </normal>
+                                                            <else>
+                                                                <action id="adjustCounter">
+                                                                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
+                                                                    <string id="value">UPPERLANE</string>
+                                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                                    <string id="Comment">Just go straight to the center</string>
+                                                                </action>
+                                                            </else>
+                                                        </condition>
+                                                    </else>
+                                                    <or>
+                                                        <condition id="getBoolEquals">
+                                                            <string id="id">Toolkit_MapInfo_Event_FoeTurret2</string>
+                                                            <string id="value" values="yesno">no</string>
+                                                            <string id="Comment">Is foe front turret down?</string>
+                                                        </condition>
+                                                        <condition id="checkCounter">
+                                                            <string id="id">Toolkit_Players_Event_Lane0Population</string>
+                                                            <string id="value">1</string>
+                                                            <string id="compare method" values="valuecompare">greater or equal</string>
+                                                            <string id="Comment">Is there at least one ally in Lane0?</string>
+                                                        </condition>
+                                                    </or>
+                                                </andblock>
+                                            </normal>
+                                            <else>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                                                    <string id="value">PATH_ADVANCELANE0_1</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Go the long way through bottomlane</string>
+                                                </action>
+                                            </else>
+                                        </condition>
+                                    </else>
+                                </condition>
+                            </normal>
+                            <else>
+                                <condition id="checkCounter">
+                                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                    <string id="value">1</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                    <string id="Comment">AI 404?</string>
+                                    <else>
+                                        <condition id="checkCounter">
+                                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                            <string id="value">2</string>
+                                            <string id="compare method" values="valuecompare">equal</string>
+                                            <string id="Comment">Sorona?</string>
+                                            <else>
+                                                <condition id="checkCounter">
+                                                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                                    <string id="value">3</string>
+                                                    <string id="compare method" values="valuecompare">equal</string>
+                                                    <string id="Comment">Aiguillon</string>
+                                                    <else>
+                                                        <condition id="checkCounter">
+                                                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                                            <string id="value">4</string>
+                                                            <string id="compare method" values="valuecompare">equal</string>
+                                                            <string id="Comment">AI 205?</string>
+                                                        </condition>
+                                                    </else>
+                                                </condition>
+                                            </else>
+                                        </condition>
+                                    </else>
+                                </condition>
+                            </else>
+                        </condition>
+                    </else>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>

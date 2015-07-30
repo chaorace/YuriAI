@@ -7,8 +7,35 @@
                     <string id="Comment">Triggers</string>
                     <normal>
                         <action id="setBool">
-                            <string id="id">Toolkit_Macro_Trigger_blah</string>
+                            <string id="id">Toolkit_Macro_Trigger_AdvanceLane0</string>
                             <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Advance to lane0</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Macro_Trigger_AdvanceLane1</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Advance to lane1</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Macro_Trigger_AdvanceLane0</string>
+                    <string id="value" values="yesno">yes</string>
+                    <normal>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Macro_Trigger_AdvanceLane0</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="getBoolEquals">
+                    <string id="id">Toolkit_Macro_Trigger_AdvanceLane1</string>
+                    <string id="value" values="yesno">yes</string>
+                    <normal>
+                        <action id="executeBehaviourTree">
+                            <string id="fileName">Mod_AwesomeAIMain_Toolkit_Macro_Trigger_AdvanceLane1</string>
                             <string id="Minimized">yes</string>
                         </action>
                     </normal>
@@ -18,8 +45,15 @@
                     <string id="Comment">Trigger resets</string>
                     <normal>
                         <action id="setBool">
-                            <string id="id">Toolkit_Macro_Trigger_blah</string>
+                            <string id="id">Toolkit_Macro_Trigger_AdvanceLane0</string>
                             <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Advance to lane0</string>
+                            <string id="Minimized">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">Toolkit_Macro_Trigger_AdvanceLane1</string>
+                            <string id="value" values="flagtoggle">no</string>
+                            <string id="Comment">Advance to lane1</string>
                             <string id="Minimized">yes</string>
                         </action>
                     </normal>
