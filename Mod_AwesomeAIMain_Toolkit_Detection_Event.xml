@@ -430,12 +430,19 @@
                             <string id="Comment">Keeps track of total solar in a counter. Increases in increments of 10. Caps at 1500</string>
                             <string id="Minimized">yes</string>
                         </action>
+                        <action id="adjustCounter">
+                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                            <string id="value">-1</string>
+                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                        </action>
                     </normal>
                 </condition>
                 <condition id="getBoolEquals">
                     <string id="id">Toolkit_Ticker_Event_3rdTick</string>
                     <string id="value" values="yesno">yes</string>
                     <string id="Comment">Spreads intensive checks across three ticks</string>
+                    <string id="Minimized">yes</string>
                     <normal>
                         <condition id="checkGameTime">
                             <float id="time in seconds">-1.00</float>
@@ -7254,6 +7261,399 @@
                                     <string id="Comment">Which way am I facing? false=right true=left</string>
                                     <string id="Minimized">yes</string>
                                 </action>
+                            </else>
+                        </condition>
+                    </else>
+                </condition>
+                <condition id="checkCounter">
+                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                    <string id="value">0</string>
+                    <string id="compare method" values="valuecompare">equal</string>
+                    <string id="Comment">Self lane detection</string>
+                    <normal>
+                        <orblock>
+                            <string id="Comment">Am I in the top lane?</string>
+                            <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                    <string id="value">0</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                </action>
+                            </normal>
+                            <else>
+                                <orblock>
+                                    <string id="Comment">Am I in the bottom lane?</string>
+                                    <normal>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                            <string id="value">1</string>
+                                            <string id="adjust method" values="valueadjust">set</string>
+                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                            <string id="value">-1</string>
+                                            <string id="adjust method" values="valueadjust">set</string>
+                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                        </action>
+                                    </else>
+                                    <or>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">AREABOTTOM</string>
+                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                            <string id="who" values="targetself">self</string>
+                                        </condition>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">AREABOTTOM</string>
+                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                            <string id="who" values="targetself">self</string>
+                                        </condition>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">AREACENTERBOTTOM</string>
+                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                            <string id="who" values="targetself">self</string>
+                                        </condition>
+                                    </or>
+                                </orblock>
+                            </else>
+                            <or>
+                                <condition id="isInNamedArea">
+                                    <string id="area name">AREAUPPER</string>
+                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                    <string id="who" values="targetself">self</string>
+                                </condition>
+                                <condition id="isInNamedArea">
+                                    <string id="area name">AREAUPPER</string>
+                                    <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                    <string id="who" values="targetself">self</string>
+                                </condition>
+                                <condition id="isInNamedArea">
+                                    <string id="area name">AREACENTER</string>
+                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                    <string id="who" values="targetself">self</string>
+                                </condition>
+                            </or>
+                        </orblock>
+                    </normal>
+                    <else>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                            <string id="value">1</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <string id="Comment">AI 404?</string>
+                            <normal>
+                                <orblock>
+                                    <string id="Comment">Am I in the top lane?</string>
+                                    <normal>
+                                        <action id="adjustCounter">
+                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                            <string id="value">0</string>
+                                            <string id="adjust method" values="valueadjust">set</string>
+                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                        </action>
+                                    </normal>
+                                    <else>
+                                        <orblock>
+                                            <string id="Comment">Is Ally0 in the bottom lane?</string>
+                                            <normal>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                    <string id="value">1</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                    <string id="value">-1</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                </action>
+                                            </else>
+                                            <or>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREAFIRST</string>
+                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREAFIRST</string>
+                                                    <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREABOTTOM</string>
+                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREABOTTOM</string>
+                                                    <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREACENTER</string>
+                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                            </or>
+                                        </orblock>
+                                    </else>
+                                    <or>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">AREAUPPER</string>
+                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                            <string id="who" values="targetself">self</string>
+                                        </condition>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">AREAUPPER</string>
+                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                            <string id="who" values="targetself">self</string>
+                                        </condition>
+                                    </or>
+                                </orblock>
+                            </normal>
+                            <else>
+                                <condition id="checkCounter">
+                                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                    <string id="value">2</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                    <string id="Comment">Sorona?</string>
+                                    <normal>
+                                        <orblock>
+                                            <string id="Comment">Am I in the top lane?</string>
+                                            <normal>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                    <string id="value">0</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                </action>
+                                            </normal>
+                                            <else>
+                                                <orblock>
+                                                    <string id="Comment">Is Ally0 in the bottom lane?</string>
+                                                    <normal>
+                                                        <action id="adjustCounter">
+                                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                            <string id="value">1</string>
+                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                        </action>
+                                                    </normal>
+                                                    <else>
+                                                        <action id="adjustCounter">
+                                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                            <string id="value">-1</string>
+                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                        </action>
+                                                    </else>
+                                                    <or>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">AREABOTTOM</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                        </condition>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">AREABOTTOM</string>
+                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                        </condition>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">AREACENTERBOTTOM</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                        </condition>
+                                                    </or>
+                                                </orblock>
+                                            </else>
+                                            <or>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREAUPPER</string>
+                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREAUPPER</string>
+                                                    <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">AREACENTER</string>
+                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
+                                                </condition>
+                                            </or>
+                                        </orblock>
+                                    </normal>
+                                    <else>
+                                        <condition id="checkCounter">
+                                            <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                            <string id="value">3</string>
+                                            <string id="compare method" values="valuecompare">equal</string>
+                                            <string id="Comment">Aiguillon</string>
+                                            <normal>
+                                                <orblock>
+                                                    <string id="Comment">Am I in the top lane?</string>
+                                                    <normal>
+                                                        <action id="adjustCounter">
+                                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                            <string id="value">0</string>
+                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                        </action>
+                                                    </normal>
+                                                    <else>
+                                                        <orblock>
+                                                            <string id="Comment">Is Ally0 in the bottom lane?</string>
+                                                            <normal>
+                                                                <action id="adjustCounter">
+                                                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                                    <string id="value">1</string>
+                                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                                </action>
+                                                            </normal>
+                                                            <else>
+                                                                <action id="adjustCounter">
+                                                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                                    <string id="value">-1</string>
+                                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                                </action>
+                                                            </else>
+                                                            <or>
+                                                                <condition id="isInNamedArea">
+                                                                    <string id="area name">AREABOTTOM</string>
+                                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                    <string id="who" values="targetself">self</string>
+                                                                </condition>
+                                                                <condition id="isInNamedArea">
+                                                                    <string id="area name">AREABOTTOM</string>
+                                                                    <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                                    <string id="who" values="targetself">self</string>
+                                                                </condition>
+                                                                <condition id="isInNamedArea">
+                                                                    <string id="area name">AREACENTERBOTTOM</string>
+                                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                    <string id="who" values="targetself">self</string>
+                                                                </condition>
+                                                            </or>
+                                                        </orblock>
+                                                    </else>
+                                                    <or>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">AREAUPPER</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                        </condition>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">AREAUPPER</string>
+                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                        </condition>
+                                                        <condition id="isInNamedArea">
+                                                            <string id="area name">AREACENTER</string>
+                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                            <string id="who" values="targetself">self</string>
+                                                        </condition>
+                                                    </or>
+                                                </orblock>
+                                            </normal>
+                                            <else>
+                                                <condition id="checkCounter">
+                                                    <string id="id">Toolkit_MapInfo_Event_CurrentMap</string>
+                                                    <string id="value">4</string>
+                                                    <string id="compare method" values="valuecompare">equal</string>
+                                                    <string id="Comment">AI 205?</string>
+                                                    <normal>
+                                                        <orblock>
+                                                            <string id="Comment">Am I in the top lane?</string>
+                                                            <normal>
+                                                                <action id="adjustCounter">
+                                                                    <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                                    <string id="value">0</string>
+                                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                                    <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                                </action>
+                                                            </normal>
+                                                            <else>
+                                                                <orblock>
+                                                                    <string id="Comment">Is Ally0 in the bottom lane?</string>
+                                                                    <normal>
+                                                                        <action id="adjustCounter">
+                                                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                                            <string id="value">1</string>
+                                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                                        </action>
+                                                                    </normal>
+                                                                    <else>
+                                                                        <action id="adjustCounter">
+                                                                            <string id="id">Toolkit_Detection_Event_LanePresence</string>
+                                                                            <string id="value">-1</string>
+                                                                            <string id="adjust method" values="valueadjust">set</string>
+                                                                            <string id="Comment">Indicates current lane. -1 for neither, 0 for lane0, 1 for lane1</string>
+                                                                        </action>
+                                                                    </else>
+                                                                    <or>
+                                                                        <condition id="isInNamedArea">
+                                                                            <string id="area name">AREAFIRST</string>
+                                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                            <string id="who" values="targetself">self</string>
+                                                                        </condition>
+                                                                        <condition id="isInNamedArea">
+                                                                            <string id="area name">AREAFIRST</string>
+                                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                                            <string id="who" values="targetself">self</string>
+                                                                        </condition>
+                                                                        <condition id="isInNamedArea">
+                                                                            <string id="area name">AREABOTTOM</string>
+                                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                            <string id="who" values="targetself">self</string>
+                                                                        </condition>
+                                                                        <condition id="isInNamedArea">
+                                                                            <string id="area name">AREABOTTOM</string>
+                                                                            <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                                            <string id="who" values="targetself">self</string>
+                                                                        </condition>
+                                                                        <condition id="isInNamedArea">
+                                                                            <string id="area name">AREACENTERBOTTOM</string>
+                                                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                            <string id="who" values="targetself">self</string>
+                                                                        </condition>
+                                                                    </or>
+                                                                </orblock>
+                                                            </else>
+                                                            <or>
+                                                                <condition id="isInNamedArea">
+                                                                    <string id="area name">AREAUPPER</string>
+                                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                    <string id="who" values="targetself">self</string>
+                                                                </condition>
+                                                                <condition id="isInNamedArea">
+                                                                    <string id="area name">AREAUPPER</string>
+                                                                    <string id="team" values="ownenemy">ENEMY_TEAM</string>
+                                                                    <string id="who" values="targetself">self</string>
+                                                                </condition>
+                                                                <condition id="isInNamedArea">
+                                                                    <string id="area name">AREACENTER</string>
+                                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                                    <string id="who" values="targetself">self</string>
+                                                                </condition>
+                                                            </or>
+                                                        </orblock>
+                                                    </normal>
+                                                </condition>
+                                            </else>
+                                        </condition>
+                                    </else>
+                                </condition>
                             </else>
                         </condition>
                     </else>
