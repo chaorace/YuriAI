@@ -9,10 +9,9 @@
                     <string id="compare method" values="valuecompare">equal</string>
                     <string id="Comment">Am I currently in Lane0?</string>
                     <normal>
-                        <action id="adjustCounter">
+                        <action id="setBool">
                             <string id="id">Toolkit_Movement_Trigger_MoveForward</string>
-                            <string id="value">true</string>
-                            <string id="adjust method" values="valueadjust">set</string>
+                            <string id="value" values="flagtoggle">yes</string>
                             <string id="Comment">Advance!</string>
                         </action>
                     </normal>
@@ -50,14 +49,19 @@
                                         </condition>
                                     </normal>
                                     <else>
-                                        <condition id="checkCounter">
-                                            <string id="id">Toolkit_Players_Event_Lane1LastAggro</string>
-                                            <string id="value">Toolkit_Players_Event_Lane0LastAggro</string>
-                                            <string id="compare method" values="valuecompare">greater or equal</string>
-                                            <string id="Comment">Have I run into an enemy in lane1 more recently than lane0?</string>
+                                        <andblock>
+                                            <string id="Comment">Are there enemies around the top lane?</string>
                                             <normal>
+                                                <action id="adjustCounter">
+                                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                                                    <string id="value">PATH_ADVANCELANE0_1</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">Go the long way through bottomlane</string>
+                                                </action>
+                                            </normal>
+                                            <else>
                                                 <andblock>
-                                                    <string id="Comment">Try lane0 first</string>
+                                                    <string id="Comment">Is it safe to just run at the center?</string>
                                                     <normal>
                                                         <action id="adjustCounter">
                                                             <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
@@ -81,10 +85,10 @@
                                                             </normal>
                                                             <else>
                                                                 <action id="adjustCounter">
-                                                                    <string id="id">Toolkit_WaypointPlus_Trigger_TargetWaypoint</string>
-                                                                    <string id="value">UPPERLANE</string>
+                                                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
+                                                                    <string id="value">PATH_ADVANCELANE0_1</string>
                                                                     <string id="adjust method" values="valueadjust">set</string>
-                                                                    <string id="Comment">Just go straight to the center</string>
+                                                                    <string id="Comment">Go the long way through bottomlane</string>
                                                                 </action>
                                                             </else>
                                                         </condition>
@@ -103,16 +107,22 @@
                                                         </condition>
                                                     </or>
                                                 </andblock>
-                                            </normal>
-                                            <else>
-                                                <action id="adjustCounter">
-                                                    <string id="id">Toolkit_WaypointPlus_Trigger_PathLoader</string>
-                                                    <string id="value">PATH_ADVANCELANE0_1</string>
-                                                    <string id="adjust method" values="valueadjust">set</string>
-                                                    <string id="Comment">Go the long way through bottomlane</string>
-                                                </action>
                                             </else>
-                                        </condition>
+                                            <or>
+                                                <condition id="checkCounter">
+                                                    <string id="id">Toolkit_Players_Event_Lane1LastAggro</string>
+                                                    <string id="value">Toolkit_Players_Event_Lane0LastAggro</string>
+                                                    <string id="compare method" values="valuecompare">less</string>
+                                                    <string id="Comment">Have I run into an enemy in lane1 more recently than lane0?</string>
+                                                </condition>
+                                                <condition id="checkCounter">
+                                                    <string id="id">Toolkit_Players_Event_Lane0LastAggro</string>
+                                                    <string id="value">Toolkit_Ticker_Event_100TickAgo</string>
+                                                    <string id="compare method" values="valuecompare">greater or equal</string>
+                                                    <string id="Comment">Was the aggro at least 10 seconds ago?</string>
+                                                </condition>
+                                            </or>
+                                        </andblock>
                                     </else>
                                 </condition>
                             </normal>
