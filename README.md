@@ -1,3 +1,6 @@
+#Awesome AI is no longer under development!
+I have decided to put this project on hold until further notice due to a depressing lack of support from the developers of Awesomenauts and the slow death of the game itself. YuriAI is under the MIT license, and, as such, may be developed, repurposed, or repackaged without any restriction by those who would wish to take up the project. Thanks for following things for all this time, have a nice day :)
+
 #What is AwesomeAI?
 AwesomeAI is a WIP AI framework made for Awesomenauts, a commercial game created by Ronimo.
 
